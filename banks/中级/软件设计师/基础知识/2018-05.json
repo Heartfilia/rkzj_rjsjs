@@ -1,0 +1,918 @@
+{
+  "paper": "2018-05",
+  "paperTitle": "2018年上半年",
+  "section": "基础知识",
+  "source": "2018年上半年软件设计师基础知识真题（答案详解 docx）",
+  "questions": [
+    {
+      "id": "sd-201805-02",
+      "no": 2,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "计算机运行工程中，遇到突发事件，要求CPU暂时停止正在运行的程序，转去为突发事件服务，服务完毕，再自动返回原程序继续执行，这个过程称为（2），其处理过程中保存现场的目的是（3）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "阻塞",
+            "B": "中断",
+            "C": "动态绑定",
+            "D": "静态绑定"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": [
+        "无解析"
+      ]
+    },
+    {
+      "id": "sd-201805-04",
+      "no": 4,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "海明码是一种纠错码，其方法是为需要校验的数据位增加若干校验位，使得校验位的值决定于某些被校位的数据，当被校数据出错时，可根据校验位的值的变化找到出错位，从而纠正错误。对于32位的数据，至少需要增加（4）个校验位才能构成海明码。 以10位数据为例，其海明码表示为D9D8D7D6D5D4 P4D3D2D1P3D0P2P1中，其中，Di (0≤i≤9)表示数据位，Pj(1≤j≤4)表示校验位，数据位D9由P4 P3 和P2进行校验（从右至左D9的位序为14，即等于8+4+2，因此用第8位的P4 第4位的P3和第二位的P2校验）数据位D5由（5）进行校验",
+      "blanks": [
+        {
+          "options": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "6"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "汉明码也利用了奇偶位校验的概念，通过在数据位后面增加一些比特，可以验证数据的有效性。利用一个以上的校验位，汉明码不仅可以验证数据是否有效，还能在数据出错的情况下指明错误位置。2P≥P+D+1，其中P代表汉明码的个数，D代表数据位的个数。D=32，所以P=6；",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-05",
+      "no": 5,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "",
+      "blanks": [
+        {
+          "options": {
+            "A": "P4 P1",
+            "B": "P4 P2",
+            "C": "P4 P3 P1",
+            "D": "P3 P2 P1"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "汉明码也利用了奇偶位校验的概念，通过在数据位后面增加一些比特，可以验证数据的有效性。利用一个以上的校验位，汉明码不仅可以验证数据是否有效，还能在数据出错的情况下指明错误位置。2P≥P+D+1，其中P代表汉明码的个数，D代表数据位的个数。D=32，所以P=6；",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": false,
+      "chapter": "ch13",
+      "flags": [
+        "不完整"
+      ]
+    },
+    {
+      "id": "sd-201805-07",
+      "no": 7,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "网络管理员通过命令行方式对路由器进行管理，需要确保ID，口令和会话内容的保密性，应采取的访问方式是（7）",
+      "blanks": [
+        {
+          "options": {
+            "A": "控制台",
+            "B": "AUX",
+            "C": "TELENT",
+            "D": "SSH"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "AUX接口（Auxiliary）是指音频输入接口，可以输出包括mp3在内的电子声频设备的音频（一般的耳机插孔），可通过车上的音响来输出这些设备内的音乐",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-08",
+      "no": 8,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "在安全通信中，S将所发送的信息使用（8）进行数字签名，T收到该消息后可利用（9）验证该消息的真实性。",
+      "blanks": [
+        {
+          "options": {
+            "A": "S的公钥",
+            "B": "S的私钥",
+            "C": "T的公钥",
+            "D": "T的私钥"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "数字签名保证信息传输的完整性、发送者的身份认证、防止交易中的抵赖发生",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch05",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-09",
+      "no": 9,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "",
+      "blanks": [
+        {
+          "options": {
+            "A": "S的公钥",
+            "B": "S的私钥",
+            "C": "T的公钥",
+            "D": "T的私钥"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "数字签名保证信息传输的完整性、发送者的身份认证、防止交易中的抵赖发生",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": false,
+      "chapter": "ch05",
+      "flags": [
+        "不完整"
+      ]
+    },
+    {
+      "id": "sd-201805-10",
+      "no": 10,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "在网络安全管理中，加强内务内控可采取的策略有（10） ①控制终端接入数量 ②终端访问授权，防止合法终端越权访问 ③加强终端的安全检查与策略管理 ④加强员工上网行为管理与违规审计",
+      "blanks": [
+        {
+          "options": {
+            "A": "②③",
+            "B": "②④",
+            "C": "①②③④",
+            "D": "②③④"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "内务内控管理，主要是为了管理内部网络，防止越权访问，以及内部泄露信息",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-14",
+      "no": 14,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "著作权中，（14）的保护期不受限制。",
+      "blanks": [
+        {
+          "options": {
+            "A": "发表权",
+            "B": "发行权",
+            "C": "署名权",
+            "D": "展览权"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "在12中有解释",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch06",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-15",
+      "no": 15,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "数据字典是结构化分析的一个重要输出。数据字典的条目不包括（15）",
+      "blanks": [
+        {
+          "options": {
+            "A": "外部实体",
+            "B": "数据流",
+            "C": "数据项",
+            "D": "基本加工"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "数据字典有以下4类条目：数据流，数据项，数据存储和基本加工",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-17",
+      "no": 17,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "某软件项目的活动图如下图所示。其中顶点表示项目里程碑，连接顶点的边表示包含的活动，边上的数字表示活动的持续天数，则完成该项目的最少时间是（17）天。活动EH和IJ的松弛时间分别是（18）天",
+      "blanks": [
+        {
+          "options": {
+            "A": "17",
+            "B": "19",
+            "C": "20",
+            "D": "22"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "关键路径为A-B-D-G-I-K-L 从A到H共需要12天(只有一条路径)，从A到L最长为22天，在不影响H到L的前提之下，EH可以推迟22-12-6=5天。同理IJ的松弛时间为3天",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [
+        "含图"
+      ]
+    },
+    {
+      "id": "sd-201805-18",
+      "no": 18,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "",
+      "blanks": [
+        {
+          "options": {
+            "A": "3和3",
+            "B": "3和6",
+            "C": "5和3",
+            "D": "5和6"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "关键路径为A-B-D-G-I-K-L 从A到H共需要12天(只有一条路径)，从A到L最长为22天，在不影响H到L的前提之下，EH可以推迟22-12-6=5天。同理IJ的松弛时间为3天",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": false,
+      "chapter": "ch13",
+      "flags": [
+        "不完整"
+      ]
+    },
+    {
+      "id": "sd-201805-19",
+      "no": 19,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "工作量估计模型COCOMO II的层次结构中，估算选择不包括（19）",
+      "blanks": [
+        {
+          "options": {
+            "A": "对象点",
+            "B": "功能点",
+            "C": "用例数",
+            "D": "源代码行"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "ＣＯＣＯＭＯⅡ中规模表示为源代码千行数（ＫＳＬＯＣ）。常用的方法有工作分解结构、类比评估技术、Ｐａｒｋｓｏｎ法则、专家判定技术、功能点分析法等。其中功能点分析法 是基于数学理论、适用于项目的各个阶段，是ＣＯＣＯＭＯ Ｉ１提倡的一种方法。有三种不同的规模估算选择：对象点，功能点和代码行",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-20",
+      "no": 20,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "（20）是一种函数式编程语言。",
+      "blanks": [
+        {
+          "options": {
+            "A": "Lisp",
+            "B": "Prolog",
+            "C": "Python",
+            "D": "Java/C++"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "Prolog(ProgramminginLogic的缩写)是一种逻辑编程语言。Python,Java/C++都是一种面向对象的解释型计算机程序设计语言，Lisp是一种函数式编程语言",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-23",
+      "no": 23,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "假设铁路自动售票系统有n个售票终端，该系统为每个售票终端创建一个进程Pi(i=1,2,...，n)管理车票销售进程。假设Tj(j=1,2,...,m)单位存放某日某趟车的车票剩余票数，Temp为Pi进程的临时工作单元，x为某用户的购票张数。Pi进程的工作流程如下图所示，用P操作和V操作实现进程间的同步与互斥。初始化时系统应将信号量S赋值为（23）。图中（a）（b）（c）处应分别填入（24）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "n-1",
+            "B": "0",
+            "C": "1",
+            "D": "2"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "D P操作是S自减一，S≥0时，继续执行；V是S自加一，S>0，继续执行",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": [
+        "含图"
+      ]
+    },
+    {
+      "id": "sd-201805-25",
+      "no": 25,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "若系统在将（25）文件修改的结果写回磁盘时发生奔溃，则对系统的影响相对较大。",
+      "blanks": [
+        {
+          "options": {
+            "A": "目录",
+            "B": "空闲块",
+            "C": "用户程序",
+            "D": "用户数据"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "目录文件是长度固定的记录式文件。大多数操作系统如UNIX，DOS采用多级目录机构 ，称为树型目录结构。 从根目录出发到任一非叶结点或树页结点都有且只有一条路径。系统为用户提供一个目前使用的工作目录，称为当前目录。 目录分解法：将目录项分为：名号目录项，基本目录项。 目录文件也分为名号目录文件和基本目录文件。 文件存取控制通过文件的共享，保护和保密三方面体现。 文件的共享是一个文件可以允许多个用户共同使用。空闲块也就是用户没有用到的部分。用户程序和用户数据对系统的影响相对来说比较小",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-27",
+      "no": 27,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "若某文件系统的目录结构如下图所示，假设用户要访问文件rw.dll，且当前工作目录为swtools，则该文件的全文件名为（27），相对路径和绝对路径分别为（28）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "rw.dll",
+            "B": "flash/rw.dll",
+            "C": "/swtools/flash/rw.dll",
+            "D": "/Programe file/Skey/rw.dll"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "B 这里的全文件名是指在根目录下如何打开这个文档，就是绝对路径加上文档全名",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": [
+        "含图"
+      ]
+    },
+    {
+      "id": "sd-201805-31",
+      "no": 31,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "软件维护工具不包括（31）工具",
+      "blanks": [
+        {
+          "options": {
+            "A": "版本控制",
+            "B": "配置管理",
+            "C": "文档分析",
+            "D": "逆向工程"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "辅助软件维护过程中的活动的软件称为“软件维护工具”，它辅助维护人员对软件代码及其文档进行各种维护活动。软件维护工具主要有：1、版本控制工具；2、文档分析工具；3、开发信息库工具；、4、逆向工程工具；5、再工程工具；6、配置管理支持工具",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-32",
+      "no": 32,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "概要设计文档的内容不包括（32）",
+      "blanks": [
+        {
+          "options": {
+            "A": "体系结构设计",
+            "B": "数据库设计",
+            "C": "模块内算法设计",
+            "D": "逻辑数据结构设计"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "概要设计文档主要包括：软件体系总体结构设计；数据结构及数据库设计",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-34",
+      "no": 34,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "对下图所示的程序流程图进行判断覆盖测试，则至少需要（34）个测试用例。采用McCabe度量法计算器环路复杂度为（35）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "2",
+            "B": "3",
+            "C": "4",
+            "D": "5"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "B覆盖测试就是要使测试用例可以走完所有的之路，也就是所有的语句都要执行一遍。在本题中，至少需要两个测试用例就可以啦；计算环形复杂度：",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": [
+        "含图"
+      ]
+    },
+    {
+      "id": "sd-201805-36",
+      "no": 36,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "软件调试的任务就是根据测试时所发现的错误，找出原因和具体的位置，进行改正。其常用的方法中，（36）是指从测试所暴露的问题出发，收集所有正确或不正确的数据，分析他们之间的关系，提出假想的错误原因，用这些数据来证明或反驳，从而查出错误所在。",
+      "blanks": [
+        {
+          "options": {
+            "A": "试探法",
+            "B": "回溯法",
+            "C": "归纳法",
+            "D": "演绎法"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "归纳法：是指从测试所暴露的问题出发，收集所有正确或不正确的数据，分析他们之间的关系，提出假想的错误原因，用这些数据来证明或反驳，从而查出错误所在",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-38",
+      "no": 38,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "在下列机制中，（38）是指过程调用和响应所需执行的代码在运行时加以结合；而（39）是过程调用和响应调用所需执行的代码在编译时加以结合。",
+      "blanks": [
+        {
+          "options": {
+            "A": "消息传递",
+            "B": "类型检查",
+            "C": "静态绑定",
+            "D": "动态绑定"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "39C 消息传递是指消息在两个不同应用程序或对象之间内容的传递",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-40",
+      "no": 40,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "同一消息可以调用多种不同种类的对象的方法，这些类有某个相同的超类，这种现象是（40）",
+      "blanks": [
+        {
+          "options": {
+            "A": "类型转换",
+            "B": "映射",
+            "C": "单态",
+            "D": "多态"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "类型转换是指把一种数据类型转换成另外一种数据类型",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-41",
+      "no": 41,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "如下所示的图为UML的（41），用于展示某汽车导航系统中（42）。Mapping对象获取汽车当前位置（GPS Location）的消息为（43）",
+      "blanks": [
+        {
+          "options": {
+            "A": "类图",
+            "B": "组件图",
+            "C": "通信图",
+            "D": "部署图"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "42A 43D",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-44",
+      "no": 44,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "假设现在要创建一个Web应用框架，基于此框架能创建不同的具体Web应用，比如博客，新闻网站和网上商店等；并可以为每个Web应用创建不同的主题样式，比如浅色或深色等。这一业务需求的类图设计适合采用（44）模式（如下图所示）。其中（45）是客户程序使用的主要接口，维护队主题类型的应用。此模式为（46），提现的最主要的意图是（47）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "观察者(Observer)",
+            "B": "访问者(Visitor)",
+            "C": "策略(Strategy)",
+            "D": "桥接(Bridge)"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "45A 46B 47A",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": [
+        "含图"
+      ]
+    },
+    {
+      "id": "sd-201805-48",
+      "no": 48,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "下图所示为一个不确定有限自动机(NFA)的状态装换图。该NFA识别的字符串集合可用正规式（48）描述。",
+      "blanks": [
+        {
+          "options": {
+            "A": "ab*a",
+            "B": "(ab)*a",
+            "C": "a*ba",
+            "D": "a(ba)*"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "a*表示a可以出现0次或多次",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": [
+        "含图"
+      ]
+    },
+    {
+      "id": "sd-201805-49",
+      "no": 49,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "简单算术表达式的结构可以用下面的上下文无关文法进行描述（E为开始符号），（49）是符合该文法的句子。",
+      "blanks": [
+        {
+          "options": {
+            "A": "2--3*4",
+            "B": "2+-3*4",
+            "C": "(2+3)*4",
+            "D": "2*4-3"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "上下文无关文法是程序设计语言所使用的语法。它的特点是同样的字符串在不同的语境下，意思不变。满足上下文无关文法的语言便于计算机识别和处理。我们已经介绍过，语言是语句的集合，而语句是通过产生式定义的。上下文无关文法要求产生式的左部有且仅有一个非终结符",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-50",
+      "no": 50,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "语法制导翻译是一种（50）方法。",
+      "blanks": [
+        {
+          "options": {
+            "A": "动态语义分析",
+            "B": "中间代码优化",
+            "C": "静态语义分析",
+            "D": "目标代码优化"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "语法制导翻译：基于属性文法的处理过程，对单词符号串进行语法分析，构造语法分析树，然后根据需要构造属性依赖图，遍历语法树并在语法树的各结点处按语义规则进行计算",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-56",
+      "no": 56,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "某集团公司下属有多个超市，每个超市的所有销售数据最终要存入公司的数据仓库中。假设该公司高管需要从时间，地区和商品种类三个维度来分析某家店商品的销售数据，那么最适合采用（56）来完成。",
+      "blanks": [
+        {
+          "options": {
+            "A": "Data Extraction",
+            "B": "OLAP",
+            "C": "OLTP",
+            "D": "ETL"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "Data Extraction：：数据抽取；",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-58",
+      "no": 58,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "设有n阶三对角矩阵A，即非0元素都位于主对角线以及与主对角线平行且紧邻的两条对角线上，现对该矩阵进行按行压缩存储，若其压缩空间用数组B表示，A的元素下标从0开始，B的元素下标从1开始。已知A[0,0]存储在B[1],A[n-1,n-1]存储在B[3n-2],那么非0元素A[i,j]（0≤i﹤n，0≤j﹤n，|i-j|≤1）存储在B[（58）]。",
+      "blanks": [
+        {
+          "options": {
+            "A": "2i+j-1",
+            "B": "2i+j",
+            "C": "2i+j+1",
+            "D": "3i-j+1"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "举几个例子就可以啦",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-59",
+      "no": 59,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "对下面的二叉树进行顺序存储（用数组MEM表示），已知结点A，B，C在MEM中对应元素的下标分别为1,2,3，那么结点D，E，F对应的数组元素下标为（59）",
+      "blanks": [
+        {
+          "options": {
+            "A": "4,5,6",
+            "B": "4,7,10",
+            "C": "6,7,8",
+            "D": "6,7,14"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "顺序存储二叉树就是先把二叉树填满成完全二叉树。在中序遍历，这时最开始的二叉树中元素的位置就是存储位置啦",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-61",
+      "no": 61,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "对有n个结点，e条边且采用数组表示法（即领接矩阵存储）的无向图进行深度优先遍历，时间复杂度为（61）",
+      "blanks": [
+        {
+          "options": {
+            "A": "O(n2)",
+            "B": "O(e2)",
+            "C": "O(n+e)",
+            "D": "O(n*e)"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "无向图就是指图中的每一条边均是无方向的",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-62",
+      "no": 62,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "现需要申请一些场地举办一批活动，每个活动有开始时间和结束时间。在同一个场地，如果一个活动结束之前，另一个活动开始，即两个活动冲突。若活动A从1时间开始，5时间结束，活动B从5时间开始，8时间结束，则活动A和B不冲突。现要计算n个活动需要的最少场地数。 求解该问题的基本思路如下（假设需要场地数为m，活动数为n，场地集合为P1，P2，...，Pm），初始条件Pi均无活动安排： （1）采用快速排序算法对n个活动的开始时间从小到大排序，得到活动a1,a2,...,an。对每个活动ai，i从1到n，重复步骤（2），（3），（4）； （2）从P1开始，判断ai与P1的最后一个活动是否冲突，若冲突，考虑下一个场地P2，...； （3）一旦发现ai与某个Pj的最后一个活动不冲突，则将ai安排到Pj，考虑下一个活动； （4）若ai与所有已安排活动的Pj的最后一个活动均冲突，则将ai安排到一个新的场地，考虑下一个活动； （5）将n减去没有安排活动的场地数即可得到所用的最少场地数。 算法首先采用快速排序算法进行排序，其算法设计策略是（62）；后面步骤采用的算法设计策略是（63）。整个算法的时间复杂度是（64）。下表给出了n=11的活动集合，根据上述算法，得到最少的场地数为（65）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "分治",
+            "B": "动态规划",
+            "C": "贪心",
+            "D": "回溯"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "63C 64C 65B",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": [
+        "含图"
+      ]
+    },
+    {
+      "id": "sd-201805-66",
+      "no": 66,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "下列网络互连设备中，属于物理层的是（66）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "交换机",
+            "B": "中继器",
+            "C": "路由器",
+            "D": "网桥"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "中继器只是简单的信号放大，属于物理层设备。交换机一般属于数据链路层，但然现在也有三层交换机是网络层，不过不特殊说明一般都是指数据链路层。路由器属于网络层。网桥和交换机类似",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-67",
+      "no": 67,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "在地址http://www.dailynews.con.cn/channel/welcome.html中，www.dailynews.con.cn表示（67），welcome.html表示（68）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "协议类型",
+            "B": "主机域名",
+            "C": "网页文件名",
+            "D": "路径"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "68C",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-69",
+      "no": 69,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "在Linux中，要更正一个文件的权限设置可使用（69）命令。",
+      "blanks": [
+        {
+          "options": {
+            "A": "attrib",
+            "B": "modify",
+            "C": "chmod",
+            "D": "change"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "mattrib为mtools工具指令，模拟MS-DOS的attrib指令，可变更MS-DOS文件的属性；",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-70",
+      "no": 70,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "主域名服务器在接收到域名请求后，首先查询的是（70）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "本地hosts",
+            "B": "转发域名服务器",
+            "C": "本地缓存",
+            "D": "授权域名服务器."
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "一、主机向本地域名服务器的查询一般都是采用递归查询。所谓递归查询就是：如果主机所询问的本地域名服务器不知道被查询的域名的IP地址，那么本地域名服务器就以DNS客户的身份，向其它根域名服务器继续发出查询请求报文(即替主机继续查询)，而不是让主机自己进行下一步查询。因此，递归查询返回的查询结果或者是所要查询的IP地址，或者是报错，表示无法查询到所需的IP地址",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": []
+    },
+    {
+      "id": "sd-201805-71",
+      "no": 71,
+      "paper": "2018-05",
+      "paperTitle": "2018年上半年",
+      "stem": "Creating a clear map of where the project is going is an important first step. It lets you identify risks, clarify objectives, an determine if the project even makes sense. The only thing more important than the Release Plan is not to take it too seriously. Release planning is creating a game plan for your Web project （71）what you think you want your Web site to be. The plan is guide for the content, design elements, and functionality of a Web site to be released to the public, to partners, or internally. It also （72）how long the project will take and how much it will cost. What the plan is not is a functional （73）that defines the project in detail or that produces a budget you can take to the bank. Basically you use a Release Plan to do an initial sanity check of the project's （74）and worthiness. Release Plans are useful road maps, but don't think of them as guides to the interstate road system. Instead, think of them as the （75）used by early explorers-half rumor and guess and half hope and expectation. It's always a good idea to have a map of where a project is headed.",
+      "blanks": [
+        {
+          "options": {
+            "A": "constructing",
+            "B": "designing",
+            "C": "implementing",
+            "D": "outlining"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "CACC",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch12",
+      "flags": []
+    }
+  ]
+}

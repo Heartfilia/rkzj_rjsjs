@@ -1,0 +1,1461 @@
+{
+  "paper": "2017-05",
+  "paperTitle": "2017年上半年",
+  "section": "基础知识",
+  "source": "2017年上半年软件设计师基础知识真题（答案详解 docx）",
+  "questions": [
+    {
+      "id": "sd-201705-01",
+      "no": 1,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "CPU 执行算术运算或者逻辑运算时，常将源操作数和结果暂存在（1）中。",
+      "blanks": [
+        {
+          "options": {
+            "A": "程序计数器 (PC)",
+            "B": "累加器 (AC)",
+            "C": "指令寄存器 (IR)",
+            "D": "地址寄存器 (AR)"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "程序计数器（PC）是用于存放下一条指令所在单元的地址的地方。  累加器（AC）全称累加寄存器，是一个通用寄存器。其功能是，当运算器的算术逻辑单元(ALU)执行算术或逻辑运算时，为 ALU 提供一个工作区。累加寄存器暂时存放 ALU 运算的结果信息。  指令寄存器（IR）用于存放当前从主存储器读出的正在执行的一条指令。  地址寄存器（AR）用来保存当前 CPU 所访问的内存单元的地址。由于在内存和 CPU 之间存在着操作速度上的差别，所以必须使用地址寄存器来保持地址信息，直到内存的读/写操作完成为止。 2017年5月第2题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-02",
+      "no": 2,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "要判断宇长为 16 位的整数 a 的低四位是否全为 0，则（2）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "将 a 与 0x000F 进行\"逻辑与\"运算，然后判断运算结果是否等于 0",
+            "B": "将 a 与 0x000F 进行\"逻辑或\"运算，然后判断运算结果是否等于 F",
+            "C": "将 a 与 0x000F 进行\"逻辑异或\"运算，然后判断运算结果是否等于 O",
+            "D": "将 a 与 0x000F 进行\"逻辑与\"运算，然后判断运算结果是否等于 F"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "2017年5月第3题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-03",
+      "no": 3,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "计算机系统中常用的输入/输出控制方式有无条件传送、中断、程序查询和 DMA 方式等。当采用（3）方式时，不需要 CPU 执行程序指令来传送数据。",
+      "blanks": [
+        {
+          "options": {
+            "A": "中断",
+            "B": "程序查询",
+            "C": "无条件传送",
+            "D": "DMA"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "DMA（直接存储器访问方式），DMA 将数据从一个地址空间复制到另外一个地址空间时，CPU 初始化这个传输动作，传输动作本身是由 DMA 控制器来执行和完成。 2017年5月第4题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-04",
+      "no": 4,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "某系统由下图所示的冗余部件构成。若每个部件的千小时可靠度都为 R ，则该系 统的千小时可靠度为（4）",
+      "blanks": [
+        {
+          "options": {
+            "A": "(1-R3)(1-R2)",
+            "B": "(1-(1-R)3)(1-(1-R)2)",
+            "C": "(1-R3)+(1-R2)",
+            "D": "(1-(1-R)3)+(1-(1-R)2)"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "串行系统的可靠性 R=R1 × R2 ×…× Rn 并联系统的可靠性为 R= 1- (1- R1) ×（1- R2）×…×（1- Rn) 2017年5月第5题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [
+        "含图"
+      ]
+    },
+    {
+      "id": "sd-201705-05",
+      "no": 5,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "己知数据信息为 16 位，最少应附加（5）位校验位，才能实现海明码纠错。",
+      "blanks": [
+        {
+          "options": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "6"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "2k -1≥m+k （m 为信息位，k 为校验位） 当 k=5 时，31≥21 等式成立。 2017年5月第6题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-06",
+      "no": 6,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "以下关于 Cache (高速缓冲存储器)的叙述中，不正确的是（6）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "Cache 的设置扩大了主存的容量",
+            "B": "Cache 的内容是主存部分内容的拷贝",
+            "C": "Cache 的命中率并不随其容量增大线性地提高",
+            "D": "Cache 位于主存与 CPU 之间"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "Cache中储存的内容是主存部分内容的复本，是按程序的局部性原理选取出来的最常使用或不久将来仍将使用的内容。 2017年5月第7题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-07",
+      "no": 7,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "HTTPS 使用（7）协议对报文进行封装",
+      "blanks": [
+        {
+          "options": {
+            "A": "SSH",
+            "B": "SSL",
+            "C": "SHA-1",
+            "D": "SET"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "HTTPS（Hyper Text Transfer Protocol over Secure Socket Layer），是以安全为目标的 HTTP 通道，是 HTTP的安全版。HTTPS 协议是由 SSL+HTTP 协议构建的可进行加密传输、身份认证的网络协议。 2017年5月第8题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-08",
+      "no": 8,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "以下加密算法中适合对大量的明文消息进行加密传输的是（8）",
+      "blanks": [
+        {
+          "options": {
+            "A": "RSA",
+            "B": "SHA-1",
+            "C": "MD5",
+            "D": "RC5"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "2017年5月第9题 假定用户 A、B 分别在 I1和 I2两个 CA 处取得了各自的证书，下面（9）是 A、B 互信的必要条件。 A.A、B 互换私钥 B.A、B 互换公钥 C.I1、I2互换私钥 D.I1、I2互换公钥 【答案】D 如果用户数量很多，仅一个CA负责为所有用户签署证书可能不现实。通常应有多个CA，每个CA为一部分用户发行和签署证书。 设用户A已从证书发放机构X1处获取了证书，用户B已从X2处获取了证书，如果A不如X2的公钥，他虽然能读取B的证书，但却无法验证用户B证书中X2的签名，因此B的证书对A来说是没有用处的。然而，如果两个证书发放机构X1和X2彼此间已经安全地交换了公开密钥，则A可通过以下过程获取B的公开密钥： （1）A从目录中获取由X1签署的X2证书X1《X2》，因为A知道X1的公开密钥，所以能验证X2的证书，并从中得到X2的公开密钥 （2）A再从目录中获取由X2签署的B的证书X2《B》，并由X2的公开密钥对此加以验证，然后从中得到B的公开密钥。 2017年5月第10题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch05",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-10",
+      "no": 10,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "甲软件公司受乙企业委托安排公司软件设计师开发了信息系统管理软件，由于在委托开发合同中未对软件著作权归属作出明确的约定，所以该信息系统管理软件的著作权由(10)享有。",
+      "blanks": [
+        {
+          "options": {
+            "A": "甲",
+            "B": "乙",
+            "C": "甲与乙共同",
+            "D": "软件设计师"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "委托开发：如果是接受他人委托进行开发的软件，其著作权的归属应由委托人与受托人签订书面合同约定；如果没有签订合同，或合同中未规定的，则其著作权由受托人享有。 由国家机关下达任务开发的软件，著作权的归属由项目任务书或合同规定，若未明确规定，其著作权应归任务接受方所有。 2017年5月第11题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch06",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-11",
+      "no": 11,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "根据我国商标法，下列商品中必须使用注册商标的是(11)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "医疗仪器",
+            "B": "墙壁涂料",
+            "C": "无糖食品",
+            "D": "烟草制品"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "根据我国法律规定： 1.卷烟、雪茄烟和有包装的烟丝必须申请商标注册，未经核准注册的，不得生产、销售。 2.除中药材和中药饮片以为的其他药品，都必须注册商标。 2017年5月第12题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch06",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-12",
+      "no": 12,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "甲、乙两人在同一天就同样的发明创造提交了专利申请，专利局将分别向各申请人通报有关情况，并提出多种可能采用的解决办法。下列说法中，不可能采用(12)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "甲、乙作为共同申请人",
+            "B": "甲或乙一方放弃权利并从另一方得到适当的补偿",
+            "C": "甲、乙都不授予专利权",
+            "D": "甲、乙都授予专利权"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "2017年5月第13题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch06",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-13",
+      "no": 13,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "数字语音的采样频率定义为 8kHz，这是因为(13)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "语音信号定义的频率最高值为 4kHz",
+            "B": "语音信号定义的频率最高值为 8kHz",
+            "C": "数字语音转输线路的带宽只有 8kHz",
+            "D": "一般声卡的采样频率最高为每秒 8k 次"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "采样频率大于等于工作频率的二倍，才能在以后恢复出实际波形，防止信息的丢失。 2017年5月第14题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-14",
+      "no": 14,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "使用图像扫描仪以 300DPI 的分辨率扫描一幅 3×4 英寸的图片，可以得到(14)像素的数字图像。",
+      "blanks": [
+        {
+          "options": {
+            "A": "300×300",
+            "B": "300×400",
+            "C": "900×4",
+            "D": "900×1200"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "DPI为像素/英寸(3*300)*(4*300)=900*1200 2017年5月第15、16题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-15",
+      "no": 15,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "在采用结构化开发方法进行软件开发时，设计阶段接口设计主要依据需求分析阶段的(15)。接口设计的任务主要是(16)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "数据流图",
+            "B": "E-R 图",
+            "C": "状态-迁移图",
+            "D": "加工规格说明"
+          },
+          "answer": "A"
+        },
+        {
+          "options": {
+            "A": "定义软件的主要结构元素及其之间的关系",
+            "B": "确定软件涉及的文件系统的结构及数据库的表结构",
+            "C": "描述软件与外部环境之间的交互关系，软件内模块之间的调用关系",
+            "D": "确定软件各个模块内部的算法和数据结构"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "(16)题A是架构定义任务，B是数据存储设计任务，D是详细设计任务 2017年5月第17、18题",
+      "source": "答案详解 docx",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-17",
+      "no": 17,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "某软件项目的活动图如下图所示，其中顶点表示项目里程碑，连接顶点的边表示包含的活动，边上的数字表示活动的持续时间(天)，则完成该项目的最少时间为(17)天。活动 BD 和 HK 最早可以从第(18)天开始。(活动 AB、AE 和 AC 最早从第 1 天开始)",
+      "blanks": [
+        {
+          "options": {
+            "A": "17",
+            "B": "18",
+            "C": "19",
+            "D": "20"
+          },
+          "answer": "D"
+        },
+        {
+          "options": {
+            "A": "3 和 10",
+            "B": "4 和 11",
+            "C": "3 和 9",
+            "D": "4 和 10"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "因为网络图是从0开始算的，按题目要求活动AB从第1天开始的话，就是1、2、3,活动BD就是第4天开始，相应的活动HK就是第11天开始。 2017年5月第19题",
+      "source": "答案详解 docx",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [
+        "含图"
+      ]
+    },
+    {
+      "id": "sd-201705-19",
+      "no": 19,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "在进行软件开发时，采用无主程序员的开发小组，成员之间相互平等;而主程序员负责制的开发小组，由一个主程序员和若干成员组成，成员之间没有沟通。在一个由 8 名开发人员构成的小组中，无主程序员组和主程序员组的沟通路径分别是(19)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "32 和 8",
+            "B": "32 和 7",
+            "C": "28 和 8",
+            "D": "28 和 7"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "沟通渠道=N(N-1)/2，N是指参与沟通者的人数。所以8*7/2=28 成员之间没有沟通，只与主程序员沟通，所以沟通路径为7。 2017年5月第20题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-20",
+      "no": 20,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "在高级语言源程序中，常需要用户定义的标识符为程序中的对象命名，常见的命名对象有(20)。 ①关键字（或保留字）②变量③函数④数据类型⑤注释",
+      "blanks": [
+        {
+          "options": {
+            "A": "①②③",
+            "B": "②③④",
+            "C": "①③⑤",
+            "D": "②④⑤"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "在编程语言中，标识符是用户编程时使用的名字，对于变量、常量、函数、语句块也有名字，我们统统称之为标识符。关键字作为用户标识符。 2017年5月第21题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-21",
+      "no": 21,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "在仅由字符 a、b 构成的所有字符串中，其中以 b 结尾的字符串集合可用正规式表示为(21)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "(b|ab)*b",
+            "B": "(ab*)*b",
+            "C": "a*b*b",
+            "D": "(a|b)*b"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "2017年5月第22题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-22",
+      "no": 22,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "在以阶段划分的编译过程中，判断程序语句的形式是否正确属于(22) 阶段的工作。",
+      "blanks": [
+        {
+          "options": {
+            "A": "词法分析",
+            "B": "语法分析",
+            "C": "语义分析",
+            "D": "代码生成"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "2017年5月第23题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-23",
+      "no": 23,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "某文件管理系统在磁盘上建立了位示图(bitmap) ，记录磁盘的使用情况。若计算机 系统的字长为 32 位，磁盘的容量为 300GB，物理块的大小为 4MB ，那么位示图的大小需要(23)个字。",
+      "blanks": [
+        {
+          "options": {
+            "A": "1200",
+            "B": "2400",
+            "C": "6400",
+            "D": "9600"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "300*1024/4/32=2400 2017年5月第24题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-24",
+      "no": 24,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "某系统中有 3 个并发进程竞争资源 R，每个进程都需要 5 个 R，那么至少有(24)个 R，才能保证系统不会发生死锁。",
+      "blanks": [
+        {
+          "options": {
+            "A": "12",
+            "B": "13",
+            "C": "14",
+            "D": "15"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "2017年5月第25题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-25",
+      "no": 25,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "某计算机系统页面大小为 4K ，进程的页面变换表如下所示。若进程的逻辑地址为 2D16H。该地址经过变换后，其物理地址应为(25)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "2048H",
+            "B": "4096H",
+            "C": "4D16H",
+            "D": "6D16H"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "2017年5月第26、27、28题 进程 P1、P2 、P3、P4 和 P5 的前趋图如下所示:",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-26",
+      "no": 26,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "若用 PV 操作控制进程 P1、P2、P3、P4 和 P5 并发执行的过程，需要设置 5 个信号量 S1、S2、S3、S4 和 S5，且信号量 S1~S5 的初值都等于零。如下的进程执行图中 a 和 b 处应分别填写(26);c 和 d 处应分别填写(27) ;e 和 f 处应分别填写(28)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "V (S1)和 P(S2)V(S3)",
+            "B": "P(S1)和 V(S2)V(S3)",
+            "C": "V(S1)和 V(S2)V(S3)",
+            "D": "P(S1)和 P(S2)V(S3)"
+          },
+          "answer": "B"
+        },
+        {
+          "options": {
+            "A": "P(S2)和 P(S4)",
+            "B": "V(S2)和 P(S4)",
+            "C": "P(S2)和 V(S4)",
+            "D": "V(S2)和 V(S4)"
+          },
+          "answer": "C"
+        },
+        {
+          "options": {
+            "A": "P(S4)和 V(S5)",
+            "B": "V(S5)和 P(S4)",
+            "C": "V(S4)和 P(S5)",
+            "D": "V(S4)和 V(S5)"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "2017年5月第29题",
+      "source": "答案详解 docx",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-29",
+      "no": 29,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "以下关于螺旋模型的叙述中，不正确的是(29)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "它是风险驱动的，要求开发人员必须具有丰富的风险评估知识和经验",
+            "B": "它可以降低过多测试或测试不足带来的风险",
+            "C": "它包含维护周期，因此维护和开发之间没有本质区别",
+            "D": "它不适用于大型软件开发"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "2017年5月第30题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-30",
+      "no": 30,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "以下关于极限编程(XP) 中结对编程的叙述中，不正确的是(30)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "支持共同代码拥有和共同对系统负责",
+            "B": "承担了非正式的代码审查过程",
+            "C": "代码质量更高",
+            "D": "编码速度更快"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "2017年5月第31题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-31",
+      "no": 31,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "以下关于 C/S (客户机/服务器)体系结构的优点的叙述中，不正确的是（31）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "允许合理地划分三层的功能，使之在逻辑上保持相对独立性",
+            "B": "允许各层灵活地选用平台和软件",
+            "C": "各层可以选择不同的开发语言进行并行开发",
+            "D": "系统安装、修改和维护均只在服务器端进行"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "2017年5月第32题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-32",
+      "no": 32,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "在设计软件的模块结构时，(32)不能改进设计质量。",
+      "blanks": [
+        {
+          "options": {
+            "A": "尽量减少高扇出结构",
+            "B": "模块的大小适中",
+            "C": "将具有相似功能的模块合并",
+            "D": "完善模块的功能"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "2017年5月第33、34题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-33",
+      "no": 33,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "模块 A、B 和 C 有相同的程序块，块内的语句之间没有任何联系，现把改程序块取出来，形成新的模块 D，则模块 D 的内聚类型为(33)内聚。以下关于该内聚类型的叙述中，不正确的是(34)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "巧合",
+            "B": "逻辑",
+            "C": "时间",
+            "D": "过程"
+          },
+          "answer": "A"
+        },
+        {
+          "options": {
+            "A": "具有最低的内聚性",
+            "B": "不易修改和维护",
+            "C": "不易理解",
+            "D": "不影响模块间的耦合关系"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "内聚：指模块内部各元素之间联系的紧密程度。模块的内聚类型分为7种，根据内聚度从高到低的排序。 巧合内聚也称偶然内聚，模块内各部分之间没有联系，或即使有联系，也很松散，是内聚程序最低的模块。 2017年5月第35、36题",
+      "source": "答案详解 docx",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-35",
+      "no": 35,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "对下图所示的程序流程图进行语句覆盖测试和路劲覆盖测试，至少需要(35)个测试用例。采用 McCabe 度量法计算其环路复杂度为(36)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "2 和 3",
+            "B": "2 和 4",
+            "C": "2 和 5",
+            "D": "2 和 6"
+          },
+          "answer": "A"
+        },
+        {
+          "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "二种方法计算复杂度： 流图G的圈复杂度V（G），为V（G）=E-N+2，E是流图中边的数量，N是流图中结点的数量 流图中区域的数量等于圈复杂性 2017年5月第37、38题",
+      "source": "答案详解 docx",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": [
+        "含图"
+      ]
+    },
+    {
+      "id": "sd-201705-37",
+      "no": 37,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "在面向对象方法中，两个及以上的类作为一个类的超类时，称为(37)，使用它可能造成子类中存在(38)的成员。",
+      "blanks": [
+        {
+          "options": {
+            "A": "多重继承",
+            "B": "多态",
+            "C": "封装",
+            "D": "层次继承"
+          },
+          "answer": "A"
+        },
+        {
+          "options": {
+            "A": "动态",
+            "B": "私有",
+            "C": "公共",
+            "D": "二义性"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "2017年5月第39题",
+      "source": "答案详解 docx",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-39",
+      "no": 39,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "采用面向对象方法进行软件开发，在分析阶段，架构师主要关注系统的(39)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "技术",
+            "B": "部署",
+            "C": "实现",
+            "D": "行为"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "2017年5月第40题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-40",
+      "no": 40,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "在面向对象方法中,多态指的是(40)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "客户类无需知道所调用方法的特定子类的实现",
+            "B": "对象动态地修改类",
+            "C": "一个对象对应多张数据库表",
+            "D": "子类只能够覆盖父类中非抽象的方法"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "2017年5月第41、42、43题 (41)A.序列图 B.状态图 C.通信图 D.活动图 (42)A.类 B.对象 C.流名称 D.消息 (43)A.类 B.对象 C.流名称 D.消息 【答案】C B D 前的部分是对象名，”:”号后面的部分是类名。而对象之间连线上面的箭头所标识的对象之间通信的消息。 2017年5月第44、45题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-44",
+      "no": 44,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "下图所示为观察者(Obserrver)模式的抽象示意图，其中(44)知道其观察者，可以有任何多个观察者观察同一个目标;提供住处和删除观察者对象的接口。此模式体现的最主要的特征是(45)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "Subject",
+            "B": "Observer",
+            "C": "ConcreteSubject",
+            "D": "ConcreteObserver"
+          },
+          "answer": "C"
+        },
+        {
+          "options": {
+            "A": "类应该对扩展开放，对修改关闭",
+            "B": "使所要交互的对象尽量松耦合",
+            "C": "组合优先于继承使用",
+            "D": "仅与直接关联类交互"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "2017年5月第46、47题",
+      "source": "答案详解 docx",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": [
+        "含图"
+      ]
+    },
+    {
+      "id": "sd-201705-46",
+      "no": 46,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "装饰器 (Decorator) 模式用于(46);外观 (Facade) 模式用于(47)。 ①将一个对象加以包装以给客户提供其希望的另外一个接口 ②将一个对象加以包装以提供一些额外的行为 ③将一个对象加以包装以控制对这个对象的访问 ④将一系列对象加以包装以简化其接口",
+      "blanks": [
+        {
+          "options": {
+            "A": "①",
+            "B": "②",
+            "C": "③",
+            "D": "④"
+          },
+          "answer": "B"
+        },
+        {
+          "options": {
+            "A": "①",
+            "B": "②",
+            "C": "③",
+            "D": "④"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "外观模式(Facade) 2017年5月第48题",
+      "source": "答案详解 docx",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-48",
+      "no": 48,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "某确定的有限自动机 (DFA) 的状态转换图如下图所示 (A 是初态，D、E 是终态)，则该 DFA 能识别(48)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "00110",
+            "B": "10101",
+            "C": "11100",
+            "D": "11001"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "2017年5月第49题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": [
+        "含图"
+      ]
+    },
+    {
+      "id": "sd-201705-49",
+      "no": 49,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "函数 main()、f()的定义如下所示，调用函数们 f()时，第一个参数采用传值 (call by value) 方式，第二个参数采用传引用 (call by reference) 方式， main() 函数中 \"print(x)\" 执行后输出的值为(49)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "11",
+            "B": "40",
+            "C": "45",
+            "D": "70"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "2017年5月第50题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-50",
+      "no": 50,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "下图为一个表达式的语法树，该表达式的后缀形式为(50)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "x 5 y + * a / b -",
+            "B": "x 5 y a b*+/-",
+            "C": "-/ * x + 5 y a b",
+            "D": "x 5 * y + a/b-"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "2017年5月第51、52题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": [
+        "含图"
+      ]
+    },
+    {
+      "id": "sd-201705-51",
+      "no": 51,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "若事务 T1对数据 D1 加了共享锁，事务 T2 、T3分别对数据 D2 、D3 加了排它锁，则事务 T1对数据(51);事务 T2对数据(52)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "D2 、D3 加排它锁都成功",
+            "B": "D2 、D3 加共享锁都成功",
+            "C": "D2 加共享锁成功 ，D3 加排它锁失败",
+            "D": "D2 、D3 加排它锁和共享锁都失败"
+          },
+          "answer": "D"
+        },
+        {
+          "options": {
+            "A": "D1 、D3 加共享锁都失败",
+            "B": "D1、D3 加共享锁都成功",
+            "C": "D1 加共享锁成功 ，D3 如排它锁失败",
+            "D": "D1 加排它锁成功 ，D3 加共享锁失败"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "有共享锁可以再加共享锁，但不可以加排他锁。有排它锁，则共享锁和排它锁都不可以再加。 2017年5月第53题",
+      "source": "答案详解 docx",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-53",
+      "no": 53,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "假设关系 R<U,F>,U= {A1,A2, A3}，F = {A1A3 →A2,A1A2 →A3}，则关系 R 的各候选关键字中必定含有属性(53)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "A1",
+            "B": "A2",
+            "C": "A3",
+            "D": "A2 A3"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "2017年5月第54、55、56题 在某企业的工程项目管理系统的数据库中供应商关系 Supp、项目关系 Proj 和零件关系 Part 的 E-R 模型和关系模式如下: Supp（供应商号,供应商名,地址,电话） Proj（项目号,项目名,负责人,电话） Part（零件号,零件名）",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-54",
+      "no": 54,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "其中，每个供应商可以为多个项目供应多种零件，每个项目可由多个供应商供应多种零件。SP P 需要生成一个独立的关系模式，其联系类型为（54） 给定关系模式 SP P（供应商号,项目号,零件号,数量）查询至少供应了 3 个项目（包含 3 项）的供应商，输出其供应商号和供应零件数量的总和，并按供应商号降序排列。 SELECT 供应商号，SUM（数量） FROM(55) GROUP BY 供应商号 (56) ORDER BY 供应商号 DESC;",
+      "blanks": [],
+      "analysis": "",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": false,
+      "chapter": "ch03",
+      "flags": [
+        "无解析",
+        "不完整"
+      ]
+    },
+    {
+      "id": "sd-201705-55",
+      "no": 55,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "SELECT 供应商号，SUM（数量） FROM(55) GROUP BY 供应商号 (56) ORDER BY 供应商号 DESC; (54)A.*:*:* B.1:*:* C.1:1:* D.1:1:1",
+      "blanks": [],
+      "analysis": "",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": false,
+      "chapter": "ch13",
+      "flags": [
+        "无解析",
+        "不完整"
+      ]
+    },
+    {
+      "id": "sd-201705-56",
+      "no": 56,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "(56) ORDER BY 供应商号 DESC; (54)A.*:*:* B.1:*:* C.1:1:* D.1:1:1 (55)A.Supp B.Proj C.Part D.SP P",
+      "blanks": [
+        {
+          "options": {
+            "A": "HAVING COUNT(项目号)>2",
+            "B": "WHERE COUNT(项目号)>2",
+            "C": "HAVING COUNT(DISTINCT(项目号))>2",
+            "D": "WHERE COUNT(DISTINCT(项目号))>3"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "2017年5月第57题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-57",
+      "no": 57,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "以下关于字符串的叙述中，正确的是（57）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "包含任意个空格字符的字符串称为空串",
+            "B": "字符串不是线性数据结构",
+            "C": "字符串的长度是指串中所含字符的个数",
+            "D": "字符串的长度是指串中所含非空格字符的个数"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "2017年5月第58题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-58",
+      "no": 58,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "已知栈 S 初始为空，用 I 表示入栈、O 表示出栈，若入栈序列为 a1a2a3a4a5，则通过栈 S 得到出栈序列 a2a4a5a3a1的合法操作序列(58)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "IIOIIOIOOO",
+            "B": "IOIOIOIOIO",
+            "C": "IOOIIOIOIO",
+            "D": "IIOOIOIOOO"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "2017年5月第59题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-59",
+      "no": 59,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "某二叉树的先序遍历序列为 ABCDEF ，中序遍历序列为BADCFE ，则该二叉树的高度(即层数)为(59)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "6"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "根据先序遍历和中序遍历得此二叉树为： 2017年5月第60题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-60",
+      "no": 60,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "对于 n 个元素的关键宇序列{k1,k2, ...kn}，当且仅当满足关系 ki≤k2i且 ki≤k2i+1{i=1.2...[n/2]} 时称其为小根堆(小顶堆)。以下序列中，(60)不是小根堆。",
+      "blanks": [
+        {
+          "options": {
+            "A": "16,25,40,55,30,50,45",
+            "B": "16,40,25,50,45,30,55",
+            "C": "16,25,39.,41,45,43,50",
+            "D": "16,40,25,53,39,55,45"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "2017年5月第61题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-61",
+      "no": 61,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "在 12 个互异元素构成的有序数组 a[1..12] 中进行二分查找(即折半查找，向下取 整)，若待查找的元素正好等于 a[9][，则在此过程中，依次与数组中的(61)比较后，查找成功结束。",
+      "blanks": [
+        {
+          "options": {
+            "A": "a[6]、 a[7]、 a[8]、 a[9]",
+            "B": "a[6]、a[9]",
+            "C": "a[6]、 a[7]、 a[9]",
+            "D": "a[6]、 a[8]、 a[9]"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "2017年5月第62、63、64、65题 某汽车加工工厂有两条装配线 L1 和 L2，每条装配线的工位数均为 n（Sij，i=1 或 2，j= 1，2，...，n），两条装配线对应的工位完成同样的加工工作，但是所需要的时间可能不同（aij，i=1 或 2，j =1，2，...，n）。汽车底盘开始到进入两条装配线的时间 (e1，e2) 以及装配后到结束的时间(X1X2)也可能不相同。从一个工位加工后流到下一个工位需要迁移时间(tij，i=1 或 2，j =2，...n）。现在要以最快的时间完成一辆汽车的装配，求最优的装配路线。 分析该问题，发现问题具有最优子结构。以 L1 为例，除了第一个工位之外，经过第 j 个工位的最短时间包含了经过 L1 的第 j-1 个工位的最短时间或者经过 L2 的第 j-1 个工位的最短时间，如式(1)。装配后到结束的最短时间包含离开L1的最短时间或者离开L2的最短时间如式（2）。 由于在求解经过 L1 和 L2 的第 j 个工位的最短时间均包含了经过L1 的第 j-1 个工位的最短时间或者经过 L2 的第 j-1 个工位的最短时间，该问题具有重复子问题的性质，故采用迭代方法求解。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-62",
+      "no": 62,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "该问题采用的算法设计策略是（62），算法的时间复杂度为（63） 以下是一个装配调度实例，其最短的装配时间为（64），装配路线为（65）",
+      "blanks": [],
+      "analysis": "",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": false,
+      "chapter": "ch09",
+      "flags": [
+        "无解析",
+        "不完整"
+      ]
+    },
+    {
+      "id": "sd-201705-64",
+      "no": 64,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "以下是一个装配调度实例，其最短的装配时间为（64），装配路线为（65） (62)A.分治 B.动态规划 C.贪心 D.回溯",
+      "blanks": [
+        {
+          "options": {
+            "A": "21",
+            "B": "23",
+            "C": "20",
+            "D": "26"
+          },
+          "answer": "B"
+        },
+        {
+          "options": {
+            "A": "S11→S12→S13",
+            "B": "S11→S22→S13",
+            "C": "S21→S12→S23",
+            "D": "S21→S22→S23"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "2017年5月第66题",
+      "source": "答案详解 docx",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch09",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-66",
+      "no": 66,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "在浏览器地址栏输入一个正确的网址后，本地主机将首先在(66)查询该网址对应的 IP 地址。",
+      "blanks": [
+        {
+          "options": {
+            "A": "本地 DNS 缓存",
+            "B": "本机 hosts 文件",
+            "C": "本地 DNS 服务器",
+            "D": "根域名服务器"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "2017年5月第67题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-67",
+      "no": 67,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "下面关于 Linux 目录的描述中，正确的是(67)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "Linux 只有一个根目录，用 \" /root \"表示",
+            "B": "Linux 中有多个根目录，用\"/\"加相应目录名称表示",
+            "C": "Linux 中只有一个根目录，用\"/\"表示",
+            "D": "Linux 中有多个根目录，用相应目录名称表示"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "2017年5月第68题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-68",
+      "no": 68,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "以下关于 TCP/IP 协议栈中协议和层次的对应关系正确的是（68）。",
+      "blanks": [],
+      "analysis": "2017年5月第69题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": false,
+      "chapter": "ch04",
+      "flags": [
+        "不完整"
+      ]
+    },
+    {
+      "id": "sd-201705-69",
+      "no": 69,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "在异步通信中，每个字符包含 1 位起始位、7 位数据位和 2 位终止位，若每秒钟传送 500 个字符，则有效数据速率为(69)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "500b/s",
+            "B": "700b/s",
+            "C": "3500b/s",
+            "D": "5000b/s"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "2017年5月第70题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-70",
+      "no": 70,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "以下路由策略中，依据网络信息经常更新路由的是(70)。",
+      "blanks": [
+        {
+          "options": {
+            "A": "静态路由",
+            "B": "洪泛式",
+            "C": "随机路由",
+            "D": "自适应路由"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "路由算法分为： 静态路由算法 泛射路由算法（扩散法） 固定路由算法 随机走动法（Random Walk） 最短路径法(Shortest Path, SP) 2017年5月第71、72、73、74、75题",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": []
+    },
+    {
+      "id": "sd-201705-71",
+      "no": 71,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "The beauty of software is in its function，in its internal structure，and in the way in which it is created by a team. To a user，a program with just the right features presented through an intuitive and(71)interface is beautiful.To a software designer，an internal structure that is partitioned in a simple and intuitive manner，and that minimizes internal coupling is beautiful.To developers and managers ，a motivated team of developers making significant progress every week，and producing defect-free code，is beautiful.There is beauty on all these levels. our world needs software--lots of software. Fifty years ago software was something that ran in a few big and expensive machines. Thirty years ago it was something that ran in most companies and industrial settings. Now there is software running in our cell phones，watches，appliances，automobiles，toys，and tools. And need for new and better software never(72).As our civilization grows and expands，as developing nations build their infrastructures，as developed nations strive to achieve ever greater efficiencies，the need for more and more Software(73)to increase. It would be a great shame if，in all that software，there was no beauty. We know that software can be ugly. We know that it can be hard to use，unreliable ，and carelessly structured. We know that there are software systems whose tangled and careless internal structures make them expensive and difficult to change. We know that there are software systems that present their features through an awkward and cumbersome interface. We know that there are software systems that crash and misbehave. These are(74) systems. Unfortunately，as a profession，software developers tend to create more ugly systems than beautiful ones. There is a secret that the best software developers know.Beauty is cheaper than ugliness. Beauty is faster than ugliness. A beautiful software system can be built and maintained in less time，and for less money ,than an ugly one. Novice software developers don't. understand this. They think that they have to do everything fast and quick. They think that beauty is(75) .No! By doing things fast and quick，they make messes that make the software stiff，and hard to understand，Beautiful systems e flexible and easy to understand. Building them and maintaining them is a joy. It is ugliness that is impractical.Ugliness will slow you down and make your software expensive and brittle. Beautiful systems cost the least build and maintain，and are delivered soonest.",
+      "blanks": [],
+      "analysis": "",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": false,
+      "chapter": "ch12",
+      "flags": [
+        "无解析",
+        "不完整"
+      ]
+    },
+    {
+      "id": "sd-201705-72",
+      "no": 72,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "our world needs software--lots of software. Fifty years ago software was something that ran in a few big and expensive machines. Thirty years ago it was something that ran in most companies and industrial settings. Now there is software running in our cell phones，watches，appliances，automobiles，toys，and tools. And need for new and better software never(72).As our civilization grows and expands，as developing nations build their infrastructures，as developed nations strive to achieve ever greater efficiencies，the need for more and more Software(73)to increase. It would be a great shame if，in all that software，there was no beauty. We know that software can be ugly. We know that it can be hard to use，unreliable ，and carelessly structured. We know that there are software systems whose tangled and careless internal structures make them expensive and difficult to change. We know that there are software systems that present their features through an awkward and cumbersome interface. We know that there are software systems that crash and misbehave. These are(74) systems. Unfortunately，as a profession，software developers tend to create more ugly systems than beautiful ones. There is a secret that the best software developers know.Beauty is cheaper than ugliness. Beauty is faster than ugliness. A beautiful software system can be built and maintained in less time，and for less money ,than an ugly one. Novice software developers don't. understand this. They think that they have to do everything fast and quick. They think that beauty is(75) .No! By doing things fast and quick，they make messes that make the software stiff，and hard to understand，Beautiful systems e flexible and easy to understand. Building them and maintaining them is a joy. It is ugliness that is impractical.Ugliness will slow you down and make your software expensive and brittle. Beautiful systems cost the least build and maintain，and are delivered soonest. (71)A.Simple B. Hard C. Complex D. Duplicated",
+      "blanks": [],
+      "analysis": "",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": false,
+      "chapter": "ch12",
+      "flags": [
+        "无解析",
+        "不完整"
+      ]
+    },
+    {
+      "id": "sd-201705-74",
+      "no": 74,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "We know that software can be ugly. We know that it can be hard to use，unreliable ，and carelessly structured. We know that there are software systems whose tangled and careless internal structures make them expensive and difficult to change. We know that there are software systems that present their features through an awkward and cumbersome interface. We know that there are software systems that crash and misbehave. These are(74) systems. Unfortunately，as a profession，software developers tend to create more ugly systems than beautiful ones. There is a secret that the best software developers know.Beauty is cheaper than ugliness. Beauty is faster than ugliness. A beautiful software system can be built and maintained in less time，and for less money ,than an ugly one. Novice software developers don't. understand this. They think that they have to do everything fast and quick. They think that beauty is(75) .No! By doing things fast and quick，they make messes that make the software stiff，and hard to understand，Beautiful systems e flexible and easy to understand. Building them and maintaining them is a joy. It is ugliness that is impractical.Ugliness will slow you down and make your software expensive and brittle. Beautiful systems cost the least build and maintain，and are delivered soonest. (71)A.Simple B. Hard C. Complex D. Duplicated (72)A.happens B.exists C.stops D.starts (73)A. starts B.continues C.appears D.stops",
+      "blanks": [],
+      "analysis": "",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": false,
+      "chapter": "ch12",
+      "flags": [
+        "无解析",
+        "不完整"
+      ]
+    },
+    {
+      "id": "sd-201705-75",
+      "no": 75,
+      "paper": "2017-05",
+      "paperTitle": "2017年上半年",
+      "stem": "There is a secret that the best software developers know.Beauty is cheaper than ugliness. Beauty is faster than ugliness. A beautiful software system can be built and maintained in less time，and for less money ,than an ugly one. Novice software developers don't. understand this. They think that they have to do everything fast and quick. They think that beauty is(75) .No! By doing things fast and quick，they make messes that make the software stiff，and hard to understand，Beautiful systems e flexible and easy to understand. Building them and maintaining them is a joy. It is ugliness that is impractical.Ugliness will slow you down and make your software expensive and brittle. Beautiful systems cost the least build and maintain，and are delivered soonest. (71)A.Simple B. Hard C. Complex D. Duplicated (72)A.happens B.exists C.stops D.starts (73)A. starts B.continues C.appears D.stops (74)A.practical B.useful C.beautiful D.ugly",
+      "blanks": [
+        {
+          "options": {
+            "A": "impractical",
+            "B": "perfect",
+            "C": "time-wasting",
+            "D": "practical"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "试题一（15 分） 阅读下列说明和图，回答问题 1 至问题 4，将解答填入答题纸的对应栏内。 【说明】 某医疗器械公司作为复杂医疗产品的集成商，必须保持高质量部件的及时供应。为了实现这一目标，该公司欲开发一采购系统。系统的主要功能如下: 1.检查库存水平。采购部门每天检查部件库存量，当特定部件的库存量降至其订货点时，返回低存量部件及库存量。 2.下达采购订单。采购部门针对低存量部件及库存量提交采购请求，向其供应商(通过供应商文件访问供应商数据)下达采购订单，并存储于采购订单文件中。 3. 交运部件。当供应商提交提单并交运部件时，运输和接收(S/R)部门通过执行以下三步过程接收货物： (1)验证装运部件。通过访问采购订单并将其与提单进行比较来验证装运的部件，并将提单信息发给 S/R 职员。 如果收货部件项目出现在采购订单和提单上，则已验证的提单和收货部件项目将被送去检验。否则，将 S/R 职员提交的装运错误信息生成装运错误通知发送给供应商。 (2) 检验部件质量。通过访问质量标准来检查装运部件的质量，并将己验证的提单发给检验员。如果部件满足所有质量标准，则将其添加到接受的部件列表用于更新部件库存。如果部件未通过检查，则将检验员创建的缺陷装运信息生成缺陷装运通知发送给供应商。 (3)更新部件库存。库管员根据收到的接受的部件列表添加本次采购数量，与原有库存量累加来更新库存部件中的库存量。标记订单采购完成。现采用结构化方法对该采购系统进行分析与设计，获得如图 1-1 所示的上下文数据流图和图 1-2 所示的 0 层数据流图。 图 1-2 0 层数据流图 【问题 1】（5 分） 使用说明中的词语，给出图 1-1 中的实体 E1 ~E5 E1 供应商 E2 采购部门 E3 检验员 E4 库管员 E5 S/R 职员 【问题 2】（4 分） 使用说明中的词语，给出图 1-2 中的数据存储 D1~D4 的名称。 D1 部件库存表 D2 采购订单文件 D3 质量标准文件 D4 供应商文件 【问题 3】（4 分） 根据说明和图中术语，补充图 1-2 中缺失的数据流及其起点和终点。 检查库存信息：P1（检查库存水平）-----D1（部件库存表） 产品送检： P3（验证装运部件）-----P4（校验部件质量） 装运错误通知：P3（验证装运部件）-----E1（供应商） 缺陷装运通知：P4（校验部件质量）-----E1（供应商） 【问题 4】(2 分) 用 200 字以内文字，说明建模图 1-1 和图 1-2 时如何保持数据流图平衡。 父图中某个加工的输入输出数据流必须与其子图的输入输出数据流在数量上和内容上保持一致 即数据不会凭空产生，也不能凭空消失。父图的一个输入（或输出）数据流应对应子图中几个输入 （或输出）数据流，而子图中组成的这些数据流的数据项全体正好是父图中的这个数据流。 试题二(共 15 分) 阅读下列说明，回答问题 1 至问题 3,将解答填入答题纸的对应栏内。 【说明】 某房屋租赁公司拟开发一个管理系统用于管理其持有的房屋、租客及员工信息。请根据下述需求描述完成系统的数据库设计。 【需求描述】 1.公司拥有多幢公寓楼，每幢公寓楼有唯一的楼编号和地址。每幢公寓楼中有多套公寓，每套公寓在楼内有唯一的编号(不同公寓楼内的公寓号可相同〉。系统需记录每套公寓的卧室数和卫生间数。 2.员工和租客在系统中有唯一的编号(员工编号和租客编号)。 3.对于每个租客，系统需记录姓名、多个联系电话、一个银行账号（方便自动扣房租)、一个紧急联系人的姓名及联系电话。 4.系统需记录每个员工的姓名、一个联系电话和月工资。员工类别可以是经理或维修工，也可兼任。每个经理可以管理多幢公寓楼。每幢公寓楼必须由一个经理管理。系统需记录每个维修工的业务技能，如：水暖维修、电工、木工等。 5.租客租赁公寓必须和公司签订租赁合同。一份租赁合同通常由一个或多个租客(合租)与该公寓楼的经理签订，一个租客也可租赁多套公寓。合同内容应包含签订日期、开始时间、租期、押金和月租金。 【概念模型设计】 根据需求阶段收集的信息，设计的实体联系图（不完整)如图 2-1所示。 【逻辑结构设计】 根据概念摸型设计阶段完成的实体联系图，得出如下关系模式(不完整): 联系电话(电话号码，租客编号) 租客（租客编号，姓名，银行账号，联系人姓名，联系人电话) 员工(员工编号，姓名，联系电话，类别，月工资， （a） ) 公寓楼( (b) ，地址，经理编号) 公寓(楼编号，公寓号，卧室数，卫生间数〉 合同（合同编号，租客编号，楼编号，公寓号，经理编号，签订日期， 起始日期，租期， （c） ，押金） 【问题 1】（4.5 分） 补充图 2-1 中的“签约”联系所关联的实体及联系类型。 维修工 【问题 2】（4.5 分） 补充逻辑结构设计中的（a）、（b）、（c）三处空缺。 【问题 3】（6 分） 在租期内，公寓内设施如出现问题，租客可在系统中进行故障登记，填写故障描述，每项故障由系统自动生成唯一的故障编号，由公司派维修工进行故障维修，系统需记录每次维修的维修日期和维修内容。请根据此需求，对图 2-1 进行补充，并将所补充的 ER 图内容转换为一个关系模式，请给出该关系模式。 试题三（共 15 分） 阅读下列系统设计说明，回答问题 1 至问题 3，将解答填入答题纸的对应栏内。 【说明】 某玩具公司正在开发一套电动玩具在线销售系统，用于向注册会员提供端对端的玩具 定制和销售服务。在系统设计阶段，\"创建新订单 (New Order)\" 的设计用例详细描述如 表 3-1 所示，候选设计类分类如表 3-2 所示，并根据该用例设计出部分类图如圈子 3-1 所 示。 表 3-1 创建新订单 (NewOrder) 设计用例 表 3-2 候选设计类分类 在订单处理的过程中，会员可以点击“取消订单\"取消该订单。如果支付失败，该订单将被标记为挂起状态，可后续重新支付，如果挂起超时 30 分钟未支付，系统将自动取消该订单。订单支付成功后，系统判断订单类型: (1)对于常规订单，标记为备货状态，订单信息发送到货运部，完成打包后交付快递发货; (2)对于定制订单，会自动进入定制状态，定制完成后交付快递发货。会员在系统中点击”收货\"按钮变为收货状态，结束整个订单的处理流程。根据订单处理过程所设计的状态图如图 3-2 所示。 【问题 1】(6 分) 根据表 3-1 中所标记的候选设计类，请按照其类别将编号C1~C12 分别填入表 3-2 中的（a）、（b）和（c）处。 【问题 2】 (4 分〉 根据创建新订单的用例描述，请给出图 3-1 中 X1~X4 处对应类的名称。 【问题 3】 (5 分) 根据订单处理过程的描述，在图 3-2 中 S1~S5 处分别填入对应的状态名称。 试题四 阅读下列说明和 C 代码，回答问题 1 至问题 3，将解答写在答题纸的对应栏内。 【说明】 假币问题：有 n 枚硬币，其中有一枚是假币，己知假币的重量较轻。现只有一个天平，要求用尽量少的比较次数找出这枚假币。 【分析问题】 将 n 枚硬币分成相等的两部分: (1)当 n 为偶数时，将前后两部分，即 1...n/2 和 n/2+1...0，放在天平的两端，较轻的一端里有假币，继续在较轻的这部分硬币中用同样的方法找出假币: (2)当 n 为奇数时，将前后两部分，即 1..(n -1)/2 和(n+1)/2+1...0，放在天平的两端，较轻的一端里有假币，继续在较轻的这部分硬币中用同样的方法找出假币:若两端重量相等，则中间的硬币，即第 (n+1)/2 枚硬币是假币。 【C 代码】 下面是算法的 C 语言实现，其中: coins[]: 硬币数组 first，last:当前考虑的硬币数组中的第一个和最后一个下标 #include <stdio.h> int getCounterfeitCoin(int coins[]， int first，iot last) { int firstSum = 0，lastSum = 0; int ì; If(first==last-1){ /*只剩两枚硬币*/ if(coins[first] < coins[last]) return first; return last; } if((last - first + 1) % 2 =0){ /*偶数枚硬币*/ for(i = first;i <( 1 );i++){ firstSum+= coins[i]; } for(i=first + (last-first) / 2 + 1;i < last +1;i++){ lastSum += coins[i]; } if( 2 ){ Return getCounterfeitCoin(coins,first,first+(last-first)/2;) }else{ Return getCounterfeitCoin(coins,first+(last-first)/2+1,last;) } } else { /*奇数枚硬币*/ For(i=first;i<first+(last-first)/2;i++){ firstSum+=coins[i]; } For(i=first+(last-first)/2+1;i<last+1;i++){ lastSum+=coins[i]; } If(firstSum<lastSum){ Return getCounterfeitCoin(coins,first,first+(last-first)/2-1); }else if(firstSum>lastSum){ Return getCounterfeitCoin(coins,first+(last-first)/2-1,last); }else{ Return( 3 ) } } } 【问题一】 根据题干说明，填充 C 代码中的空（1）-（3） 【问题二】 根据题干说明和 C 代码，算法采用了（ ）设计策略。函数getCounterfeitCoin 的时间复杂度为（ ）（用 O 表示）。 【问题三】 若输入的硬币数为 30，则最少的比较次数为（ ），最多的比较次数为（ ）。 试题五(共 15 分〉 阅读下列说明和 C++代码，将应填入(n)处的字句写在答题纸的对应栏内。 【说明】 某快餐厅主要制作井出售儿童套餐，一般包括主餐(各类比萨)、饮料和玩具，其餐品种类可能不同，但其制作过程相同。前台服务员(Waiter)调度厨师制作套餐。现采用生成器(Builder) 模式实现制作过程，得到如图 5-1 所示的类图。 【C++代码】 #include<iostream> #include <string> using namespace std; class Pizza { private: string parts; public: void setParts(string parts) { this->parts=parts; } string getParts() { return parts; } }; class PizzaBuilder { protected:Pizza* pizza; public: Pizza* getPizza() { retum pizza; } void createNewPizza() { pizza = new Pizza(); } ( 1 ); } class HawaiianPizzaBuilder :public PizzaBuilder { public: void buildParts() { pizza->setParts(\"cross +mild +ham&pineapple\"); } class SpicyPizzaBuider: public PizzaBuilder { public: void buildParts() { pizza->setParts(\"pan baked +hot +ham&pineapple\"); } } Class Waiter{ Private: PizzaBuilder* pizzaBuilder; public: void setPizzaBuilder(PizzaBuilder* pizzaBuilder) { /*设 置构建器*/ ( 2 ) } Pizza* getPizza() { return pizzaBuilder->getPizza(); } void construct() { /*构建*/ pizzaBuilder->createNewPizza(); ( 3 ) } }; int main(){ Waiter*waiter=new Waiter(); PizzaBuilder*hawaiian pizzabuilder=new HawaiianPizzaBuilder() ( 4 ); ( 5 ); cout<< \"pizza: \"<< waiter->getPizza()->getParts()<< endl; } 程序的输出结果为: pizza: cross + mild + ham&pineapple 试题六(共 15 分) 阅读下列说明和 Java 代码，将应填入 (n) 处的字句写在答题纸的对应栏内。 【说明】 某快餐厅主要制作并出售儿童套餐，一般包括主餐(各类比萨)、饮料和玩具，其餐品种类可能不同，但其制作过程相同。前台服务员(Waiter) 调度厨师制作套餐。现采用生成器 (Builder) 模式实现制作过程，得到如图 6-1 所示的类图。 【Java 代码】 class Pizza { private String parts； public void setParts(String parts) { this.parts = parts;} public String toString() { return this.parts; } } abstract class PizzaBuilder { protected Pizza pizza; public Pizza getPizza() { return pizza; } public void createNewPizza() { pizza = new Pizza(); } public (1) ; } class HawaiianPizzaBuilder extends PizzaBuilder { public void buildParts() { pizza.setParts(\"cross + mild +ham&pineapp1e”}; } class SpicyPizzaBuilder extends PizzaBuilder { public void buildParts() { pizza.setParts(\"pan baked + hot +pepperoni&salami\"); } } class Waiter { private PizzaBuilder pizzaBuilder; public void setPizzaBuilder(PizzaBuilder pizzaBuilder) { /* 设置构建器*/ (2) ; } public Pizza getPizza(){ return pizzaBuilder.getPizza(); } public void construct() { /*构建*/ pizzaBuilder.createNewPizza(); (3) ; } } Class FastFoodOrdering { public static viod mainSting[]args) { Waiter waiter = new Waiter(); PizzaBuilder hawaiian_pizzabuilder = new HawaiianPizzaBuilder(); (4) ; (5) ; System.out.println(\"pizza: \" + waiter.getPizza()); } } 程序的输出结果为： Pizza:cross + mild + ham&pineapple",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch12",
+      "flags": []
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "file": "2009年上半年_软件设计师_答案详解.docx",
+    "paras": 603,
+    "tables": 0,
+    "n_answer_tag": 59,
+    "n_analysis_tag": 59,
+    "n_plain": 0,
+    "n_option_lines": 75,
+    "q_nums_inline": 75,
+    "q_nums_plain": 0,
+    "style": "tagged",
+    "sample": [
+      "海明校验码是在n个数据位之外增设k个校验位，从而形成一个k+n位的新的码字， 使新的码字的码距比较均匀地拉大。n与k的关系是（1)。",
+      "(1)A.2k - l≥n + k\t\tB.2n - 1≤ n + k\t\tC.n = k\t\t\tD.n-1≤k"
+    ]
+  },
+  {
+    "file": "2009年下半年_软件设计师_答案详解.docx",
+    "paras": 543,
+    "tables": 0,
+    "n_answer_tag": 55,
+    "n_analysis_tag": 55,
+    "n_plain": 0,
+    "n_option_lines": 75,
+    "q_nums_inline": 75,
+    "q_nums_plain": 0,
+    "style": "tagged",
+    "sample": [
+      "以下关于CPU的叙述中，错误的是（1)。",
+      "(1)A.CPU产生每条指令的操作信号并将操作信号送往相应的部件进行控制"
+    ]
+  },
+  {
+    "file": "2010年上半年_软件设计师_答案详解.docx",
+    "paras": 530,
+    "tables": 0,
+    "n_answer_tag": 55,
+    "n_analysis_tag": 55,
+    "n_plain": 0,
+    "n_option_lines": 75,
+    "q_nums_inline": 75,
+    "q_nums_plain": 0,
+    "style": "tagged",
+    "sample": [
+      "为实现程序指令的顺序执行，CPU (1)中的值将自动加1。",
+      "(1)\tA.指令寄存器（IR)\t\t\tB.程序计数器（PC)"
+    ]
+  },
+  {
+    "file": "2010年下半年_软件设计师_答案详解.docx",
+    "paras": 600,
+    "tables": 0,
+    "n_answer_tag": 55,
+    "n_analysis_tag": 55,
+    "n_plain": 0,
+    "n_option_lines": 75,
+    "q_nums_inline": 75,
+    "q_nums_plain": 0,
+    "style": "tagged",
+    "sample": [
+      "在输入输出控制方法中，采用（1）可以使得设备与主存间的数据块传送无需CPU干预。",
+      "(1)A.程序控制输入输出\tB.中断\t\t\t\tC.DMA\t\t\tD.总线控制"
+    ]
+  },
+  {
+    "file": "2011年上半年_软件设计师_答案详解.docx",
+    "paras": 586,
+    "tables": 0,
+    "n_answer_tag": 59,
+    "n_analysis_tag": 59,
+    "n_plain": 0,
+    "n_option_lines": 75,
+    "q_nums_inline": 75,
+    "q_nums_plain": 0,
+    "style": "tagged",
+    "sample": [
+      "在CPU中用于跟踪指令地址的寄存器是(1).",
+      "(1)A.地址寄存器（MAR)\t\t\t\tB.数据寄存器（MDR)"
+    ]
+  },
+  {
+    "file": "2012年上半年_软件设计师_答案详解.docx",
+    "paras": 588,
+    "tables": 0,
+    "n_answer_tag": 55,
+    "n_analysis_tag": 55,
+    "n_plain": 0,
+    "n_option_lines": 75,
+    "q_nums_inline": 76,
+    "q_nums_plain": 0,
+    "style": "tagged",
+    "sample": [
+      "位于CPU与主存之间的高速缓冲存储器（Cache)用于存放部分主存数据的拷贝， 主存地址与Cache地址之间的转换工作由（1）完成。",
+      "(1)A.硬件\t\t\tB.软件\t\t\tC.用户\t\t\tD.程序员"
+    ]
+  },
+  {
+    "file": "2012年下半年_软件设计师_答案详解.docx",
+    "paras": 585,
+    "tables": 0,
+    "n_answer_tag": 56,
+    "n_analysis_tag": 56,
+    "n_plain": 0,
+    "n_option_lines": 74,
+    "q_nums_inline": 75,
+    "q_nums_plain": 0,
+    "style": "tagged",
+    "sample": [
+      "Ni 在CPU中，(1)不仅要保证指令的正确执行，还要能够处理异常事件。",
+      "(1)A.运算器\t\t\tB.控制器\t\t\tC.寄存器组\t\t\tD.内部总线"
+    ]
+  },
+  {
+    "file": "2013年上半年_软件设计师_答案详解.docx",
+    "paras": 784,
+    "tables": 0,
+    "n_answer_tag": 54,
+    "n_analysis_tag": 54,
+    "n_plain": 0,
+    "n_option_lines": 75,
+    "q_nums_inline": 75,
+    "q_nums_plain": 0,
+    "style": "tagged",
+    "sample": [
+      "常用的虚拟存储器由（1）两级存储器组成。",
+      "(1)A.主存-辅存\t\tB.主存-网盘 \t\tC.Cache-主存 \t\tD.Cache-硬盘"
+    ]
+  },
+  {
+    "file": "2014年下半年_软件设计师_答案详解.docx",
+    "paras": 621,
+    "tables": 0,
+    "n_answer_tag": 56,
+    "n_analysis_tag": 56,
+    "n_plain": 0,
+    "n_option_lines": 75,
+    "q_nums_inline": 75,
+    "q_nums_plain": 0,
+    "style": "tagged",
+    "sample": [
+      "三总线结构的计算机总线系统由（1）组成。",
+      "(1)A.CPU总线、内存总线和IO总线\t\t\tB.数据总线、地址总线和控制总线"
+    ]
+  },
+  {
+    "file": "2015年上半年_软件设计师_答案详解.docx",
+    "paras": 827,
+    "tables": 0,
+    "n_answer_tag": 57,
+    "n_analysis_tag": 57,
+    "n_plain": 0,
+    "n_option_lines": 75,
+    "q_nums_inline": 75,
+    "q_nums_plain": 0,
+    "style": "tagged",
+    "sample": [
+      "2015年5月第1题",
+      "机器字长为n位的二进制数可以用补码来表示（1）个不同的有符号定点小数。"
+    ]
+  },
+  {
+    "file": "2015年下半年_软件设计师_答案详解.docx",
+    "paras": 656,
+    "tables": 0,
+    "n_answer_tag": 56,
+    "n_analysis_tag": 56,
+    "n_plain": 0,
+    "n_option_lines": 75,
+    "q_nums_inline": 75,
+    "q_nums_plain": 0,
+    "style": "tagged",
+    "sample": [
+      "2015年11月第1题",
+      "CPU是在（1）结束时响应DMA请求的。"
+    ]
+  },
+  {
+    "file": "2016年下半年_软件设计师_答案详解.docx",
+    "paras": 717,
+    "tables": 0,
+    "n_answer_tag": 57,
+    "n_analysis_tag": 57,
+    "n_plain": 0,
+    "n_option_lines": 75,
+    "q_nums_inline": 76,
+    "q_nums_plain": 0,
+    "style": "tagged",
+    "sample": [
+      "2015年11月第1题",
+      "在程序运行过程中，CPU需要将指令从内存中取出并加以分析和执行。CPU依据（1）来区分在内存中以二进制编码形式存放的指令和数据。"
+    ]
+  }
+]

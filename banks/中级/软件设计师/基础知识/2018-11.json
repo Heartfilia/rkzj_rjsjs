@@ -1,0 +1,1176 @@
+{
+  "paper": "2018-11",
+  "paperTitle": "2018年下半年",
+  "section": "基础知识",
+  "source": "2018年下半年软件设计师基础知识真题（答案详解 docx）",
+  "questions": [
+    {
+      "id": "sd-201811-01",
+      "no": 1,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "CPU在执行指令的过程中，会自动修改（ ）的内容，以使其保存的总是将要执行的下一条指令的地址。",
+      "blanks": [
+        {
+          "options": {
+            "A": "指令寄存器",
+            "B": "程序计数器",
+            "C": "地址寄存",
+            "D": "指令译码器"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "程序计数器pc是用于存放下一条指令所在单元的地址的地方。 指令寄存器是临时放置从内存里面取得的程序指令的寄存器，用于存放当前从主存储器读出的正在执行的一条指令。 地址寄存器用来保存当前CPU所访问的内存单元的地址。 指令译码器，从内存中取出的一条指令经数据总线送往指令寄存器中。 .",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-02",
+      "no": 2,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "在微机系统中，BIOS（基本输入输出系统）保存在（ ）中。",
+      "blanks": [
+        {
+          "options": {
+            "A": "主板上的ROM",
+            "B": "CPU的寄存器",
+            "C": "主板上的RAM",
+            "D": "虚拟存储器"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "BIOS是一个程序，是固化在主板的BIOS ROM芯片里面的，它相当于硬件底层的一个操作系统，控制和保存着硬件的输入输出工作。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-03",
+      "no": 3,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "采用n位补码（包含一个符号位）表示数据，可以直接表示数值（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "2n",
+            "B": "-2n",
+            "C": "2n-1",
+            "D": "-2n-1"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "对于有n位的整数补码，其取值范围是-(2n-1)~(2n-1)-1以8位的整数补码举例，其有效取值范围是-(27)～(27)-1， 也就是-128～127。拿C计算值为128越界了，只有D符合。其它选项都越界了。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-04",
+      "no": 4,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "某系统由下图所示的部件构成，每个部件的千小时可靠度都为R，该系统的千小时可靠度为（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "(3R+2R)/2",
+            "B": "R/3+R/2",
+            "C": "(1-(1-R)3)(1-(1-R)2)",
+            "D": "(1-(1-R)3-(1-R)2)"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "2017年上半年原题 串行系统的可靠性 R=R 1×R 2×…× R n 并联系统的可靠性为 R= 1- (1- R 1 ) ×（1- R 2 ）×…×（1- R n )",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [
+        "含图"
+      ]
+    },
+    {
+      "id": "sd-201811-05",
+      "no": 5,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "以下关于采用一位奇校验方法的叙述中，正确的是（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "若所有奇数位出错，则可以检测出该错误但无法纠正错误",
+            "B": "若所有偶数位出错，则可以检测出该错误并加以纠正",
+            "C": "若有奇数个数据位出错，则可以检测出该错误但无法纠正错误",
+            "D": "若有偶数个数据位出错，则可以检测出该错误并加以纠正"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "奇校验：如果以二进制数据中1的个数是奇数为依据，则是奇校验 偶校验：如果以二进制数据中1的个数是偶数为依据，则是偶校验 如果传输过程中包括校验位在内的奇数个数据位发生改变，那么奇校验位将出错表示传输过程有错误发生， 但是由于没有办法确定哪一位出错，所以它不能进行错误校正。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-06",
+      "no": 6,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "下列关于流水线方式执行指令的叙述中，不正确的是（ ）。",
+      "blanks": [],
+      "analysis": "流水线技术是指在程序执行时，多条指令重叠进行操作的一种任务分解技术。把一个任务分解为若干顺序执行的子任务，不同的子任务由不同的执行机构来负责执行，而这些执行机构可以同时并行工作。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": false,
+      "chapter": "ch01",
+      "flags": [
+        "不完整"
+      ]
+    },
+    {
+      "id": "sd-201811-07",
+      "no": 7,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "DES是（ ）算法。",
+      "blanks": [
+        {
+          "options": {
+            "A": "公开密钥加密",
+            "B": "共享密钥加密",
+            "C": "数字签名",
+            "D": "认证"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "共享密钥加密又称对称加密算法，既用同一个密钥去加密和解密数据。 常用的算法包括DES、3DES、IDEA、AES等。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch05",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-08",
+      "no": 8,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "计算机病毒的特征不包括（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "传染性",
+            "B": "触发性",
+            "C": "隐蔽性",
+            "D": "自毁性"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "《软件设计师教程第5版》P566页：计算机病毒具有隐蔽性、传染性、潜伏性、触发性和破坏性等特性。 因此不包括选项D自毁性。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch05",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-09",
+      "no": 9,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "10. MD5是（ ）算法，对任意长度的输入计算得到的结果长度为（ ）位。",
+      "blanks": [
+        {
+          "options": {
+            "A": "路由选择",
+            "B": "摘要",
+            "C": "共享密钥",
+            "D": "公开密钥"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "常见的摘要算法有：MD5、SHA等 MD5：信息摘要算法第五版，输入以512位为分组，进行处理，产生一个128位的输出。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-11",
+      "no": 11,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "使用Web方式收发电子邮件时，以下描述错误的是（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "无须设置简单邮件传输协议",
+            "B": "可以不设置帐号密码登录",
+            "C": "邮件可以插入多个附件",
+            "D": "未发送邮件可以保存到草稿箱"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "谈到收发这二个关键字，使用WEB方式收发邮件是必须设置账号密码登录的。如果只是简单的查看可以不设置账号密码。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-12",
+      "no": 12,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "有可能无限期拥有的知识产权是（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "著作权",
+            "B": "专利权",
+            "C": "商标权",
+            "D": "集成电路布图设计权"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "根据我国《著作权法》第二十条之规定，作者的署名权、修改权、保护作品完整权的保护期不受限制。 但是商标权可以每10年，无限续期。所以也存在无限期拥有。但是题目中提到的有可能所以应该选择C， 不然A的话就不用说有可能了，是必须无限期了",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch06",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-13",
+      "no": 13,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "（ ）是构成我国保护计算机软件著作权的两个基本法律文件。",
+      "blanks": [
+        {
+          "options": {
+            "A": "《软件法》和《计算机软件保护条例》",
+            "B": "《中华人民共和国著作权法》和《计算机软件保护条例》",
+            "C": "《软件法》和《中华人民共和国著作权法》",
+            "D": "《中华人民共和国版权法》和《计算机软件保护条例》"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "我国保护计算机软件著作权的两个基本法律文件是《中华人民共和国著作权法》和《计算机软件保护条例》",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch06",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-14",
+      "no": 14,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "某软件程序员接受一个公司（软件著作权人）委托开发完成一个软件，三个月后又接受另一公司委托开发功能类似的软件，此程序员仅将受第一个公司委托开发的软件略作修改即提交给第二家公司，此种行为（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "属于开发者的特权",
+            "B": "属于正常使用著作权",
+            "C": "不构成侵权",
+            "D": "构成侵权"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "本题目指明了第一个软件公司为软件著作权人，所以再把略作修改的软件交给第二家，构成侵权行为。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch06",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-15",
+      "no": 15,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "结构化分析的输出不包括（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "数据流图",
+            "B": "数据字典",
+            "C": "加工逻辑",
+            "D": "结构图"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "《软件设计师教程第5版》P325页：结构化方法的分析结果由以下几部分组成：一套分层的数据流图、一本数据词典、一组小说明（也称加工逻辑说明）、补充材料。因此D选项不包括。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-16",
+      "no": 16,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "某航空公司拟开发一个机票预订系统， 旅客预订机票时使用信用卡付款。付款通过信用卡公司的信用卡管理系统提供的接口实现。若采用数据流图建立需求模型，则信用卡管理系统是（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "外部实体",
+            "B": "加工",
+            "C": "数据流",
+            "D": "数据存储"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "数据流图的成分包括：数据存储、数据流、加工、外部实体。其中，数据流、加工、数据存储是用于系统内部数据处理的模型，而外部实体指系统以外，又和系统有联系的人或事物或软件系统。所以此选项为A",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-17",
+      "no": 17,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "18.某软件项目的活动图如下图所示，其中顶点表示项目里程碑，连接顶点的边表示包含的活动，边上的数字表示活动的持续时间（天），则完成该项目的最少时间为（ ）天。活动FG的松驰时间为（ ）天。",
+      "blanks": [
+        {
+          "options": {
+            "A": "20",
+            "B": "37",
+            "C": "38",
+            "D": "46"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "最少完成时间是指完全项目工期的最长时间因此ADFHJ为项目活动图的关键路径等于46天。FG的松弛时间为18天。46-7-3和46-10-18相比，差值为18所以此选项为18",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [
+        "含图"
+      ]
+    },
+    {
+      "id": "sd-201811-19",
+      "no": 19,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "以下叙述中，（ ）不是一个风险。",
+      "blanks": [
+        {
+          "options": {
+            "A": "由另一个小组开发的子系统可能推迟交付，导致系统不能按时交付客户",
+            "B": "客户不清楚想要开发什么样的软件，因此开发小组开发原型帮助其确定需求",
+            "C": "开发团队可能没有正确理解客户的需求",
+            "D": "开发团队核心成员可能在系统开发过程中离职"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "一般而言，风险与不确定性有关，若某一事件的发生存在着两种或两种以上的可能性，即可认为该事件存在风险。 但是选项B已经确定客户不清楚需求，所以是确定事情。所以不存在风险。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-20",
+      "no": 20,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "对布尔表达式进行短路求值是指：无须对表达式中所有操作数或运算符进行计算就可确定表达式的值。对于表达式\"a or ((c< d) and b)\",（ ）时可进行短路计算。",
+      "blanks": [
+        {
+          "options": {
+            "A": "d为true",
+            "B": "a为true",
+            "C": "b为true",
+            "D": "c为true"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "此题考察的是短路问题。or的含义代表或的意思，and的意思是代表并且的意思。所以此题a为true后面的就可以不用执行下去直接判定为真。所以形成短路效应。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-21",
+      "no": 21,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "下面二叉树表示的简单算术表达式为（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "10*20+30-40",
+            "B": "10*（20+30-40）",
+            "C": "10*（20+30）-40",
+            "D": "10*20+（30-40）"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "此题考察的是二叉树排序问题。根据图示可知最后计算的符号为-号，其次为*号，最后为+号，所以答案可知为C选项。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-22",
+      "no": 22,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "在程序运行过程中，（ ）时涉及整型数据转换为浮点型数据的操作。",
+      "blanks": [
+        {
+          "options": {
+            "A": "将浮点型变量赋值给整型变量",
+            "B": "将整型常量赋值给整型变量",
+            "C": "将整型变量与浮点型变量相加",
+            "D": "将浮点型常量与浮点型变量相加"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "此题BD选项为同数据数据，对于A选项是将float数据类型转成int数据类型，C选项是将int类型和float类型进行相加，实现了int类型转成float类型。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-23",
+      "no": 23,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "某计算机系统中互斥资源R的可用数为8，系统中有3个进程P1、P2和P3竞争R，且每个进程都需要i个R，该系统可能会发生死锁的最小i值为（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "如果是3 每个进程都需要3个资源 按照给每个最大资源分配会是3，3，2这种情况了 那么有两个进程资源就够了 结束后吐出给最后那个进程 8个资源足够，如果i是4的话 3，3，2这种必定是死锁了 24~26.进程P1、P2、P3、P4和P5的前趋图如下所示： 若用PV操作控制这5个进程的同步与互斥的程序如下，那么程序中的空①和空②处应分别为（ ）；空③和空④处应分别为（ ）；空⑤和空⑥处应分别为（ ）。 V（S1）和P（S2） B. P（S1）和V（S2） C. V（S1）和V（S2） D. V（S2）和P（S1） A. V（S3）和V（S5） B. P（S3）和V（S5） C. V（S3）和P（S5） D. P（S3）和P（S5） A. P（S6）和P（S5）V（S6） B. V（S5）和V（S5）V（S6） C. V（S6）和P（S5）P（S6） D. P（S6）和P（S5）P（S6） 首先标明信号然后由题可知DBC",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-27",
+      "no": 27,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "某文件管理系统在磁盘上建立了位示图（bitmap），记录磁盘的使用情况。若磁盘上物理块的编号依次为：0、1、2、....；系统中的字长为32位，位示图中字的编号依次为：0、1、2、..，每个字中的一个二进制位对应文件存储器上的一个物理块，取值0和1分别表示物理块是空闲或占用。假设操作系统将2053号物理块分配给某文件，那么该物理块的使用情况在位示图中编号为（ ）的字中描述。",
+      "blanks": [
+        {
+          "options": {
+            "A": "32",
+            "B": "33",
+            "C": "64",
+            "D": "65"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "2053/32=64.156，并且位示图是从0号开始所以选择C",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-28",
+      "no": 28,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "某操作系统文件管理采用索引节点法。每个文件的索引节点有8个地址项，每个地址项大小为4字节，其中5个地址项为直接地址索引，2个地址项是一级间接地址索引，1个地址项是二级间接地址索引，磁盘索引块和磁盘数据块大小均为1KB。若要访问文件的逻辑块号分别为1和518，则系统应分别采用（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "直接地址索引和一级间接地址索引",
+            "B": "直接地址索引和二级间接地址索引",
+            "C": "一级间接地址索引和一级间接地址索引",
+            "D": "一级间接地址索引和二级间接地址索引"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "1KB/4b=256 所以直接地址索引为0-4号 一级地址索引为256*2+4=516号 二级地址索引为256*256+516=517-66052号",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-29",
+      "no": 29,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "某企业拟开发一个企业信息管理系统，系统功能与多个部门的业务相关。现希望该系统能够尽快投入使用，系统功能可以在使用过程中不断改善。则最适宜采用的软件过程模型为（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "瀑布模型",
+            "B": "原型模型",
+            "C": "演化（迭代）模型",
+            "D": "螺旋模型"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "增量模型在各个阶段并不交付一个可运行的完整产品，而是交付满足客户需求的一个子集的可运行产品。整个产品被分解成若干个构件，开发人员逐个构件地交付产品，这样做的好处是软件开发可以较好地适应变化，客户可以不断地看到所开发的软件，从而降低开发风险。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-30",
+      "no": 30,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "能力成熟度模型集成（CMMI）是若干过程模型的综合和改进。连续式模型和阶段式模型是CMMI提供的两种表示方法，而连续式模型包括6个过程域能力等级，其中（ ）使用量化（统计学）手段改变和优化过程域，以应对客户要求的改变和持续改进计划中的过程域的功效。",
+      "blanks": [
+        {
+          "options": {
+            "A": "CL2(已管理的)",
+            "B": "CL3(已定义级的)",
+            "C": "CL4(定量管理的)",
+            "D": "CL5(优化的)"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "CL0：未完成的：未执行或未达到CL1定义的所有目标 CL1：已执行的：共性目标是过程将可标识的输入工作产品转换成可标识的输出工作产品，以实现支持过程域的特定目标。 CL2：已管理的：共性目标集中于已管理的过程的制度化。 CL3：已定义级的：共性目标集中于以定义过程的制度化。 CL4：定量管理的：共性目标集中于可定量管理的过程的制度化 CL5：优化的使用量化（统计学）手段改变和优化过程域，以对付客户要求的可持续改进计划中的过程域的功效",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-31",
+      "no": 31,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "在ISO/IEC 9126软件质量模型中，可靠性质量特性是指在规定的一段时间内和规定的条件下，软件维持在其性能水平有关的能力，其质量子特性不包括（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "安全性",
+            "B": "成熟性",
+            "C": "容错性",
+            "D": "易恢复性"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "由《软件设计师教程》P300页可知如下图安全性不包括",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-32",
+      "no": 32,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "以下关于模块化设计的叙述中，不正确的是（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "尽量考虑高内聚、低耦合，保持模块的相对独立性",
+            "B": "模块的控制范围在其作用范围内",
+            "C": "模块的规模适中",
+            "D": "模块的宽度、深度、扇入和扇出适中"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "模块化设计的原则应该是尽量考虑高内聚、低耦合 1．模块独立 模块的独立性原则表现在模块完成独立的功能，与其他模块的联系应该尽可能得简单，各个模块具有相对的独立性。 2．模块的规模要适当 模块的规模不能太大，也不能太小。如果模块的功能太强，可读性就会较差，若模块的功能太弱，就会有很多的接口。读者需要通过较多的程序设计来进行经验的积累。 3．分解模块时要注意层次 在进行多层次任务分解时，要注意对问题进行抽象化。在分解初期，可以只考虑大的模块，在中期，再逐步进行细化，分解成较小的模块进行设计。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-33",
+      "no": 33,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "某企业管理信息系统中，采购子系统根据材料价格、数量等信息计算采购的金额，并给财务子系统传递采购金额、收款方和采购日期等信息，则这两个子系统之间的耦合类型为（ ）耦合。",
+      "blanks": [
+        {
+          "options": {
+            "A": "数据",
+            "B": "标记",
+            "C": "控制",
+            "D": "外部"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": [
+        "无解析"
+      ]
+    },
+    {
+      "id": "sd-201811-34",
+      "no": 34,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "35对以下的程序伪代码（用缩进表示程序块）进行路径覆盖测试，至少需要（ ）个测试用例。采用McCabe度量法计算其环路复杂度为（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "2",
+            "B": "4",
+            "C": "6",
+            "D": "8"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "由公式可知V(G)=m-n+2 得到14-12+2=4.",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-36",
+      "no": 36,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "某商场的销售系统所使用的信用卡公司信息系统的数据格式发生了更改，因此对该销售系统进行的修改属于（ ）维护。",
+      "blanks": [
+        {
+          "options": {
+            "A": "改正性",
+            "B": "适应性",
+            "C": "改善性",
+            "D": "预防性"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "更正性。由于系统测试不可能揭露系统存在的所有错误，因此在系统投入运行后频繁的实际应用过程中，就有可能暴露出系统内隐藏的错误 适应性维护。适应性维护时为了使系统适应环境的变化而进行的维护工作。 完善性维护。在系统的使用过程中，用户往往要求扩充原有系统的功能，增加一些在软件需求规范书中没有规定的功能与性能特征，以及对处理效率和编写程序的改进。 预防性维护。系统维护工作不应总是被动地等待用户提出要求后才进行，应进行主动的预防性维护，即选择那些还有较长使用寿命，目前尚能正常运行，但可能将要发生变化或调整的系统进行维护，目的是通过预防性维护为未来的修改与调整奠定更好的基础",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-37",
+      "no": 37,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "在面向对象方法中，继承用于（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "在已存在的类的基础上创建新类",
+            "B": "在已存在的类中添加新的方法",
+            "C": "在已存在的类中添加新的属性",
+            "D": "在已存在的状态中添加新的状态"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "本题考查的是继承的定义：继承是类之间的一种关系，在定义和实现一个类的时候，可以在一个已经存在的类的基础上进行。因此本题选择A选项。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-38",
+      "no": 38,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "（ ）多态是指操作（方法）具有相同的名称、且在不同的上下文中所代表的含义不同。",
+      "blanks": [
+        {
+          "options": {
+            "A": "参数",
+            "B": "包含",
+            "C": "过载",
+            "D": "强制"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "参数多态：应用广泛、最纯的多态。 包含多态：同样的操作可用于一个类型及其子类型。包含多态一般需要进行运行时的类型检查。 过载多态：同一个名（操作符﹑函数名）在不同的上下文中有不同的类型。 强制多态：编译程序通过语义操作，把操作对象的类型强行加以变换，以符合函数或操作符的要求。 本题应该选择C选项过载多态。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-39",
+      "no": 39,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "40 在某销售系统中，客户采用扫描二维码进行支付。若采用面向对象方法开发该销售系统，则客户类属于（ ）类， 二维码类属于（ ）类。",
+      "blanks": [
+        {
+          "options": {
+            "A": "接口",
+            "B": "实体",
+            "C": "控制",
+            "D": "状态"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "类可以分为三种：实体类、接口类（边界类）和控制类。 实体类的对象表示现实世界中真实的实体，如人、物等。 接口类（边界类）的对象为用户提供一种与系统合作交互的方式，分为人和系统两大类，其中人的接口可以是显示屏、窗口、Web窗体、对话框、菜单、列表框、其他显示控制、条形码、二维码或者用户与系统交互的其他方法。系统接口涉及到把数据发送到其他系统，或者从其他系统接收数据。 控制类的对象用来控制活动流，充当协调者。 41~43 下图所示UML图为（ ），用于展示（ ）。①和②分别表示（ ）。 A.类图 B.组件图 C.通信图 D.部署图 A.一组对象、接口、协作和它们之间的关系 B.收发消息的对象的结构组织 C.组件之间的组织和依赖 D.面向对象系统的物理模型 A.供接口和供接口 B.需接口和需接口 C.供接口和需接口 D.需接口和供接口 请参考《软件设计师教程第5版》P375图示为组件图。 末端有一个完整的圆周的接口符号代表组件提供接口。 在末端只有半个圆的接口符号代表组件需求接口 44~47假设现在要创建一个简单的超市销售系统，顾客将毛巾、饼干、酸奶等物品（Item）加入购物车（Shopping_Cart)，在收银台（Checkout）人工（Manual）或自动（Auto）地将购物车中每个物品的价格汇总到总价格后结帐。这一业务需求的类图（方法略）设计如下图所示，采用了（ ）模式。其中（ ）定义以一个Checkout对象为参数的accept操作，由子类实现此accept操作。此模式为（ ），适用于（ ）。 A.观察者（Observer） B.访问者（Visitor） C.策略（Strategy） D.桥接器（Bridge） A.Item B.Shopping_Cart C.Checkout D.Manual和Auto A.创建型对象模式 B.结构型对象模式 C.行为型类模式 D.行为型对象模式 A.必须保存一个对象在某一个时刻的（部分）状态 B.想在不明确指定接收者的情况下向多个对象中的一个提交一个请求 C.需要对一个对象结构中的对象进行很多不同的并且不相关的操作 D.在不同的时刻指定、排列和执行请求 访问者模式包含如下角色： Vistor :抽象访问者 ConcreteVisitor:具体访问者 Element: 抽象元素 ConcreteElement:具体元素 ObjectStructure:对象结构",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-48",
+      "no": 48,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "在以阶段划分的编译器中，（ ）阶段的主要作用是分析程序中的句子结构是否正确。",
+      "blanks": [
+        {
+          "options": {
+            "A": "词法分析",
+            "B": "语法分析",
+            "C": "语义分析",
+            "D": "代码生成"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "1、词法分析阶段：识别出一个个的单词，删掉无用的信息，报告分析时的错误。 2、语法分析阶段：语法分析器以单词符号作为输入，分析单词符号是否形成符合语法规则的语法单位，如表达式、赋值、循环等，按语法规则分析检查每条语句是否有正确的逻辑结构。语法分析构造一棵语法树。 3、语义分析阶段：主要检查源程序是否存在语义错误，并收集类型信息供后面的代码生成阶段使用，如：赋值语句的右端和左端的类型不匹配。表达式的除数是否为零等。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-49",
+      "no": 49,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "下图所示为一个不确定有限自动机（NFA）的状态转换图。该NFA可识别字符串（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "0110",
+            "B": "0101",
+            "C": "1100",
+            "D": "1010"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "由答案可知以0开始以0结尾，所以只有A符合。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": [
+        "含图"
+      ]
+    },
+    {
+      "id": "sd-201811-50",
+      "no": 50,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "函数f和g的定义如下图所示。执行函数f时若采用引用（call by reference）方式调用函数g(a)，则函数f的返回值为（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "14",
+            "B": "18",
+            "C": "24",
+            "D": "28"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "代入可知m=2*5;x=10-1; return x+m=19 19+9=28",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [
+        "含图"
+      ]
+    },
+    {
+      "id": "sd-201811-51",
+      "no": 51,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "数据库系统中的视图、存储文件和基本表分别对应数据库系统结构中的（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "模式、内模式和外模式",
+            "B": "外模式、模式和内模式",
+            "C": "模式、外模式和内模式",
+            "D": "外模式、内模式和模式"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "本题考察的是数据库体系结构：三层模式。对于题干给出的视图、存储文件、基本表分别对应：视图-外模式，存储文件-内模式，基本表-模式。因此本题选择D选项",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-52",
+      "no": 52,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "在分布式数据库中，（ ）是指用户或应用程序不需要知道逻辑上访问的表具体如何分块存储。",
+      "blanks": [
+        {
+          "options": {
+            "A": "逻辑透明",
+            "B": "位置透明",
+            "C": "分片透明",
+            "D": "复制透明"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "本题考查的是分布式数据库相关知识。 1.逻辑透明性（局部映像透明性）：它是最低层次的透明性，该透明性提供数据到局部数据库的映像，即用户不必关心局部DBMS支持哪种数据模型、使用哪种数据操纵语言，数据模型和操纵语言的转换是由系统完成的。因此，局部映像透明性对异构型和同构异质的分布式数据库系统时非常重要的。2.位置透明性：用户不必知道所操作的数据放在何处，即数据分配到哪个或哪些站点存储对用户是透明的。因此，数据分片模式的改变，如把数据从一个站点转移到另一个站点将不会影响应用程序，因而应用程序不必改写。 3.分片透明性：用户不必关心数据是如何分片，他们对数据的操作在全局关系上进行的，即关心如何分片对用户是透明的，因此，当分片改变时应用程序可以不变。 4.复制透明性：用户不用关心数据库在网络中的各个节点的复制情况，被复制的数据的更新都由系统自动完成。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-53",
+      "no": 53,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "54 设有关系模式R（A1，A2，A3，A4，A5，A6），函数依赖集F={A1→A3，A1 A2→A4，A5 A6→A1，A3 A5→A6，A2 A5→A6}。关系模式R的一个主键是（ ）， 从函数依赖集F可以推出关系模式R（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "A1A4",
+            "B": "A2A5",
+            "C": "A3A4",
+            "D": "A4A5"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "把每个选项代入求它的闭包，A2A5能推出所有属性的为主键。 第二空，根据第一空可知R的一个主键为A2A5，由函数依赖集F可知，存在A2A5→A6，A5A6→A1，A1→A3，这里存在传递函数依赖，故A、B选项均不正确，C选项本身不正确，存在非主属性对候选键的传递函数依赖，是不满足3NF的。因此本题选择D选项。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-55",
+      "no": 55,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "56给定关系R（A, B,C,D）和S（C,D,E），若关系R与S进行自然连接运算，则运算后的元组属性列数为（ ）；关系代数表达式与（ ）等价。",
+      "blanks": [
+        {
+          "options": {
+            "A": "4",
+            "B": "5",
+            "C": "6",
+            "D": "7"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "对于自然连接只要把重复的列去掉就可以所以为5. 第二空和选项等价的为D选项",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-57",
+      "no": 57,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "栈的特点是后进先出，若用单链表作为栈的存储结构，并用头指针作为栈顶指针，则（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "入栈和出栈操作都不需要遍历链表",
+            "B": "入栈和出栈操作都需要遍历链表",
+            "C": "入栈操作需要遍历链表而出栈操作不需要",
+            "D": "入栈操作不需要遍历链表而出栈操作需要"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "本题用单链表作为栈的存储结构，因为栈的操作是先进后出，因此无论是入栈还是出栈，都只对栈顶元素操作，而在单链表中用头指针作为栈顶指针，此时无论是出栈还是入栈，都只需要对头指针指向的栈顶指针操作即可，不需要遍历链表。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-58",
+      "no": 58,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "已知某二叉树的先序遍历序列为A B C D E F、中序遍历序列为B A D C F E，则可以确定该二叉树（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "是单支树（即非叶子结点都只有一个孩子）",
+            "B": "高度为4（即结点分布在4层上）",
+            "C": "根结点的左子树为空",
+            "D": "根结点的右子树为空"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "根据先序遍历和中序遍历序列可以构造出二叉树高度为4的所以选择B",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-59",
+      "no": 59,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "可以构造出下图所示二叉排序树（二叉检索树、二叉查找树）的关键码序列是（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "10 13 17 19 23 27 31 40 65 91",
+            "B": "23 40 91 17 19 10 31 65 27 13",
+            "C": "23 19 40 27 17 13 10 91 65 31",
+            "D": "27 31 40 65 91 13 10 17 23 19"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "根据排序二叉树的构造过程，可知A选项的根节点为10，D选项的根节点为27，因此可以排除。对于C选项，构造根节点的子结点，可知19为其左孩子结点，与图不符。本题只有B选项可以构造出图示的排序二叉树。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": [
+        "含图"
+      ]
+    },
+    {
+      "id": "sd-201811-60",
+      "no": 60,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "61 图G的邻接矩阵如下图所示（顶点依次表示为v0、v1、v2、v3、v4、v5），G是（ ）。对G进行广度优先遍历（从v0开始），可能的遍历序列为（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "无向图",
+            "B": "有向图",
+            "C": "完全图",
+            "D": "强连通图"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "62~65 在一条笔直公路的一边有许多房子，现要安装消防栓，每个消防栓的覆盖范围远大于房子的面积，如下图所示。现求解能覆盖所有房子的最少消防栓数和安装方案（问题求解过程中，可将房子和消防栓均视为直线上的点）。 该问题求解算法的基本思路为：从左端的第一栋房子开始，在其右侧m米处安装一个消防栓，去掉被该消防栓覆盖的所有房子。在剩余的房子中重复上述操作，直到所有房子被覆盖。算法采用的设计策略为（ ）；对应的时间复杂度为（ ）。 假设公路起点A的坐标为0，消防栓的覆盖范围（半径）为20米，10栋房子的坐标为（10，20,，30，35，60，80，160，210，260，300），单位为米。根据上述算法，共需要安装（ ）个消防栓。以下关于该求解算法的叙述中，正确的是（ ）。 A.分治 B.动态规划 C.贪心 D.回溯 A.4 B.5 C.6 D.7 对于第一空，本题使用的是分治法。 分治法特征：对于一个规模为n的问题，若该问题可以容易地解决（比如说规模n较小）则直接解决；否则将其分解为k个规模较小的子问题，这些子问题互相独立且与原问题形式相同，递归地解这些子问题，然后将各子问题的解合并得到原问题的解。 动态规划法：在求解问题中，对于每一步决策，列出各种可能的局部解，再依据某种判定条件，舍弃那些肯定不能得到最优解的局部解，在每一步都经过筛选，以每一步都是最优解来保证全局是最优解。本题情景没有列出所有的可能解进行筛选，因此，本题不属于动态规划法。 回溯法：回溯法是一种选优搜索法，按选优条件向前搜索，以达到目标。但当搜索到某一步时，发现原先选择并不优或达不到目标，就退回一步重新选择。这种走不通就退回再走的技术就是回溯法。本题情景没有探索和回退的过程，因此，本题不属于回溯法。 贪心法：总是做出在当前来说是最好的选择，而并不从整体上加以考虑，它所做的每步选择只是当前步骤的局部最优选择，但从整体来说不一定是最优的选择。由于它不必为了寻找最优解而穷尽所有可能解，因此其耗费时间少，一般可以快速得到满意的解，但得不到最优解。在本题情景中，没有给出每步选择的局部最优判断条件，因此，本题不属于贪心法。 舍弃已被覆盖的房子，可以将问题的规模逐步缩小，形成规模较小的子问题，而这些问题的求解与原问题的求解过程相同，因此本题属于分治法的算法思想。 由于本题的算法过程，是依次与各个房子进行判断，当所有房子都被比较之后，则问题结束，因此时间复杂度与房子的个数相关，本问题的时间复杂度应该趋于现象，为O(n)。 对于第三空，关于对应序列（10，20，30，35，60，80，160，210，260，300） 第一轮放置：在第一座房子x=10的右侧20米处安装一个消防栓，可以覆盖10，20，30，35这4栋房子； 2、第二轮放置：去掉前4栋房子，在第5栋房子x=60的右侧20米处安装一个消防栓，可以覆盖60、80这2栋房子； 3、第三轮放置：去掉前面已覆盖的房子，在第7栋房子x=160的右侧20米处安装一个消防栓，只可以覆盖160这一栋房子； 4、第四轮放置：去掉前面已覆盖的房子，在第8栋房子x=210的右侧20米处安装一个消防栓，可以覆盖210这一栋房子 第五轮放置：去掉前面已覆盖的房子，在第9栋房子x=260的右侧20米处安装一个消防栓，可以覆盖260、300这2栋房子； 房子全部覆盖完毕，因此共需安装5个消防栓。 对于第四空，对于得到一个最优解是动态规划的特点，可以得到问题所有的最优解，是回溯法的特征，可以排除A、B选项。对于C、D选项。 A.肯定可以求得问题的一个最优解 B.可以求得问题的所有最优解 C.对有些实例，可能得不到最优解 D.只能得到近似最优解",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": [
+        "含图"
+      ]
+    },
+    {
+      "id": "sd-201811-66",
+      "no": 66,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "使用ADSL接入Internet，用户端需要安装（ ）协议。",
+      "blanks": [
+        {
+          "options": {
+            "A": "PPP",
+            "B": "SLIP",
+            "C": "PPTP",
+            "D": "PPPoE"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "PPPoE（英语：Point-to-Point Protocol Over Ethernet），以太网上的点对点协议，是将点对点协议（PPP）封装在以太网（Ethernet）框架中的一种网络隧道协议。提供用户身份验证、用户管理以及数据加密等功能。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-67",
+      "no": 67,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "下列命令中，不能用于诊断DNS故障的是（ ）。",
+      "blanks": [],
+      "analysis": "",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": false,
+      "chapter": "ch04",
+      "flags": [
+        "无解析",
+        "不完整"
+      ]
+    },
+    {
+      "id": "sd-201811-68",
+      "no": 68,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "以下关于TCP/IP协议和层次对应关系的表示中，正确的是（）。",
+      "blanks": [],
+      "analysis": "",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": false,
+      "chapter": "ch04",
+      "flags": [
+        "无解析",
+        "不完整"
+      ]
+    },
+    {
+      "id": "sd-201811-69",
+      "no": 69,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "把CSS样式表与HTML网页关联，不正确的方法是（ ）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "在HTML文档的<head>标签内定义CSS样式",
+            "B": "用@import引入样式表文件",
+            "C": "在HTML文档的<!-- -->标签内定义CSS样式",
+            "D": "用<link>标签链接网上可访问的CSS样式表文件"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "<!-- -->是HTML注释的表示方式，在这里定义CSS样式无效。",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": []
+    },
+    {
+      "id": "sd-201811-70",
+      "no": 70,
+      "paper": "2018-11",
+      "paperTitle": "2018年下半年",
+      "stem": "使用（ ）命令可以释放当前主机自动获取的IP地址。",
+      "blanks": [
+        {
+          "options": {
+            "A": "ipconfig/all",
+            "B": "ipconfig/reload",
+            "C": "ipconfig/release",
+            "D": "ipconfig/reset"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "71~75. The project workbook is not so much a separate document as it is a structure imposed on the documents that the project will be producing anyway. All the documents of the project need to be part of this （ ）. This includes objectives ,external specifications , interface specifications , technical standards , internal specifications and administrative memoranda(备忘录). Technical prose is almost immortal. If one examines the genealogy ( Ff ) of a customer manual for a piece of hardware or software , one can trace not only the ideas , but also many of the very sentences and paragraphs back to the first （ ） proposing the product or explaining the first design. For the technical writer, the paste-pot is as mighty as the pen. Since this is so, and since tomorrow&#39;s product-quality manuals will grow from today&rsquo;s memos, it is very important to get the structure of the documentation right. The early design of the project （ ） ensures that the documentation structure itself is crafted, not haphazard. Moreover, the establishment of a structure molds later writing into segments that fit into that structure. The second reason for the project workbook is control of the distribution of （ ）. The problem is not to restrict information, but to ensure that relevant information gets to all the people who need it. The first step is to number all memoranda, so that ordered lists of titles are available and h worker can see if he has what he wants. The organization of the workbook goes well beyond this to establish a tree-structure of memoranda. The （ ） allows distribution lists to be maintained by subtree, if that is desirable. A.structureB.specificationC.standardD.objective A.objectiveB.memorandaC.standardD.specification A.titleB.listC.workbookD.quality A.productB.manualC.documentD.information A.listB.documentC.tree-structureD.number",
+      "source": "答案详解 docx",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": []
+    }
+  ]
+}

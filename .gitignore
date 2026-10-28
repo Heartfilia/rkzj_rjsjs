@@ -1,0 +1,27 @@
+# ---- 数据源：体积大且有版权，不入库 ----
+# 需要时按 README 的「补题记录」重新下载
+data/_pdf/
+data/_docx/
+data/_docx_parsed/
+
+# ---- 运行时数据：含密码哈希和会话密钥，绝不入库 ----
+data/app.db
+data/app.db-shm
+data/app.db-wal
+data/secret.key
+
+# ---- 本地依赖与构建产物 ----
+.tools/
+dist/
+__pycache__/
+*.pyc
+.venv/
+
+# ---- 编辑器 / 系统 ----
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# ---- 部署时生成 ----
+*.log

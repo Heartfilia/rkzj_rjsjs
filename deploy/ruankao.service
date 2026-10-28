@@ -1,0 +1,54 @@
+[Unit]
+Description=软考刷题 · API 服务
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ruankao
+Group=ruankao
+WorkingDirectory=/opt/ruankao
+
+# ---------------------------- 环境变量 ----------------------------
+# 只监听回环地址：外部访问一律经 Nginx 转发，服务本身不暴露公网。
+Environment=PORT=8787
+Environment=BIND=127.0.0.1
+Environment=DB_PATH=/opt/ruankao/data/app.db
+Environment=SECRET_FILE=/opt/ruankao/data/secret.key
+Environment=WEB_DIR=/opt/ruankao/server/web
+# 日志不缓冲，journalctl 才能实时看到
+Environment=PYTHONUNBUFFERED=1
+
+# ------------------------------ 启动 ------------------------------
+# 纯标准库，不需要 venv。若 python3 不在 /usr/bin/python3，
+# 用 `command -v python3` 查实际路径后修改（deploy.sh 会自动探测并写入）。
+ExecStart=/usr/bin/python3 /opt/ruankao/server/app.py
+
+Restart=always
+RestartSec=3
+
+# ------------------------------ 日志 ------------------------------
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=ruankao
+
+# ---------------------------- 资源限制 ----------------------------
+# 题库常驻内存约 2 MB，进程整体 40–60 MB。给个上限防止异常时拖垮小机器。
+MemoryMax=300M
+
+# ---------------------------- 安全加固 ----------------------------
+NoNewPrivileges=true
+PrivateTmp=true
+# 整机只读，只有 data/ 可写（SQLite 和会话密钥都落在这里）
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+ReadWritePaths=/opt/ruankao/data
+
+[Install]
+WantedBy=multi-user.target

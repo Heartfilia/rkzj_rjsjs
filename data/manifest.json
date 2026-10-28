@@ -1,0 +1,176 @@
+{
+  "generatedAt": "2026-10-28T08:08:23+00:00",
+  "banks": [
+    {
+      "id": "ruankao-zb-software-designer",
+      "level": "中级",
+      "subject": "软件设计师",
+      "sections": [
+        "基础知识"
+      ],
+      "papers": [
+        {
+          "id": "2009-05",
+          "title": "2009年上半年",
+          "section": "基础知识",
+          "count": 58,
+          "practiceable": 56
+        },
+        {
+          "id": "2009-11",
+          "title": "2009年下半年",
+          "section": "基础知识",
+          "count": 56,
+          "practiceable": 53
+        },
+        {
+          "id": "2010-05",
+          "title": "2010年上半年",
+          "section": "基础知识",
+          "count": 54,
+          "practiceable": 49
+        },
+        {
+          "id": "2010-11",
+          "title": "2010年下半年",
+          "section": "基础知识",
+          "count": 55,
+          "practiceable": 53
+        },
+        {
+          "id": "2011-05",
+          "title": "2011年上半年",
+          "section": "基础知识",
+          "count": 59,
+          "practiceable": 57
+        },
+        {
+          "id": "2011-11",
+          "title": "2011年下半年",
+          "section": "基础知识",
+          "count": 57,
+          "practiceable": 54
+        },
+        {
+          "id": "2012-05",
+          "title": "2012年上半年",
+          "section": "基础知识",
+          "count": 59,
+          "practiceable": 53
+        },
+        {
+          "id": "2012-11",
+          "title": "2012年下半年",
+          "section": "基础知识",
+          "count": 54,
+          "practiceable": 53
+        },
+        {
+          "id": "2013-05",
+          "title": "2013年上半年",
+          "section": "基础知识",
+          "count": 54,
+          "practiceable": 53
+        },
+        {
+          "id": "2013-11",
+          "title": "2013年下半年",
+          "section": "基础知识",
+          "count": 58,
+          "practiceable": 56
+        },
+        {
+          "id": "2014-05",
+          "title": "2014年上半年",
+          "section": "基础知识",
+          "count": 53,
+          "practiceable": 53
+        },
+        {
+          "id": "2014-11",
+          "title": "2014年下半年",
+          "section": "基础知识",
+          "count": 58,
+          "practiceable": 56
+        },
+        {
+          "id": "2015-05",
+          "title": "2015年上半年",
+          "section": "基础知识",
+          "count": 60,
+          "practiceable": 55
+        },
+        {
+          "id": "2015-11",
+          "title": "2015年下半年",
+          "section": "基础知识",
+          "count": 58,
+          "practiceable": 56
+        },
+        {
+          "id": "2016-05",
+          "title": "2016年上半年",
+          "section": "基础知识",
+          "count": 58,
+          "practiceable": 55
+        },
+        {
+          "id": "2016-11",
+          "title": "2016年下半年",
+          "section": "基础知识",
+          "count": 60,
+          "practiceable": 57
+        },
+        {
+          "id": "2017-05",
+          "title": "2017年上半年",
+          "section": "基础知识",
+          "count": 58,
+          "practiceable": 51
+        },
+        {
+          "id": "2017-11",
+          "title": "2017年下半年",
+          "section": "基础知识",
+          "count": 56,
+          "practiceable": 51
+        },
+        {
+          "id": "2018-05",
+          "title": "2018年上半年",
+          "section": "基础知识",
+          "count": 37,
+          "practiceable": 33
+        },
+        {
+          "id": "2018-11",
+          "title": "2018年下半年",
+          "section": "基础知识",
+          "count": 49,
+          "practiceable": 46
+        },
+        {
+          "id": "2020-11",
+          "title": "2020年11月",
+          "section": "基础知识",
+          "count": 57,
+          "practiceable": 42
+        },
+        {
+          "id": "2022-05",
+          "title": "2022年05月",
+          "section": "基础知识",
+          "count": 30,
+          "practiceable": 30
+        },
+        {
+          "id": "2022-11",
+          "title": "2022年11月",
+          "section": "基础知识",
+          "count": 75,
+          "practiceable": 59
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1270 @@
+{
+  "paper": "2020-11",
+  "paperTitle": "2020年11月",
+  "section": "基础知识",
+  "source": "2020年11月上午真题（公开卷，仅供个人学习）",
+  "questions": [
+    {
+      "no": 1,
+      "stem": "在程序执行过程中，高速缓存(Cache)与主存间的地址映射由（ ）。",
+      "options": {
+        "A": "操作系统进行管理",
+        "B": "存储管理软件进行管理",
+        "C": "程序员自行安排",
+        "D": "硬件自动完成"
+      },
+      "answer": "D",
+      "analysis": "",
+      "flags": [
+        "无解析"
+      ],
+      "id": "sd-202011-01",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch01",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "check"
+    },
+    {
+      "no": 2,
+      "stem": "计算机中提供指令地址的程序计数器 PC 在（ ）中。",
+      "options": {
+        "A": "控制器",
+        "B": "运算器",
+        "C": "存储器",
+        "D": "I/O 设备"
+      },
+      "answer": "A",
+      "analysis": "控制器是分析和执行指令的部件 ●指令寄存器 ●指令译码器 ●程序计数器 ●定时与控制电路 ●堆栈和堆栈指针",
+      "flags": [],
+      "id": "sd-202011-02",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch01",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 3,
+      "stem": "以下关于两个浮点数相加运算的叙述中，正确的是（ ）。",
+      "options": {
+        "A": "首先进行对阶，阶码大的向阶码小的对齐",
+        "B": "首先进行对阶，阶码小的向阶码大的对齐",
+        "C": "不需要对阶，直接将尾数相加",
+        "D": "不需要对阶，直接将阶码相加"
+      },
+      "answer": "B",
+      "analysis": "两个浮点数相加诚，首先需要比较阶码大小，使小阶向大阶看齐(称为“对阶”)。即小 阶的尾数向右移位(相当于小数点左移)，每右移-位，其阶码加 1，直到阶码相等，右移的位 数等于阶差。",
+      "flags": [],
+      "id": "sd-202011-03",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch01",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 4,
+      "stem": "某计算机系统的 CPU 主频为 2.8GHz。某应用程序包括 3 类指令，各类指令的 CPI(执行 每条指令所需要的时钟周期数)及指令比例如下表所示。执行该应用程序时的平均 CPI 为（ ）； 运算速度用 MIPS 表示，约为（ ）。 指令 A 指令 B 指令 C 比例 35% 45% 20% CPI 4 2 6",
+      "options": {
+        "A": "25",
+        "B": "3",
+        "C": "3.5",
+        "D": "4\nA.700 B.800 C.930 D.1100"
+      },
+      "answer": "CB",
+      "analysis": "4*0.35+2*0.45+6*0.2=3. 5 2.8G=2.8* 10^9HZ (=2.8*10^3MHz), 2.8* 10^9 /3.5=8*10^8=800* 10^6=800MIPS (2.8*10^3/3.5=2800/3.5=800MIPS) 1，主频 主频 = 时钟频率，它是指 CPU 内部晶振的频率，常用单位为 MHz，它反映了 CPU 的 基本工作节拍; 时钟频率又称主频，它是指 CPU 内部晶振的频率，常用单位为 MHz，它反映了 CPU 的 基本工作节拍; 2，时钟周期 时钟周期 t =1/ f; 主频的倒数 3，机器周期 机器周期 = m*t ;一个机器周期包含若干个时钟周期 4，指令周期 指令周期 = m*t*n; 执行一条指令所需要的时间，一般包含若干个机器周期 5，CPI CPI = m*n; 平均每条指令的平均时钟周期个数 指令周期 = CPI×机器周期 = n（CPI=n）×m×时钟周期=nm/主频 f, 注意指令周期单位 是 s 或者 ns，CPI 无量纲 6，MIPS(MillionInstructions Per Second） MIPS = 每秒执行百万条指令数 = 1/（CPI×时钟周期）= 主频/CPI MFLOPS 每秒百万浮点运算次数。表示秒钟所能执行的指令条数，对于微型计算机可 用 CPU 的主频和每条指令的执行所需的时钟周期来衡量。",
+      "flags": [
+        "多空题",
+        "含图"
+      ],
+      "id": "sd-202011-04",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch01",
+      "answerSource": "卷内",
+      "multiBlank": true,
+      "practiceable": false,
+      "quality": "check"
+    },
+    {
+      "no": 6,
+      "stem": "中断向量提供（ ）。",
+      "options": {
+        "A": "函数调用结束后的返回地址",
+        "B": "I/O 设备的接口地址",
+        "C": "主程序的入口地址",
+        "D": "中断服务程序入口地址"
+      },
+      "answer": "D",
+      "analysis": "中断向量是中断服务程序的入口地址,在计算机中中断向量的地址存放一条跳转到中 断服务程序的跳转指令。",
+      "flags": [],
+      "id": "sd-202011-06",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch01",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 7,
+      "stem": "以下关于认证和加密的叙述中，错误的是（ ）。",
+      "options": {
+        "A": "加密用以确保数据的保密性",
+        "B": "认证用以确保报文发送者和接收者的真实性",
+        "C": "认证和加密都可以阻止对手进行被动攻击",
+        "D": "身份认证的目的在于识别用户的合法性，阻止非法用户访问系统"
+      },
+      "answer": "C",
+      "analysis": "认证和加密的区别在于:加密用以确保数据的保密性，阻止对手的被动攻击，如截取， 窃听等，认证用以确保报文发送者和接收者的真实性以及报文的完整性，阻止对手的主动攻 击，如冒充、篡改、重播等。",
+      "flags": [],
+      "id": "sd-202011-07",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch05",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 8,
+      "stem": "访问控制是对信息系统资源进行保护的重要措施，适当的访问控制能够阻止未经授权的用 户有意或者无意地获取资源。计算机系统中，访问控制的任务不包括（ ）。",
+      "options": {
+        "A": "审计",
+        "B": "授权",
+        "C": "确定存取权限",
+        "D": "实施存取权限"
+      },
+      "answer": "A",
+      "analysis": "访问控制包括三个任务: ●授权:确定哪些主体有权访问哪些客体 ●确定访问权限(读、写、执行、删除、追加等存取方式的组合) ●实施访问权限 审计是指专业审核，涉核实公司的会计文件及相关凭证，以便就公司帐目的公正性、一 致性和符合一般认可的会计原则上表达意见。",
+      "flags": [],
+      "id": "sd-202011-08",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch05",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 9,
+      "stem": "路由协议称为内部网关协议，自治系统之间的协议称为外部网关协议，以下属于外部网关 协议的是()。",
+      "options": {
+        "A": "RIP",
+        "B": "OSPF",
+        "C": "BGP",
+        "D": "UDP"
+      },
+      "answer": "C",
+      "analysis": "常见协议功能 POP3：邮件收取 SMTP：邮件发送 FTP：20 数据端口/21 控制端口，文件传输协议 HTTP：超文本传输协议，网页传输 DHCP： IP 地址自动分配 SNMP：简单网络管理协议 DNS：域名解析协议，记录域名与 IP 的映射关系 TCP：可靠的传输层协议 UDP：不可靠的传输层协议 ICMP：因特网控制协议，PING 命令来自该协议 IGMP：组播协议 ARP：地址解析协议，IP 地址转换为 MAC 地址 RARP：反向地址解析协议，MAC 地址转 IP 地址 BCP (边界网关协议)是运行于 TCP 上的一种自治系统的编由协议。",
+      "flags": [],
+      "id": "sd-202011-09",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch04",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 10,
+      "stem": "所有资源只能由授权方或以授权的方式进行修改，即信息未经授权不能进行改变的特性 是指信息的( )。",
+      "options": {
+        "A": "完整性",
+        "B": "可用性",
+        "C": "保密性",
+        "D": "不可抵赖性."
+      },
+      "answer": "A",
+      "analysis": "安全的五个基本要素 ●机密性(确保信息不暴露给未授权的实体或进程) ●完整性(只有得到允许的人才能修改数据，并能够判别数据是否己被篡改) ●可用性(得到授权的实体在需要时可访问数据) ●可控性(可以控制授权范围内的信息流向和行为方式) ●可审查性(对出现的安全问题提供调查的依据和手段)",
+      "flags": [],
+      "id": "sd-202011-10",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch05",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 11,
+      "stem": "在 Windows 操作系统下，要获取某个网络开放端口所对应的应用程序信息,可以使用命令 ( ).",
+      "options": {
+        "A": "ipconfig",
+        "B": "traceroute",
+        "C": "netstat",
+        "D": "nslookup"
+      },
+      "answer": "C",
+      "analysis": "常见网络诊断命令： ping：用于检查网络是否连通； tracert（linux: traceroute）：用于确定 IP 数据包访问目标所采取的路径，若网络不通， 能定位到具体哪个结点不通； ipconfig （ linux: ifconfig）：显示 TCP/IP 网络配置值，如：IP 地址，MAC 地址，网关 地址； nslookup：查询 DNS 记录； Netstat：用于显示网络连接、路由表和网络接口信息。",
+      "flags": [],
+      "id": "sd-202011-11",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch04",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 12,
+      "stem": "甲、 乙两个申请人分别就相同内容的计算机软件发明创造，向国务院专利行政部门门 提出专利申请，甲先于乙一日提出，则（ ）。",
+      "options": {
+        "A": "甲获得该项专利中请权",
+        "B": "乙获得该项专利申",
+        "C": "甲和乙都获得该项专利中请权",
+        "D": "甲和乙都不能获得该项专利申请权"
+      },
+      "answer": "A",
+      "analysis": "",
+      "flags": [
+        "无解析"
+      ],
+      "id": "sd-202011-12",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch06",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "check"
+    },
+    {
+      "no": 13,
+      "stem": "小王是某高校的非全 8 制在读研究生，目前在甲公司实习，负责了该公司 某软件项 目的开发工作并撰写相关的软件文档。以下叙述中，正确的是（ ）。",
+      "options": {
+        "A": "该软件文档属于职务作品，但小王享有该软件著作权的全部权利",
+        "B": "该软件文档属于职务作品，甲公司享有该软件著作权的全部权利",
+        "C": "该软件文档不属于职务作品，小王享有该软件著作权的全部权利",
+        "D": "该软件文档不属于职务作品，甲公司和小王共同享有该著作权的全部权利"
+      },
+      "answer": "B",
+      "analysis": "如果开发者在单位或组织中任职期间，所开发的软件符合以下条件，则软件著作权应 归单位或组织所有。 ●针对本职工作中明确规定的开发 目标所开发的软件。 ●开发出的软件属于从事本职工作活动的结果。 ●使用了 单位或组织的资金、专用设备、未公开的信息等物质、技术条件，并由单位或组 织承担责任的软件。",
+      "flags": [],
+      "id": "sd-202011-13",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch13",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 14,
+      "stem": "按照我国著作权法的权利保护期，以下权利中，（ ）受到永久保护。",
+      "options": {
+        "A": "发表权",
+        "B": "修改权",
+        "C": "复制权",
+        "D": "发行权"
+      },
+      "answer": "B",
+      "analysis": "作者的署名权、修改权、保护作品完整权的保护期不受限制。公民的作品，其发表权、 使用权和获得报酬权的保护期为作者终生及其死亡后 50 年，截止于作者死亡后第 50 年的 12 月 31 日;如果是合作作品，截止到最后死亡的作者死亡后第 50 年的 12 月 31 日。 法人或者其他组织的作品、著作权(署名权除外)由法人或者其他组织享有的职务作品， 其发表权、使用权和获得报酬权的保护期为 50 年，截止于作品首次发表后第 50 年的 12 月 31 日，但作品自创作完成后 50 年内未发表的，著作权法不再保护。",
+      "flags": [],
+      "id": "sd-202011-14",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch06",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 15,
+      "stem": "结构化分析方法中，数据流图中的元素在（ ）中进行定义。",
+      "options": {
+        "A": "加工逻辑",
+        "B": "实体联系图",
+        "C": "流程图",
+        "D": "数据字典"
+      },
+      "answer": "D",
+      "analysis": "",
+      "flags": [
+        "无解析"
+      ],
+      "id": "sd-202011-15",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch11",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "check"
+    },
+    {
+      "no": 16,
+      "stem": "良好的启发式设计原则上不包括（ ）。",
+      "options": {
+        "A": "提高模块独立性",
+        "B": "模块规模越小越好",
+        "C": "模块作用域在其控制域之内",
+        "D": "降低模块接\n口复杂性"
+      },
+      "answer": "B",
+      "analysis": "",
+      "flags": [
+        "无解析"
+      ],
+      "id": "sd-202011-16",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch13",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "check"
+    },
+    {
+      "no": 17,
+      "stem": "如下所示的软件项目活动图中，顶点表示项目里程碑，连接顶点的边表示包 含的活动， 边上的权重表示活动的持续时间()天， 则完成该项目的最短时间为 （ ）天。在该活动图 中，共有（ ）条关键路径。",
+      "options": {
+        "A": "17",
+        "B": "19",
+        "C": "20",
+        "D": "22\nA、1 B、2 C、3 D、4"
+      },
+      "answer": "DB",
+      "analysis": "关键路径 ABFJL、ADGIJL",
+      "flags": [
+        "多空题",
+        "解析过短"
+      ],
+      "id": "sd-202011-17",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch02",
+      "answerSource": "卷内",
+      "multiBlank": true,
+      "practiceable": false,
+      "quality": "check"
+    },
+    {
+      "no": 19,
+      "stem": "软件项目成本估算模型 COCOMOII 中，体系结构阶段模型基于（ ）进行 估算。",
+      "options": {
+        "A": "应用程序点数量",
+        "B": "功能点数量",
+        "C": "复用或生成的代码行数",
+        "D": "源代码的行数"
+      },
+      "answer": "D",
+      "analysis": "COCOMO I 模型也需要使用规模估算信息,体系结构阶段,在模型层次结构中有 3 种不 同规模估算选择,即:对象点、功能点和代码行。应用组装模型使用的是对象点;早期设计阶段 模型使用的是功能点,功能点可以转换为代码行。体系结构模型把工作量表示为代码行数。",
+      "flags": [],
+      "id": "sd-202011-19",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch11",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 20,
+      "stem": "某表达式的语法树如下图所示，其后缀式(逆波兰式)是（ ）。",
+      "options": {
+        "A": "abcd-+*",
+        "B": "ab-c+d*",
+        "C": "abc-d*+",
+        "D": "ab-cd+*"
+      },
+      "answer": "C",
+      "analysis": "后缀式即依次遍历左子树、右子树、根，是 abc-d*+历年后缀式(逆波兰式)相关试题",
+      "flags": [
+        "含图"
+      ],
+      "id": "sd-202011-20",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch07",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "check"
+    },
+    {
+      "no": 21,
+      "stem": "用 C/C++语言为某个应用编写的程序，经过（ ）后形成可执行程序。",
+      "options": {
+        "A": "预处理、编译、汇编、链接",
+        "B": "编译、预处理、汇编、链接",
+        "C": "汇编、预处理、链接、编译",
+        "D": "链接、预处理、编译、汇编"
+      },
+      "answer": "A",
+      "analysis": "编译四个过程:预处理、编译、汇编、链接",
+      "flags": [
+        "解析过短"
+      ],
+      "id": "sd-202011-21",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch07",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "check"
+    },
+    {
+      "no": 22,
+      "stem": "在程序的执行过程中，系统用（ ）实现嵌套调用(递归调用)函数的正确返 回。",
+      "options": {
+        "A": "队列",
+        "B": "优先队列",
+        "C": "栈",
+        "D": "散列表"
+      },
+      "answer": "C",
+      "analysis": "",
+      "flags": [
+        "无解析"
+      ],
+      "id": "sd-202011-22",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch09",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "check"
+    },
+    {
+      "no": 23,
+      "stem": "假设系统中有三个进程 P1、P2 和 P3，两种资源 R1、R2。如果进程资源图 如图①和 图②所示，那么（ ）。",
+      "options": {
+        "A": "图①和图②都可化简",
+        "B": "图①和图②都不可化简",
+        "C": "图①可化简，图②不可化简",
+        "D": "图①不可化简，图②可化简"
+      },
+      "answer": "C",
+      "analysis": "P1 已经得到所需资源，可以运行，等它运行完后，资源释放 P2 可以分到所需资源， 继续运行，P3 也可以得到 P1 释放的资源继续运行。图②中 P1 和 P3 都在申请一个 R2，不 管这个 R2 先给谁，它都可以继续运行，完成后释放资源，其它进程就可以继续运行了。",
+      "flags": [
+        "含图"
+      ],
+      "id": "sd-202011-23",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch02",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "check"
+    },
+    {
+      "no": 24,
+      "stem": "假设计算机系统的页面大小为 4K，进程 P 的页面变换表如下表所示。若 P 要访问的逻 辑地址为十六进制 3C20H,那么该逻辑地址经过地址变换后，其物理地址应为（）",
+      "options": {
+        "A": "2048H",
+        "B": "3C20H",
+        "C": "5C20H",
+        "D": "6C20H"
+      },
+      "answer": "D",
+      "analysis": "页大小为 4K（=4*1024=4096=2*12），所以业内地址长度需要 12 位二进制表示 逻辑地址 3C20H，其中低 12 位二进制为页内地址，剩余高位 3H 为页号，转化为十进制为 3。查表可知：页号 3 对应的物理块号为 6，十六进制为：6H，把原来的 3C20H 中的 3 换成 6 即可（因为其页内地址不变），即最终物理地址为：6C20H",
+      "flags": [
+        "含图"
+      ],
+      "id": "sd-202011-24",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch02",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "check"
+    },
+    {
+      "no": 25,
+      "stem": "某文件系统采用索引节点管理，其磁盘索引块和磁盘数据块大小均为 1KB 字节且每 个文件索引节点 有 8 个地址项 iaddr[0]~iaddr[7]，每个地址项大 小为 4 字节，其中 iaddr[0]~iaddr[4]采用直接地址索引，iaddr[5]和 iaddr[6]采用一级 间接地址索引，iaddr[7] 采用二级间接地址索引。若用户要访问文件 userA 中 逻辑块号为 4 和 5 的信息，则系统 应分别采用（ ）， 该文件系统可表示的单 个文件最大长度是（ ）KB。",
+      "options": {
+        "A": "直接地址访问和直接地址访问",
+        "B": "直接地址访问和一级间接地址访问",
+        "C": "一级问接地址访问和一级间接地址访问",
+        "D": "一级间接地址访问和二级间接地址访问\nA、 517 B、1029 C、65797 D、66053"
+      },
+      "answer": "BD",
+      "analysis": "",
+      "flags": [
+        "多空题",
+        "无解析"
+      ],
+      "id": "sd-202011-25",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch02",
+      "answerSource": "卷内",
+      "multiBlank": true,
+      "practiceable": false,
+      "quality": "check"
+    },
+    {
+      "no": 27,
+      "stem": "假设系统有 n (n≥5) 个进程共享资源 R，且资源 R 的可用数为 5。若采用 PV 操作， 则相应的信号量 S 的取值范围应为（ ）。",
+      "options": {
+        "A": "-1~n-1",
+        "B": "-5~5",
+        "C": "-(n-1)~1",
+        "D": "-(n-5)~5"
+      },
+      "answer": "D",
+      "analysis": "PV 操作是一种实现进程互斥与同步的有效方法。PV 操作与信号量的处理相关，P 表 示通过的意思，V 表示释放的意思。 PV 操作是典型的同步机制之一。用一个信号量与一个消息联系起来，当信号量的值为 0 时，表示期望的消息尚未产生；当信号量的值非 0 时，表示期望的消息已经存在。用 PV 操作实现进程同步时，调用 P 操作测试消息是否到达，调用 V 操作发送消息。",
+      "flags": [],
+      "id": "sd-202011-27",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch02",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 28,
+      "stem": "在支持多线程的操作系统中，假设进程 P 创建了线程 TI、T2 和 T3， 那么 以下叙述 中错误的是（ ）。",
+      "options": {
+        "A": "线程 T1、 T2 和 T3 可以共享程 P 的代码",
+        "B": "线程 T1、T2 可以共享 P 进程中 T3 的栈指针",
+        "C": "线程 T1、T2 和 T3 可以共享进程 P 打开的文件",
+        "D": "线程 T1、T2 和 T3 可以共享进程 P 的全局变量"
+      },
+      "answer": "B",
+      "analysis": "1.线程是程序执行的最小单位，而进程是操作系统分配资源的最小单位 2.一个进程由一个或多个线程组成，线程是一个进程中代码的不同执行路线 3. 进程之间相互独立，但同一进程下的各个线程之间共享程序的内存空间(包括代码段， 数据集，堆等)及一些进程级的资源(如打开文件和信号等)，某进程内的线程在其他进程不可 见",
+      "flags": [],
+      "id": "sd-202011-28",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch02",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 29,
+      "stem": "喷泉模型是一种适合于面向( ) 开发方法的软件过程模型。该过程模型的特点不包括()。",
+      "options": {
+        "A": "对象",
+        "B": "数据.",
+        "C": "数据流",
+        "D": "事件\nA.以用户需求为动力 B.支持软件重用 C.具有迭代性， D.开发活动之间存在明显的界\n限"
+      },
+      "answer": "AD",
+      "analysis": "喷泉模型是一种以用户需求为动力，以对象为驱动的模型，主要用于描述面向对象的软 件开发过程。该模型认为软件开发过程自下而上周期的各阶段是相互迭代和无间隙的特性。 无间隙指在各项活动之间无明显边界，如分析和设计活动之间没有明显的界限。",
+      "flags": [
+        "多空题"
+      ],
+      "id": "sd-202011-29",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch11",
+      "answerSource": "卷内",
+      "multiBlank": true,
+      "practiceable": false,
+      "quality": "check"
+    },
+    {
+      "no": 31,
+      "stem": "若某模块内所有处理元素都在同一个数据结构上操作，则该模块的内聚类型为()。",
+      "options": {
+        "A": "逻辑",
+        "B": "过程",
+        "C": "通信",
+        "D": "功能"
+      },
+      "answer": "C",
+      "analysis": "如果模块 A 的三个处理都对同一数据结构操作，则模块 A 的内聚类型是 通信内聚。 模块间的耦合和模块的内聚是度量模块独立性的两个准则。内聚是模块功能强度的度量， 即模块内部各个元素彼此结合的紧密程度。一个模块内部各元素之间的紧密程度越高，则其 内聚性越高，模块独立性越好。模块内聚类型主要有以下几类: 偶然内聚或巧合内聚：指一个模块内的各处理元素之间没有任何联系。 逻辑内聚：指模块内执行若干个逻辑上相似的功能，通过参数确定该模块完成哪一个功 能。 时间内聚：把需要同时执行的动作组合在一起形成的模块。 过程内聚：指一个模块完成多个任务，这些任务必须按指定的过程执行。 通信内聚：指模块内的所有处理元素都在同一数据结构上操作，或者各处理使用相同的 输入数据或产生相同的输出数据。 顺序内聚：指一个模块中的各个处理元素都密切相关于同一各功能且必须顺序执行，前 一个功能元素的输出就是下一个功能的输入。 功能内聚：指模块内的所有元素共同作用完成一个功能，缺一不可。",
+      "flags": [],
+      "id": "sd-202011-31",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch11",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 32,
+      "stem": "软件质量属性中，( ) 是指软件每分钟可以处理多少个请求。",
+      "options": {
+        "A": "响应时间",
+        "B": "吞吐量",
+        "C": "负载.",
+        "D": "容量"
+      },
+      "answer": "B",
+      "analysis": "",
+      "flags": [
+        "无解析"
+      ],
+      "id": "sd-202011-32",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch11",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "check"
+    },
+    {
+      "no": 33,
+      "stem": "提高程序执行效率的方法-般不包括( )。",
+      "options": {
+        "A": "设计更好的算法",
+        "B": "采用不同的数据结构",
+        "C": "采用不同的程序设计语言",
+        "D": "改写\n代码使其更紧凑"
+      },
+      "answer": "D",
+      "analysis": "",
+      "flags": [
+        "无解析"
+      ],
+      "id": "sd-202011-33",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch13",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "check"
+    },
+    {
+      "no": 34,
+      "stem": "软件可靠性是指系统在给定的时间间隔内、在给定条件下无失效运行的概率。若 MTTF 和 MTTR 分别表示平均无故障时间和平均修复时间，则公式( ) 可用于计算软件可靠性。",
+      "options": {
+        "A": "MTTF/(1+MTTF)",
+        "B": "1/(1+MTTF)",
+        "C": "MTTR/(1+MTTR)",
+        "D": "1/(1+MTTR)"
+      },
+      "answer": "A",
+      "analysis": "●可 靠性 : 指 一个 系统 对 于给 定时 间 间隔 内、 给 定条 件下 无 失效 运作 的 概率 。可 以用 MTTF/(1+MTTF)来度量，其中 MTTF 为平均无故障时间 ● 可 用 性 : 在 给 定 时 间 点 上 ， 一 个 系 统 能 够 按 照 规 格 说 明 正 确 运 作 的 概 率 。 可 以 用 MTBF/(1+MTBF)来度量，其中 MTBF 为平均失效间隔时间 ●可维护性:实在给定使用条件下，再规定时间间隔内，使用规定的过程和资源完成维护活 动的概率，可以用 1/ (MTTR)来度量，其中 MTTR 为平均修复时间",
+      "flags": [],
+      "id": "sd-202011-34",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch01",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 35,
+      "stem": "用白盒测试技术对下面流程图进行测试，设计的测试用例如下表所示。至少采用测试 用例( )才可以实现语句覆盖;至少采用测试用例( ) 才可以实现路径覆盖。",
+      "options": {
+        "A": "①",
+        "B": "②",
+        "C": "③",
+        "D": "④\nA.① B.①② c.③④ D.①②③④"
+      },
+      "answer": "AD",
+      "analysis": "",
+      "flags": [
+        "无解析",
+        "含图"
+      ],
+      "id": "sd-202011-35",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch11",
+      "answerSource": "卷内",
+      "multiBlank": true,
+      "practiceable": false,
+      "quality": "check"
+    },
+    {
+      "no": 37,
+      "stem": "面向对象程序设计语言 C++、JAVA 中，关键字( ) 可以用于区分同名的对象属性和局.部 变量名。",
+      "options": {
+        "A": "private",
+        "B": "protected",
+        "C": "public",
+        "D": "this"
+      },
+      "answer": "D",
+      "analysis": "",
+      "flags": [
+        "无解析"
+      ],
+      "id": "sd-202011-37",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch10",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "check"
+    },
+    {
+      "no": 38,
+      "stem": "采用面向对象方法进行系统开发时，以下与新型冠状病毒有关的对象中，存在“一般--特 殊”关系的是( )。",
+      "options": {
+        "A": "确诊病人和治愈病人",
+        "B": "确诊病人和疑似病人",
+        "C": "医生和病人",
+        "D": "发热病人和确诊\n病人"
+      },
+      "answer": "D",
+      "analysis": "面向对象基本概念。面向对象：对象+分类+继承+通过消息的通信 对象：属性（数据）+方法（操作）+对象 ID 封装：隐藏对象的属性和实现细节,仅对外公开接口（信息隐藏技术） 类（实体类/控制类/边界类）：对对象的抽象。 接口：一种特殊的类，他只有方法定义没有实现 继承与泛化：复用机制 消息和消息通信：对象之间进行通信的一种构造叫做消息。消息是异步通信的。 重置/覆盖：在子类中重新定义父类中已经定义的方法。 重载：一个类可以有多个同名而参数类型不同的方法。 动态绑定：根据接收对象的具体情况将请求的操作与实现的方法进行连接（运行时绑定）。 多态：不同对象收到同样的消息产生不同的结果。（软设一般只涉及过载多态-同一个名字 在不同的上下文中所代表的含义不同）",
+      "flags": [],
+      "id": "sd-202011-38",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch10",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 39,
+      "stem": "进行面向对象系统设计时，针对包中的所有类对于同一类性质的变化。一个变化若对一 个包产生影响，则将对该包中的所有类产生影响，而对于其他的包不造成任何影响。这属于 ( )设计原则。",
+      "options": {
+        "A": "共同重用",
+        "B": "开放-封闭",
+        "C": "接口分离",
+        "D": "共同封闭"
+      },
+      "answer": "D",
+      "analysis": "●共同重用原则: -组接口中应该是共同重用的。如果重用了这组中的一个类，那么就要重用 包中的所有的类。相互之间没有紧密联系的类不应该在同一组中。这个原则强调了分类，就 具有相同关系或者关联比较紧密的类应该分到一组中，方便修改和客户端的调用。 ●共同封闭原则:包中的所有类对于同一种性质的变化应该是共同封闭的。一个变化若对一 个封闭的包产生影响,则将对该包中的所有类产生影响,而对于其他包则不造成任何影响。",
+      "flags": [],
+      "id": "sd-202011-39",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch10",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 40,
+      "stem": "多态有不同的形式，( ) 的多态是指同一个名字在不同上下文中所代表的含义不同。",
+      "options": {
+        "A": "参数",
+        "B": "包含",
+        "C": "过载",
+        "D": "强制"
+      },
+      "answer": "C",
+      "analysis": "多态细分为 4 类:参数多态、包含多态、过载多态、强制多态，前两种为通用多态，后 两种为特定多态。 参数多态:采用参数化模板，通过给出不同的类型参数，使得一个结构有多种类型。 包含多态:在许多语言中都存在，最常见的例子就是子类型化，即-一个类型是另外一个类型 的子类型。-般需要进行运行时的类型检查，属于动态多态。 过载多态:同一个名字在不同的上下文中所代表的含义不同。典型的例子是运算符重载 和函数重载，属于静态多态 强制多态:编译程序通过语义操作，把操作对象的类型强行加以变换，以符合函数或操 作符的要求。",
+      "flags": [],
+      "id": "sd-202011-40",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch07",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 48,
+      "stem": "函数 foo()、hoo()定义如下，调用函数 hoo()时，第一个参 数采用传值(call by value)方 式， 第二个参数采，用传引用(call by reference)方式。设有函数调用 foo(5)， 那么\"print(x)”执行 后输出的值为( )。",
+      "options": {
+        "A": "24",
+        "B": "25",
+        "C": "30",
+        "D": "36"
+      },
+      "answer": "A",
+      "analysis": "tips：不要被形参 int x，int&a 所迷惑，误认为 x=6，a 是 args 的缩写传入的实参位 置，要与行参位置一一对应",
+      "flags": [],
+      "id": "sd-202011-48",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch07",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 49,
+      "stem": "程序设计语言的大多数语法现象可以用 CFG (上下文无关文法)表示。下面的 CFG 产生式 集用于描述简单算术表达式，其中+、- *表示加、减、乘运算，id 表示单个字母表示的变 量，那么符合该文法的表达式为( )。 P:E→E+T|E-T|T T→T*F|F F→Flid",
+      "options": {
+        "A": "a+-b-c",
+        "B": "a*(b+c)",
+        "C": "a*-b+2",
+        "D": "-a/b+c ."
+      },
+      "answer": "A",
+      "analysis": "",
+      "flags": [
+        "无解析"
+      ],
+      "id": "sd-202011-49",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch07",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "check"
+    },
+    {
+      "no": 50,
+      "stem": "某有限自动机的状态转换图如下图所示，该自动机可识别( )。",
+      "options": {
+        "A": "1001",
+        "B": "1100",
+        "C": "1010",
+        "D": "0101"
+      },
+      "answer": "B",
+      "analysis": "",
+      "flags": [
+        "无解析",
+        "含图"
+      ],
+      "id": "sd-202011-50",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch07",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "check"
+    },
+    {
+      "no": 51,
+      "stem": "某高校信息系统设计的分 E-R 图中，人力部门定义的职工实体具有属性:职工号、姓名、 性别和出生日期;教学部门定义的教师实体具有属性:教师号、姓名和职称。这种情况 属于(),在合并 E-R 图时，()解决这一冲突。",
+      "options": {
+        "A": "属性冲突",
+        "B": "命名冲突",
+        "C": "结构冲突",
+        "D": "实体冲突\nA.职工和教师实体保持各自属性不变\nB.职工实体中加入职称属性，删除教师实体\nC.教师也是学校的职工，故直接将教师实体删除\nD.将教师实体所有属性并入职工实体，删除教师实体"
+      },
+      "answer": "CB",
+      "analysis": "属性冲突。同一属性可能会存在于不同的分 E- R 图,由于设计人员不同或是出发点不同, 对属性的类型、取值范围和数据单位等可能会不 一致。 命名冲突。相同意义的属性在不同的分 E- R 图中有着不同的命名,或是名词相同的属性 在不同的分 E-R 图中代表这不同的意义。 结构冲突。同-实体在不同的分 E-R 图中有不同的属性,同-对象在某一分 E-R 图中被抽 象为实体 ,而在另-分 E-R 图中又被抽象为属性, 需要统一-。本题属于结构冲突没有实体冲突的说法。 将局部的 E-R 图集成为全局 E-R 图时，可能存在 3 类冲突。 ●属性冲突:包括类型、取值范围、取值单位的冲突; ●结构冲突:例如同一对象在一个局部 E-R 图中作为实体，而在另一个局部 E-R 图中作为属 性，同一实体在不同的 E-R 图中的属性个数和类型不同等， ●命名冲突:包括实体类型名、联系类型名之间异名同义，或同名异义等。",
+      "flags": [
+        "多空题"
+      ],
+      "id": "sd-202011-51",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch03",
+      "answerSource": "卷内",
+      "multiBlank": true,
+      "practiceable": false,
+      "quality": "check"
+    },
+    {
+      "no": 53,
+      "stem": "假设关系 R<U, F>, U={A,B,C,D,E}, F= {A→BC, AC→D, B→D},那么在关系 R 中( )。",
+      "options": {
+        "A": "不存在传递依赖，候选关键字 A",
+        "B": "不存在传递依赖，候选关键字 AC",
+        "C": "存在传递依赖 A→D，候选关键字 A",
+        "D": "存在传递依赖 B→D，候选关键字 C"
+      },
+      "answer": "C",
+      "analysis": "分别用给出各选项给出的候关键字做闭包，如 A，A→BC, B→D，包括了全部属性，所 以 A 是候选关键字。{A→BC, B→D}存在传递依赖。 传递依赖：A-->B-->C 那么 A-->C 部分依赖：学号，课程号确定学生姓名，但是学号也可以直接确定姓名 给定一个 x 的值，能够求出唯一的 y 值，这就是函数依赖学号-->姓名，但是通过姓名 可能会找到两个学号。",
+      "flags": [],
+      "id": "sd-202011-53",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch03",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 54,
+      "stem": "关系 R、S 如下表所示，RS 的结果集为()，R、s 的左外联接、右外联接和完全外联接 的元组个数分别为()。",
+      "options": {
+        "A": "{ (2,1,4),(3,4,4)}",
+        "B": "{ (2,1,4,8),(3,4,4,4)}",
+        "C": "{ (2,1,4,2,1,8).(3,4,4,3,4,4)}",
+        "D": "{ (1,2,3,1,9,1),(2,1,4,2,1,8),(3,4,4,3,4,4),(4,6,7.4,8,3)}\nA.2,2,4 B.2,2,6 C.4,4,4 D.4,4,6"
+      },
+      "answer": "BD",
+      "analysis": "关系代数，自然连接(Natural join)，自然连接是一种特殊的等值连接 ●两个关系中进行比较的分量必须是相同的属性组 ●在结果中把重复的属性列去掉 自然连接的含义 R 和 s 具有相同的属性组 B 左外连接：关系 R、S 进行自然连接时，如果只把左边关系 R 中要舍弃的元组保留就叫 做左外连接(LEFT OUTER JOIN 或 LEFT JOIN)",
+      "flags": [
+        "多空题",
+        "含图"
+      ],
+      "id": "sd-202011-54",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch03",
+      "answerSource": "卷内",
+      "multiBlank": true,
+      "practiceable": false,
+      "quality": "check"
+    },
+    {
+      "no": 56,
+      "stem": "其企业信息系统采用分布式数据库系统。“当某一场地故障时，系统可以使用其他场地上 的副本而不至于使整个系统瘫痪”称为分布式数据库的( )。",
+      "options": {
+        "A": "共享性",
+        "B": "自治性",
+        "C": "可用性",
+        "D": "分布性"
+      },
+      "answer": "C",
+      "analysis": "●可用性是指将数据分布于多 个场地，并增加适当的冗余度，当一个场地出了故障不 会引起整个系統崩溃，因为故障场地的用户可以通过其它场地进入系统,利用其它数据副本 执行操作，不影响，业务的正常运行。 ●自治性是指网络中的每个节点具有独立处理的能力(称为场地自治),可以执行局部应 用。同时，每个节点也能通过网络通信子系统执行全局应用。 在分布式数据库系统中，应用程序直接使用本节点数据的性质称为自治性 共享性是指各节点数据共享；自治性是指每个节点对本地数据都能独立管理。",
+      "flags": [],
+      "id": "sd-202011-56",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch03",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 57,
+      "stem": "以下关于 Huffman (哈夫曼)树的叙述中，错误的是( )。",
+      "options": {
+        "A": "权值越大的叶子离根结点越近",
+        "B": "Huffman (哈夫曼)树中不存在只有一个子树的结点",
+        "C": "Huffman (哈夫曼)树中的结点总数一定为奇数",
+        "D": "权值相同的结点到树根的路径长度一定相同"
+      },
+      "answer": "D",
+      "analysis": "哈夫曼树: 1.哈夫曼树中权越大的叶子离根越近 2.具有相同带权结点的哈夫曼树不惟一 3.哈夫曼树的结点的度数为 0 或 2，没有度为 1 的结点。 4.包含 n 个叶子结点的哈夫曼树中共有 2n-1 个结点。",
+      "flags": [],
+      "id": "sd-202011-57",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch08",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 58,
+      "stem": "通过元素在存储空间中的相对位置来表示数据元素之间的逻辑关系，是()的特点。",
+      "options": {
+        "A": "顺序存储",
+        "B": "链表存储",
+        "C": "索引存储",
+        "D": "哈希存储"
+      },
+      "answer": "A",
+      "analysis": "顺序存储 是用一组地址连续的存储单元依次存储线性表中的数据元素,从而使得逻辑 关系相邻的两个元素在物理位置上也相邻。 ●优点:可以随机存取表中的元素 ●缺点:插入和删除操作需要移动大量的元素。 在线性表的顺序存储结构中,第 i 个元素 ai 的存储位置为: LOC(ai)= LOC(a1)+(i-1)xL 其中 LOC(a1)是表中第一个元素的存储位置，L 是表中每个元 素所占空间的大小。",
+      "flags": [],
+      "id": "sd-202011-58",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch13",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 59,
+      "stem": "在线性表 L 中进行二分查找，要求 L ( )。",
+      "options": {
+        "A": "顺序存储，元素随机排列",
+        "B": "双向链表存储，元素随机排列",
+        "C": "顺序存储，元素有序排列",
+        "D": "双向链表存储，元素有序排列"
+      },
+      "answer": "C",
+      "analysis": "折半查找(二分查找) 先给数据排序，形成有序表，把待查数据值与查找范围的中间元素值进行比较，会有四 种情况出现: 1)待查找数值与中间元素值相等，返回中间元素值的索引。 2)待查找数值比中间元素值小，则以整个查找范围的前部分作为新的查找范围，执行 1)，直到找到相等的值。 3)待查找数值比中间元素值大，则以整个查找范围的后半部分作为新的查找范围，执行 1)，直到找到相等的值 4)如果最后找不到相等的值，则返回错误提示信息。",
+      "flags": [],
+      "id": "sd-202011-59",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch08",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 60,
+      "stem": "61 某有向图如下所示，从顶点 V1 出发对其进行深度优先遍历，可能得到的遍历序列是(); 从顶点 V1 出发对其进行广度优先遍历，可能得到的遍历序列是() ①v1 v2 v3 v4 v5 ②v1v3 v4 v5 v2 ③v1 v3 v2 v4 v5 ④v1v2 v4 v5 v3 A.①②③ B.①③④ c.①②④ D.②③④ A.①② B.①③ c.②③ D.③④",
+      "options": {},
+      "answer": "DB",
+      "analysis": "",
+      "flags": [
+        "无选项",
+        "无解析"
+      ],
+      "id": "sd-202011-60",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch08",
+      "answerSource": "卷内",
+      "multiBlank": true,
+      "practiceable": false,
+      "quality": "check"
+    },
+    {
+      "no": 62,
+      "stem": "对数组 A=(2,8,7,1,3,5,6,4)用快速排序算法的划分方法进行一趟划分后得到的数组 A 为 ( ) (非递减排序，以最后一个元素为基准元素)。进行一趟划分的计算时间为( )。",
+      "options": {
+        "A": "(1,2,8,7,3,5,6,4)",
+        "B": "(1,2,3,4,8,7,5,6)",
+        "C": "(2,3,1,4,7,5,6,8)",
+        "D": "(2,1,3,4,8,7,5,6)\nA.O(1) B.O(Ign) C.O(n) D.O(nlgn)"
+      },
+      "answer": "CC",
+      "analysis": "",
+      "flags": [
+        "多空题",
+        "无解析"
+      ],
+      "id": "sd-202011-62",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch08",
+      "answerSource": "卷内",
+      "multiBlank": true,
+      "practiceable": false,
+      "quality": "check"
+    },
+    {
+      "no": 64,
+      "stem": "某简单无向连通图 G 的顶点数为 n，则图 G 最少和最多分别有( ) 条边。",
+      "options": {
+        "A": "n,n2/2",
+        "B": "n-1,n*(n-1)/2",
+        "C": "n,n*(n-1)/2",
+        "D": "n-1,n2/2"
+      },
+      "answer": "B",
+      "analysis": "一个无向图 G=(V,E) 是连通的，那么边的数目大于等于顶点的数目减一：|E|>=|V|-1， 而反之不成立。 如果 G=(V,E) 是有向图，那么它是强连通图的必要条件是边的数目大于等于顶点的数 目：|E|>=|V|，而反之不成立。 没有回路的无向图是连通的当且仅当它是树，即等价于：|E|=|V|-1。 有向完全图: n 个顶点的有向图有 n(n-1)条边。 无向完全图: n 个顶点的无向图有 n(n-1)/2 条边。",
+      "flags": [],
+      "id": "sd-202011-64",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch08",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 65,
+      "stem": "根据渐进分析，表达式序列: 从低到高排序为( )。 （65）",
+      "options": {
+        "A": "lgn, 1000n, n 2/3, n 4, n!, 2 n",
+        "B": "n 2/3, 1000n, lgn, n 4, n!, 2 n",
+        "C": "lgn, 1000n, n 2/3, 2 n, n 4, n!",
+        "D": "lgn, n 2/3, 1000n, n 4, 2 n, n!"
+      },
+      "answer": "D",
+      "analysis": "当 n 为 10 时为 1，幂是指数值，如 8 的 1/3 次幂=2，当 n 等于 8 时 为 4,因此 B 排除。n! 的增长率远大于 的增长率，因此选择 D.",
+      "flags": [],
+      "id": "sd-202011-65",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch07",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 66,
+      "stem": "采用 DHCP 动态分配 IP 地址,如果其主机开机后没有得到 DHCP 服务器的响应，则该主机 获取的 IP 地址属于网络()。",
+      "options": {
+        "A": "202.117.0.0/24",
+        "B": "192.168.1.0/24",
+        "C": "172.16.0.0/16",
+        "D": "169.254.0.0/16"
+      },
+      "answer": "D",
+      "analysis": "运 行 Windows 系 统 的 计 算 机 无 法 从 DHCP 服 务 器 中 获 取 动 态 地 址 时 ， 它 将 在 169.254.0.0/16 中随机选取一个自动专用 IP 地址(APIPA)。 169.254.0.0/16 这个是保留的\"link local\"网段，当不能获得 DHCP 服务时，自动配置的 系统被分配这个网段的地址。详细见 RFC3927。 保留地址用来在系统中做特殊用途的，不会被分配给任何一个企业、组织。 67,在浏览器的地址栏中输入 xxxftp.abc.can.cn 在该 URL 中( )是要访问的主机名。 A.xxxftp B. abc C.can D.cn 参考答案：A 解析： 1.url = 协议//主机名（包括服务器的计算机名+域名）/路径 https:// www.baidu.com https:// www.baidu.com 中的 https 是协议，www 是主机名。就是 www, 就是 web 的主机。 .com 是顶级域名，从右向左，每碰到一个“.”,依次表示二级域名，三级域名 2. location.hostname 可设置或返回当前 URL 的主机名",
+      "flags": [],
+      "id": "sd-202011-66",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch04",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 68,
+      "stem": "当修改邮件时，客户与 POP3 服务器之间通过( ) 建立连接,所使用的端口是( )。",
+      "options": {
+        "A": "HTTP",
+        "B": "TCP",
+        "C": "UDP",
+        "D": "HTTPS\nA.52 B.25 C.1100 D.110"
+      },
+      "answer": "BD",
+      "analysis": "POP3 主要用于支持使用客户端远程管理在服务器上的电子邮件，默认传输协议是 TCP, 认端口号 110。QQ 邮箱的 POP3。",
+      "flags": [
+        "多空题"
+      ],
+      "id": "sd-202011-68",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch04",
+      "answerSource": "卷内",
+      "multiBlank": true,
+      "practiceable": false,
+      "quality": "check"
+    },
+    {
+      "no": 70,
+      "stem": "因特网中的域名系统(Domain Name System)是-个分层的域名，在根域下面是顶级域，以 下顶级域中，( ) 属于国家顶级域。",
+      "options": {
+        "A": "NET",
+        "B": "EDU",
+        "C": "COM",
+        "D": "UK"
+      },
+      "answer": "D",
+      "analysis": "ABC 属于，国际顶级域名 英国的全称是大不列颠及北爱尔兰联合王国，又简称英国〔United Kingdom，UK〕 英国的顶级域名是.UK 这取决于那个国家的域名管理机构是如何定义的。 例如 co.uk，这 其实就是 com.uk 的缩写，com 代表公司的意思，uk 呢就是他们的国家代 码相当于用 co.uk 意思就是代表英国的公司，我们中国的 com.cn 是一个道理。 uk 是英国网络的标志,像中国的.com.cn。 71~75.Regardless of how well designed, constructed, and tested a system or aplication may be,errors or bugs will inevitably occur. Once a system has been ( implemented ), it enters operations and support.Systems support is the ongoing technical support for user, as well as themaintenance required tofix any errors, omissions,or new requirements that may arise. Before an information system can be(supported ) , it must be in operation. System operation is the day-to-day, week-to-week, month-to-month, and year-to-year (execution ) of an information system's business processes and application programs.Unlike systems analysis, design, and implementation, systems support cannot sensibly be ( decomposed) into actual phases that a support project must perform. Rather, systems support consists of four ongoing activities that are program maintenance, system recovery, technical support, and system enhancement.Each activity is a type of support project that is ( triggered ) by a particular problem,event,or opportunity encountered with the implemented system.",
+      "flags": [],
+      "id": "sd-202011-70",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch04",
+      "answerSource": "卷内",
+      "multiBlank": false,
+      "practiceable": true,
+      "quality": "ok"
+    },
+    {
+      "no": 71,
+      "stem": "",
+      "options": {
+        "A": "designed",
+        "B": "implemented",
+        "C": "investigated",
+        "D": "analyzed"
+      },
+      "answer": "",
+      "analysis": "",
+      "flags": [
+        "无答案",
+        "无解析"
+      ],
+      "id": "sd-202011-71",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch12",
+      "answerSource": "缺失",
+      "multiBlank": false,
+      "practiceable": false,
+      "quality": "check"
+    },
+    {
+      "no": 72,
+      "stem": "",
+      "options": {
+        "A": "supported",
+        "B": "tested",
+        "C": "implemented",
+        "D": "constructed"
+      },
+      "answer": "",
+      "analysis": "",
+      "flags": [
+        "无答案",
+        "无解析"
+      ],
+      "id": "sd-202011-72",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch12",
+      "answerSource": "缺失",
+      "multiBlank": false,
+      "practiceable": false,
+      "quality": "check"
+    },
+    {
+      "no": 73,
+      "stem": "",
+      "options": {
+        "A": "construction",
+        "B": "maintenance",
+        "C": "execution",
+        "D": "implementation"
+      },
+      "answer": "",
+      "analysis": "",
+      "flags": [
+        "无答案",
+        "无解析"
+      ],
+      "id": "sd-202011-73",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch12",
+      "answerSource": "缺失",
+      "multiBlank": false,
+      "practiceable": false,
+      "quality": "check"
+    },
+    {
+      "no": 74,
+      "stem": "",
+      "options": {
+        "A": "broke .",
+        "B": "formed",
+        "C": "composed",
+        "D": "decomposed"
+      },
+      "answer": "",
+      "analysis": "",
+      "flags": [
+        "无答案",
+        "无解析"
+      ],
+      "id": "sd-202011-74",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch12",
+      "answerSource": "缺失",
+      "multiBlank": false,
+      "practiceable": false,
+      "quality": "check"
+    },
+    {
+      "no": 75,
+      "stem": "",
+      "options": {
+        "A": "triggered",
+        "B": "leaded",
+        "C": "caused",
+        "D": "produced"
+      },
+      "answer": "",
+      "analysis": "有道翻译 71.设计 实现 调查 分析 72.a 支持 b 测试 c 实现 d 构造 73.建设 维护 执行 实现 74.打破 形成 组成 分解 75.触发 含铅 引起 生产",
+      "flags": [
+        "答案存疑"
+      ],
+      "id": "sd-202011-75",
+      "paper": "2020-11",
+      "paperTitle": "2020年11月",
+      "chapter": "ch12",
+      "answerSource": "卷内",
+      "multiBlank": true,
+      "practiceable": false,
+      "quality": "check"
+    }
+  ]
+}
