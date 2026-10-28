@@ -548,7 +548,10 @@ function renderQuestion(){
   const q = BY_ID[SESS.ids[SESS.i]];
   const done = SESS.answers[q.id];
   const picks = SESS.picks[q.id] || [];
-  const blanks = q.blanks || [];
+  // 兜底：老结构只有 options/answer 时也能渲染，避免出现"题目下面没有选项"
+  const blanks = (q.blanks && q.blanks.length)
+    ? q.blanks
+    : (q.options ? [{ options: q.options, answer: q.answer }] : []);
   const multi = blanks.length > 1;
 
   $('#q-chapter').textContent = chapterName(q.chapter);
@@ -611,7 +614,10 @@ function grade(q, picks){
 }
 
 function feedbackHTML(q, done, picks){
-  const blanks = q.blanks || [];
+  // 兜底：老结构只有 options/answer 时也能渲染，避免出现"题目下面没有选项"
+  const blanks = (q.blanks && q.blanks.length)
+    ? q.blanks
+    : (q.options ? [{ options: q.options, answer: q.answer }] : []);
   const multi = blanks.length > 1;
   const right = blanks.map(b => b.answer).join('、');
   const mine = (done.picks || []).join('、');

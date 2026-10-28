@@ -69,6 +69,7 @@ ruankao/
 │   ├── _pdf/                       # 原始真题 PDF
 │   ├── manifest.json               # 目录扫描结果（自动生成）
 │   └── quality-report.md           # 抽取质量报告（自动生成）
+├── banklib.py                      # 题库加载（离线构建与线上服务共用，避免两边逻辑分叉）
 ├── app/template.html               # 页面模板，数据用 /*__DATA__*/ 占位
 ├── deploy/
 │   ├── deploy.sh                   # 一键部署（install / update / user / status）

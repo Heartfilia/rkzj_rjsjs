@@ -32,7 +32,10 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, ROOT)
 BANKS = os.path.join(ROOT, "banks")
+OVERLAY = os.path.join(ROOT, "data", "analyses.json")
+EXCLUDED = os.path.join(ROOT, "data", "excluded.json")
 DB_PATH = os.environ.get("DB_PATH", os.path.join(ROOT, "data", "app.db"))
 SECRET_FILE = os.environ.get("SECRET_FILE", os.path.join(ROOT, "data", "secret.key"))
 def _default_web_dir():
@@ -190,53 +193,6 @@ def login_ok(ip):
 _banks_cache = {"mtime": 0, "banks": [], "questions": [], "index": {}}
 
 
-def scan_banks():
-    """扫 banks/<级别>/<资格>/<科目>/*.json —— 和 build_app.py 同一套约定"""
-    banks, questions = [], []
-    if not os.path.isdir(BANKS):
-        return banks, questions
-    for level in sorted(os.listdir(BANKS)):
-        level_dir = os.path.join(BANKS, level)
-        if not os.path.isdir(level_dir) or level.startswith("."):
-            continue
-        for subject in sorted(os.listdir(level_dir)):
-            bank_dir = os.path.join(level_dir, subject)
-            if not os.path.isdir(bank_dir) or subject.startswith("."):
-                continue
-            meta_path = os.path.join(bank_dir, "bank.json")
-            meta = json.load(open(meta_path, encoding="utf-8")) if os.path.exists(meta_path) else {}
-            bank_id = meta.get("id") or f"{level}-{subject}"
-            papers, sections = [], []
-            for section in sorted(os.listdir(bank_dir)):
-                sec = os.path.join(bank_dir, section)
-                if not os.path.isdir(sec) or section.startswith("."):
-                    continue
-                sections.append(section)
-                for fname in sorted(os.listdir(sec)):
-                    if not fname.endswith(".json"):
-                        continue
-                    doc = json.load(open(os.path.join(sec, fname), encoding="utf-8"))
-                    qs = doc.get("questions", [])
-                    for q in qs:
-                        q["bank"] = bank_id
-                        q["level"] = level
-                        q["subject"] = subject
-                    questions.extend(qs)
-                    papers.append({
-                        "id": doc.get("paper", fname[:-5]),
-                        "title": doc.get("paperTitle", fname[:-5]),
-                        "section": section,
-                        "count": len(qs),
-                        "practiceable": sum(1 for q in qs if q.get("practiceable")),
-                    })
-            banks.append({
-                "id": bank_id, "level": level, "subject": subject,
-                "name": meta.get("subject") or subject, "exam": meta.get("exam", ""),
-                "chapters": meta.get("chapters", []), "sections": sections, "papers": papers,
-            })
-    return banks, questions
-
-
 def banks_version():
     """用目录里最新的 mtime 判断题库有没有变"""
     newest = 0
@@ -250,7 +206,8 @@ def banks_version():
 def get_banks():
     mtime = banks_version()
     if mtime > _banks_cache["mtime"]:
-        banks, questions = scan_banks()
+        from banklib import load_banks
+        banks, questions, _usable = load_banks(BANKS, OVERLAY, EXCLUDED)
         _banks_cache.update({
             "mtime": mtime, "banks": banks, "questions": questions,
             "index": {q["id"]: q for q in questions},

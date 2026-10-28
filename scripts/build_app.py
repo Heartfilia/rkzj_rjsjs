@@ -11,7 +11,7 @@
 """
 import json
 import os
-import re
+import sys
 from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -30,87 +30,9 @@ def read_json(path):
 
 
 def scan():
-    banks, questions = [], []
-    overlay = read_json(OVERLAY) if os.path.exists(OVERLAY) else {}
-    excluded_path = os.path.join(ROOT, "data", "excluded.json")
-    excluded = set(read_json(excluded_path)["ids"]) if os.path.exists(excluded_path) else set()
-
-    for level in sorted(os.listdir(BANKS), key=lambda x: LEVEL_ORDER.get(x, 9)):
-        level_dir = os.path.join(BANKS, level)
-        if not os.path.isdir(level_dir) or level.startswith("."):
-            continue
-
-        for subject in sorted(os.listdir(level_dir)):
-            bank_dir = os.path.join(level_dir, subject)
-            if not os.path.isdir(bank_dir) or subject.startswith("."):
-                continue
-
-            meta_path = os.path.join(bank_dir, "bank.json")
-            meta = read_json(meta_path) if os.path.exists(meta_path) else {}
-            bank_id = meta.get("id") or f"{level}-{subject}"
-
-            papers, sections = [], []
-            for section in sorted(os.listdir(bank_dir)):
-                sec_dir = os.path.join(bank_dir, section)
-                if not os.path.isdir(sec_dir) or section.startswith("."):
-                    continue
-                sections.append(section)
-                for fname in sorted(os.listdir(sec_dir)):
-                    if not fname.endswith(".json"):
-                        continue
-                    doc = read_json(os.path.join(sec_dir, fname))
-                    qs = doc.get("questions", [])
-                    for q in qs:
-                        # 统一成 blanks 结构（老 PDF 题是 options/answer 单空）
-                        if not q.get("blanks") and q.get("options"):
-                            a = q.get("answer", "")
-                            # 老数据的双空题答案会连成 "CB"，单空结构放不下，直接判为不可用
-                            q["blanks"] = [{"options": q["options"],
-                                            "answer": a if len(a) == 1 else ""}]
-                        # 去掉原卷解析里混入的跨题引用、行首多出来的答案字母
-                        if q.get("analysis"):
-                            a = q["analysis"]
-                            a = re.sub(r"\s*\d{4}年\d{1,2}月第[\d、，\s]+题\s*$", "", a)
-                            a = re.sub(r"^([A-D])[\s.．、]+(?=[\u4e00-\u9fa5])", r"\1 选项：", a)
-                            q["analysis"] = a.strip()
-
-                        # 只补「没有解析」或「解析过短」的题，原卷解析优先保留
-                        cur = (q.get("analysis") or "").strip()
-                        if q.get("id") in overlay and len(cur) < 30:
-                            q["analysis"] = overlay[q["id"]]
-                            q["analysisSource"] = "auto"
-                        q["multiBlank"] = len(q.get("blanks") or []) > 1
-                        if q.get("id") in excluded:
-                            q["practiceable"] = False
-                            q["excluded"] = "答案存疑"
-                            continue
-                        q["practiceable"] = bool(
-                            q.get("stem") and q.get("blanks")
-                            and all(len(b.get("options") or {}) == 4 and b.get("answer")
-                                    for b in q["blanks"]))
-                        q["bank"] = bank_id
-                        q["level"] = level
-                        q["subject"] = subject
-                        q["section"] = section
-                    questions.extend(qs)
-                    papers.append({
-                        "id": doc.get("paper", fname[:-5]),
-                        "title": doc.get("paperTitle", fname[:-5]),
-                        "section": section,
-                        "count": len(qs),
-                        "practiceable": sum(1 for q in qs if q.get("practiceable")),
-                    })
-
-            banks.append({
-                "id": bank_id,
-                "level": level,
-                "subject": subject,
-                "name": meta.get("subject") or subject,
-                "exam": meta.get("exam", ""),
-                "chapters": meta.get("chapters", []),
-                "sections": sections,
-                "papers": papers,
-            })
+    sys.path.insert(0, ROOT)
+    from banklib import load_banks
+    banks, questions, _usable = load_banks(BANKS, OVERLAY, os.path.join(ROOT, "data", "excluded.json"))
     return banks, questions
 
 

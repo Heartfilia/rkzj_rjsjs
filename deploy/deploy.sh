@@ -135,8 +135,9 @@ if [ "$SRC_DIR" = "$APP_DIR" ]; then
 else
   log "复制应用文件"
 
-  # 服务本体
+  # 服务本体 + 共用的题库加载模块
   install -o "$APP_USER" -g "$APP_USER" -m 644 "$SRC_DIR/server/app.py" "$APP_DIR/server/app.py"
+  install -o "$APP_USER" -g "$APP_USER" -m 644 "$SRC_DIR/banklib.py" "$APP_DIR/banklib.py"
 
   # 线上前端（构建产物）
   for f in "$SRC_DIR"/server/web/*; do
@@ -176,7 +177,7 @@ log "文件已就位："
 find "$APP_DIR" -maxdepth 2 -not -path "$APP_DIR/deploy/*" -printf '    %M %u:%g  %p\n' 2>/dev/null | sort || true
 
 # 关键文件校验：缺了服务必然起不来，早点报出来
-for f in server/app.py server/web/index.html banks; do
+for f in server/app.py banklib.py server/web/index.html banks; do
   [ -e "$APP_DIR/$f" ] || die "缺少文件：$APP_DIR/$f"
 done
 
