@@ -135,9 +135,14 @@ if [ "$SRC_DIR" = "$APP_DIR" ]; then
 else
   log "复制应用文件"
 
-  # 服务本体 + 共用的题库加载模块
+  # 服务本体
   install -o "$APP_USER" -g "$APP_USER" -m 644 "$SRC_DIR/server/app.py" "$APP_DIR/server/app.py"
-  install -o "$APP_USER" -g "$APP_USER" -m 644 "$SRC_DIR/banklib.py" "$APP_DIR/banklib.py"
+
+  # 根目录下的公共模块（banklib.py 等），以后新增模块自动带上
+  for f in "$SRC_DIR"/*.py; do
+    [ -f "$f" ] || continue
+    install -o "$APP_USER" -g "$APP_USER" -m 644 "$f" "$APP_DIR/$(basename "$f")"
+  done
 
   # 线上前端（构建产物）
   for f in "$SRC_DIR"/server/web/*; do

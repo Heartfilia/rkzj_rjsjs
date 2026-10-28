@@ -32,7 +32,17 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, ROOT)
+# 兼容两种布局：仓库根目录 或 部署后的 /opt/ruankao
+sys.path[:0] = [ROOT, os.path.dirname(os.path.abspath(__file__))]
+
+try:
+    from banklib import load_banks
+except ModuleNotFoundError:
+    sys.exit(
+        "缺少 banklib.py。请确认它和 server/ 在同一层目录：\n"
+        f"  期望位置：{os.path.join(ROOT, 'banklib.py')}\n"
+        "  修复：在仓库目录执行 sudo ./deploy/deploy.sh update"
+    )
 BANKS = os.path.join(ROOT, "banks")
 OVERLAY = os.path.join(ROOT, "data", "analyses.json")
 EXCLUDED = os.path.join(ROOT, "data", "excluded.json")
@@ -206,7 +216,6 @@ def banks_version():
 def get_banks():
     mtime = banks_version()
     if mtime > _banks_cache["mtime"]:
-        from banklib import load_banks
         banks, questions, _usable = load_banks(BANKS, OVERLAY, EXCLUDED)
         _banks_cache.update({
             "mtime": mtime, "banks": banks, "questions": questions,
