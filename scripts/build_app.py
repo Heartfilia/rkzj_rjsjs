@@ -72,12 +72,20 @@ def main():
     open(os.path.join(os.path.dirname(OUT), "index.html"), "w", encoding="utf-8").write(html)
 
     usable = sum(1 for q in questions if q.get("practiceable"))
+    from banklib import audit_options
+    missing = audit_options(questions)
+    if missing:
+        raise SystemExit(
+            f"题库校验失败：{len(missing)} 道可练习题缺少完整 A–D 选项："
+            + "、".join(missing[:20])
+        )
     print(f"生成 {os.path.relpath(OUT, ROOT)}  ({os.path.getsize(OUT)/1024:.0f} KB)")
     for b in banks:
         n = sum(p["count"] for p in b["papers"])
         u = sum(p["practiceable"] for p in b["papers"])
         print(f"  · {b['level']} {b['subject']}：{len(b['papers'])} 套卷 / {n} 题（可刷 {u}）")
     print(f"  合计可刷 {usable} 题")
+    print(f"  选项校验：{usable} 道可练习题均含完整 A–D 选项")
 
 
 if __name__ == "__main__":

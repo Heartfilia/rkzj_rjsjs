@@ -19,6 +19,7 @@
   python3 server/app.py
 """
 import base64
+import gzip
 import hashlib
 import hmac
 import json
@@ -29,14 +30,14 @@ import sys
 import threading
 import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from urllib.parse import urlparse
+from urllib.parse import urlparse, parse_qs
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # 兼容两种布局：仓库根目录 或 部署后的 /opt/ruankao
 sys.path[:0] = [ROOT, os.path.dirname(os.path.abspath(__file__))]
 
 try:
-    from banklib import load_banks
+    from banklib import load_banks, audit_options
 except ModuleNotFoundError:
     sys.exit(
         "缺少 banklib.py。请确认它和 server/ 在同一层目录：\n"
@@ -200,7 +201,28 @@ def login_ok(ip):
 
 
 # ---------------------------------------------------------------- 题库
-_banks_cache = {"mtime": 0, "banks": [], "questions": [], "index": {}}
+_banks_cache = {"mtime": 0, "banks": [], "questions": [], "index": {},
+                "payload": b"", "payload_gzip": b"", "etag": "",
+                "lite": b"", "lite_gzip": b"", "lite_etag": "",
+                "banks_json": b"", "questions_json": b""}
+_banks_checked_at = 0.0
+
+# 前端只用到这些字段，其余（no/flags/source/quality…）留在服务端，不随网络发送
+WIRE_KEYS = ("id", "bank", "paper", "paperTitle", "chapter", "stem",
+             "blanks", "analysis", "analysisSource", "practiceable")
+
+
+def wire_question(q):
+    return {k: q[k] for k in WIRE_KEYS if k in q}
+
+
+def lite_question(q):
+    """首屏索引：只带选题/统计需要的字段，题目正文按需通过 /api/questions 取"""
+    return {
+        "id": q["id"], "bank": q["bank"], "paper": q["paper"], "no": q.get("no", 0),
+        "chapter": q.get("chapter", ""), "practiceable": bool(q.get("practiceable")),
+        "hasAnalysis": bool((q.get("analysis") or "").strip()),
+    }
 
 
 def banks_version():
@@ -213,15 +235,44 @@ def banks_version():
     return newest
 
 
-def get_banks():
+def get_banks(force=False):
+    global _banks_checked_at
+    now = time.time()
+    # mtime 检查做 5 秒节流：/api/banks 会频繁收到带 If-None-Match 的请求
+    if not force and now - _banks_checked_at < 5:
+        return _banks_cache
+    _banks_checked_at = now
+
     mtime = banks_version()
-    if mtime > _banks_cache["mtime"]:
+    if mtime > _banks_cache["mtime"] or not _banks_cache["payload"]:
         banks, questions, _usable = load_banks(BANKS, OVERLAY, EXCLUDED)
+        bad = audit_options(questions)
+        if bad:
+            print(f"[banks] WARNING: {len(bad)} practiceable question(s) missing options: "
+                  f"{', '.join(bad[:10])}", flush=True)
+
+        # 一次性序列化好，之后每个请求直接写缓存字节，不再重复 json.dumps 2 MB
+        # （之前每个 /api/bootstrap 都序列化一遍，小机器上会被单个页面加载拖住）
+        wire = [wire_question(q) for q in questions]
+        lite = [lite_question(q) for q in questions]
+        payload = json.dumps({"banks": banks, "questions": wire},
+                             ensure_ascii=False, separators=(",", ":")).encode()
+        lite_payload = json.dumps({"banks": banks, "questions": lite},
+                                  ensure_ascii=False, separators=(",", ":")).encode()
         _banks_cache.update({
             "mtime": mtime, "banks": banks, "questions": questions,
             "index": {q["id"]: q for q in questions},
+            "payload": payload,
+            "payload_gzip": gzip.compress(payload, 6),
+            "etag": '"' + hashlib.sha1(payload).hexdigest()[:20] + '"',
+            "lite": lite_payload,
+            "lite_gzip": gzip.compress(lite_payload, 6),
+            "lite_etag": '"' + hashlib.sha1(lite_payload).hexdigest()[:20] + '"',
+            "banks_json": json.dumps(banks, ensure_ascii=False, separators=(",", ":")).encode(),
+            "questions_json": json.dumps(wire, ensure_ascii=False, separators=(",", ":")).encode(),
         })
-        print(f"[banks] reloaded: {len(banks)} bank(s), {len(questions)} question(s)", flush=True)
+        print(f"[banks] reloaded: {len(banks)} bank(s), {len(questions)} question(s), "
+              f"index {len(lite_payload)//1024} KB / full {len(payload)//1024} KB", flush=True)
     return _banks_cache
 
 
@@ -269,11 +320,21 @@ class Handler(BaseHTTPRequestHandler):
 
     # ---- 工具
     def _json(self, code, obj, cookie=None):
-        body = json.dumps(obj, ensure_ascii=False).encode()
+        body = json.dumps(obj, ensure_ascii=False, separators=(",", ":")).encode()
+        self._send(code, body, cache="no-store", cookie=cookie)
+
+    def _send(self, code, body, cache="no-store", etag=None, encoding=None,
+              vary=None, cookie=None):
         self.send_response(code)
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Content-Length", str(len(body)))
-        self.send_header("Cache-Control", "no-store")
+        self.send_header("Cache-Control", cache)
+        if etag:
+            self.send_header("ETag", etag)
+        if encoding:
+            self.send_header("Content-Encoding", encoding)
+        if vary:
+            self.send_header("Vary", vary)
         if cookie:
             self.send_header("Set-Cookie", cookie)
         self.end_headers()
@@ -312,18 +373,96 @@ class Handler(BaseHTTPRequestHandler):
         if path == "/api/health":
             return self._json(200, {"ok": True})
 
+        if path == "/api/index":
+            uid = self._need_login()
+            if uid is None:
+                return
+            cache = get_banks()
+            etag = cache["lite_etag"]
+            if etag and self.headers.get("If-None-Match") == etag:
+                self.send_response(304)
+                self.send_header("ETag", etag)
+                self.send_header("Cache-Control", "private, max-age=0, must-revalidate")
+                self.send_header("Vary", "Accept-Encoding")
+                self.end_headers()
+                return
+            body, encoding = cache["lite"], None
+            if "gzip" in (self.headers.get("Accept-Encoding") or ""):
+                body, encoding = cache["lite_gzip"], "gzip"
+            return self._send(200, body, cache="private, max-age=0, must-revalidate",
+                              etag=etag, encoding=encoding, vary="Accept-Encoding")
+
+        if path == "/api/questions":
+            uid = self._need_login()
+            if uid is None:
+                return
+            raw = (parse_qs(urlparse(self.path).query).get("ids") or [""])[0]
+            ids = [x for x in raw.split(",")[:200] if x]
+            if not ids:
+                return self._json(400, {"error": "ids required"})
+            cache = get_banks()
+            items = [wire_question(cache["index"][i]) for i in ids if i in cache["index"]]
+            body = json.dumps({"questions": items},
+                              ensure_ascii=False, separators=(",", ":")).encode()
+            etag = '"' + hashlib.sha1(body).hexdigest()[:20] + '"'
+            if self.headers.get("If-None-Match") == etag:
+                self.send_response(304)
+                self.send_header("ETag", etag)
+                self.send_header("Cache-Control", "private, max-age=0, must-revalidate")
+                self.send_header("Vary", "Accept-Encoding")
+                self.end_headers()
+                return
+            encoding = None
+            if "gzip" in (self.headers.get("Accept-Encoding") or ""):
+                body, encoding = gzip.compress(body, 6), "gzip"
+            return self._send(200, body, cache="private, max-age=0, must-revalidate",
+                              etag=etag, encoding=encoding, vary="Accept-Encoding")
+
+        if path == "/api/banks":
+            uid = self._need_login()
+            if uid is None:
+                return
+            cache = get_banks()
+            etag = cache["etag"]
+            # 浏览器带 ETag 回来时只回 304，不传题库、也不再序列化
+            if etag and self.headers.get("If-None-Match") == etag:
+                self.send_response(304)
+                self.send_header("ETag", etag)
+                self.send_header("Cache-Control", "private, max-age=0, must-revalidate")
+                self.send_header("Vary", "Accept-Encoding")
+                self.end_headers()
+                return
+            body, encoding = cache["payload"], None
+            if "gzip" in (self.headers.get("Accept-Encoding") or ""):
+                body, encoding = cache["payload_gzip"], "gzip"
+            return self._send(200, body, cache="private, max-age=0, must-revalidate",
+                              etag=etag, encoding=encoding, vary="Accept-Encoding")
+
+        if path == "/api/state":
+            uid = self._need_login()
+            if uid is None:
+                return
+            with db() as c:
+                u = c.execute("SELECT name FROM users WHERE id=?", (uid,)).fetchone()
+            return self._json(200, {
+                "user": {"id": uid, "name": u["name"] if u else ""},
+                "state": progress_of(uid),
+            })
+
         if path == "/api/bootstrap":
+            # 兼容旧页面：用缓存好的字节拼接，避免重新序列化整份题库
             uid = self._need_login()
             if uid is None:
                 return
             cache = get_banks()
             with db() as c:
                 u = c.execute("SELECT name FROM users WHERE id=?", (uid,)).fetchone()
-            return self._json(200, {
-                "user": {"id": uid, "name": u["name"] if u else ""},
-                "banks": cache["banks"], "questions": cache["questions"],
-                "state": progress_of(uid),
-            })
+            dumps = lambda o: json.dumps(o, ensure_ascii=False, separators=(",", ":")).encode()
+            body = (b'{"user":' + dumps({"id": uid, "name": u["name"] if u else ""})
+                    + b',"banks":' + cache["banks_json"]
+                    + b',"questions":' + cache["questions_json"]
+                    + b',"state":' + dumps(progress_of(uid)) + b'}')
+            return self._send(200, body)
 
         if path == "/api/progress":
             uid = self._need_login()
@@ -369,7 +508,7 @@ class Handler(BaseHTTPRequestHandler):
 
         if path == "/api/reload":
             _banks_cache["mtime"] = 0
-            cache = get_banks()
+            cache = get_banks(force=True)
             return self._json(200, {"ok": True, "questions": len(cache["questions"])})
 
         self._json(404, {"error": "not found"})

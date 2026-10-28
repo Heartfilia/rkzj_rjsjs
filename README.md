@@ -45,7 +45,7 @@ dist/软件设计师-刷题.html
 | | 离线版 | 线上版 |
 |---|---|---|
 | 入口 | `dist/软件设计师-刷题.html` 双击 | 域名（nginx 反代） |
-| 题库 | 内联在 html 里（1.9 MB） | 走 `/api/bootstrap`，改题库不用重新构建前端 |
+| 题库 | 内联在 html 里（1.9 MB） | 首屏只取 `/api/index` 索引（gzip 约 10 KB），题目正文按需取；进度走 `/api/state` |
 | 记录 | 浏览器 localStorage | 服务端 SQLite，换设备也在 |
 | 账号 | 无 | 密码登录，不同密码 = 不同用户 |
 | 后端 | 无 | `server/app.py`（纯标准库，40–60 MB 内存） |

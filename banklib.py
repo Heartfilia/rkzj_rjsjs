@@ -16,6 +16,56 @@ XREF = re.compile(r"\s*\d{4}年\d{1,2}月第[\d、，\s]+题\s*$")
 LEAD_ANS = re.compile(r"^([A-D])[\s.．、]+(?=[\u4e00-\u9fa5])")
 
 
+def clean_options(options):
+    """选项必须是 A-D 四个非空文本，返回归一化后的副本，不满足返回 None。"""
+    if not isinstance(options, dict):
+        return None
+    cleaned = {}
+    for key, val in options.items():
+        k = str(key).strip().upper()
+        if k in OPT_KEYS and isinstance(val, str) and val.strip():
+            cleaned[k] = val
+    return cleaned if all(k in cleaned for k in OPT_KEYS) else None
+
+
+def question_blanks(q):
+    """取题目的空位；兼容只有 options/answer 的老结构。"""
+    blanks = q.get("blanks")
+    if not blanks and q.get("options"):
+        ans = str(q.get("answer") or "").strip().upper()
+        # 老数据的双空题答案会连成 "CB"，单空结构放不下
+        blanks = [{"options": q["options"], "answer": ans if len(ans) == 1 else ""}]
+    return blanks or []
+
+
+def option_problems(q):
+    """列出题目无法正常作答的原因；空列表代表题干和 A-D 选项都完整。"""
+    stem = q.get("stem")
+    if not isinstance(stem, str) or not stem.strip():
+        return ["题干为空"]
+
+    blanks = question_blanks(q)
+    if not blanks:
+        return ["没有选项"]
+
+    problems = []
+    for i, b in enumerate(blanks):
+        if not isinstance(b, dict):
+            problems.append(f"第{i+1}空结构错误")
+            continue
+        if clean_options(b.get("options")) is None:
+            problems.append(f"第{i+1}空选项不完整")
+        ans = b.get("answer")
+        if not isinstance(ans, str) or ans.strip().upper() not in OPT_KEYS:
+            problems.append(f"第{i+1}空答案无效")
+    return problems
+
+
+def audit_options(questions):
+    """返回练习池里仍然缺完整选项的题号；正常情况下应为空。"""
+    return [q["id"] for q in questions if q.get("practiceable") and option_problems(q)]
+
+
 def read_json(path, default=None):
     if not os.path.exists(path):
         return default
@@ -28,13 +78,17 @@ def normalize_question(q, overlay=None, excluded=None):
     overlay = overlay or {}
     excluded = excluded or set()
 
-    # 1) 老结构 options/answer -> blanks
-    if not q.get("blanks") and q.get("options"):
-        ans = q.get("answer", "")
-        # 老数据的双空题答案会连成 "CB"，单空结构放不下，判为不可用
-        q["blanks"] = [{"options": q["options"], "answer": ans if len(ans) == 1 else ""}]
-
-    blanks = q.get("blanks") or []
+    # 1) 老结构 options/answer -> blanks；选项键统一大写并剔除空值
+    q["blanks"] = question_blanks(q)
+    blanks = q["blanks"]
+    for b in blanks:
+        if not isinstance(b, dict):
+            continue
+        opts = clean_options(b.get("options"))
+        if opts is not None:
+            b["options"] = opts
+        if isinstance(b.get("answer"), str):
+            b["answer"] = b["answer"].strip().upper()
 
     # 2) 人工补写的解析：只覆盖空的或明显残缺的，原卷解析优先
     cur = (q.get("analysis") or "").strip()
@@ -56,10 +110,8 @@ def normalize_question(q, overlay=None, excluded=None):
         q["excluded"] = "答案存疑"
         return False
 
-    q["practiceable"] = bool(
-        q.get("stem") and blanks
-        and all(len(b.get("options") or {}) == 4 and b.get("answer") for b in blanks)
-    )
+    # 5) 只有题干和每个空的 A-D 选项都完整，才允许进入练习池
+    q["practiceable"] = not option_problems(q)
     return q["practiceable"]
 
 
