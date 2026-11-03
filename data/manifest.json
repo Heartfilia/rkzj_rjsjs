@@ -1,12 +1,13 @@
 {
-  "generatedAt": "2026-10-28T08:29:00+00:00",
+  "generatedAt": "2026-11-03T03:39:58+00:00",
   "banks": [
     {
       "id": "ruankao-zb-software-designer",
       "level": "中级",
       "subject": "软件设计师",
       "sections": [
-        "基础知识"
+        "基础知识",
+        "应用技术"
       ],
       "papers": [
         {
@@ -169,8 +170,49 @@
           "section": "基础知识",
           "count": 75,
           "practiceable": 59
+        },
+        {
+          "id": "2023-05",
+          "title": "2023年上半年",
+          "section": "基础知识",
+          "count": 55,
+          "practiceable": 55
+        },
+        {
+          "id": "2024-11",
+          "title": "2024年下半年（前30题·回忆版）",
+          "section": "基础知识",
+          "count": 30,
+          "practiceable": 30
+        },
+        {
+          "id": "2026-10",
+          "title": "2026年下半年（考生回忆版）",
+          "section": "基础知识",
+          "count": 67,
+          "practiceable": 67
+        },
+        {
+          "id": "2026-11-mock",
+          "title": "2026 模拟冲刺卷（原创）",
+          "section": "基础知识",
+          "count": 75,
+          "practiceable": 75
         }
       ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "ruankao-zb-software-designer/2022-05-应用技术",
+      "bank": "ruankao-zb-software-designer",
+      "level": "中级",
+      "subject": "软件设计师",
+      "section": "应用技术",
+      "title": "2022 年 5 月 软件设计师 · 应用技术（下午题）",
+      "source": "2022 年上半年软考真题整理",
+      "note": "共 6 道案例题。原卷中的数据流图、类图等图形已用文字说明替代，方便在手机上直接阅读；试题三为文字改编。题目与答案整理自公开真题，仅供复习参考。",
+      "count": 6
     }
   ]
 }

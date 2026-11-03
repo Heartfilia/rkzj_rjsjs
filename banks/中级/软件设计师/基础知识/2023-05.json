@@ -1,0 +1,1668 @@
+{
+  "paper": "2023-05",
+  "paperTitle": "2023年上半年",
+  "section": "基础知识",
+  "source": "2023年上半年软件设计师综合知识真题（信管网文字版（考生回忆版））",
+  "questions": [
+    {
+      "id": "sd-202305-01",
+      "no": 1,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "计算机中，系统总线用于（）连接",
+      "blanks": [
+        {
+          "options": {
+            "A": "接口和外设",
+            "B": "运算器,控制器和寄存器",
+            "C": "主存及外设部件",
+            "D": "DMA控制器和中断控制器"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-02",
+      "no": 2,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "在由高速缓存，主存和硬盘构成的三级存储体系中,CPU执行指令时需要读取数据，那么DMA控制器和中断CPU发出的数据地址是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "高速缓存地址",
+            "B": "主存物理地址",
+            "C": "硬盘的扇区地址",
+            "D": "虚拟地址"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-03",
+      "no": 3,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "设信息位是8位，用海明码来发现并纠正1位出错的情况，则校验位的位数至少为（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "1",
+            "B": "2",
+            "C": "4",
+            "D": "8"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-04",
+      "no": 4,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "中断向量提供的是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "中断源的设备地址",
+            "B": "中断服务程序的入口地址",
+            "C": "传递数据的起始地址",
+            "D": "主程序的断点地址"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-05",
+      "no": 5,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "计算机系统中，定点数常采用补码表示，以下关于补码表示的叙述中，错误的是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "补码零的表示不是唯一的",
+            "B": "可以将减法运算转化为加法运算",
+            "C": "符号位可以与数值位一起参加运算",
+            "D": "与真值的对应关系简单且直观"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-06",
+      "no": 6,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "设指令流水线将—条指令的执行分为取指,分析，执行三段，已知取指时间是2ns,分析时间需2ns.执行时间为1nS，则执行完1000条指令所需时间为（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "1004ns",
+            "B": "1998ns",
+            "C": "2003ns",
+            "D": "2008ns"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-07",
+      "no": 7,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "在OSI参考模型中，负责对应用层消息进行压缩、加密功能的层次为（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "传输层",
+            "B": "会话层",
+            "C": "表示层",
+            "D": "应用层"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-08",
+      "no": 8,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "PKI体系中，由SSL/TSL实现HTTPS应用。浏览器和服务器之间用于加密HTTP消息的方式是（）。如果服务器证书被撇销那么所产生的后果是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "对方公钥+公钥加密",
+            "B": "本方公钥+公钥加密",
+            "C": "会话密钥+公钥加密",
+            "D": "会话密钥+对称加密"
+          },
+          "answer": "D"
+        },
+        {
+          "options": {
+            "A": "服务器不能执行加解密",
+            "B": "服务器不能执行签名",
+            "C": "客户端无法再信任服务器",
+            "D": "客户端无法发送加密信息给服务器"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch05",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-10",
+      "no": 10,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "以下关于入侵防御系统功能的描述中，不正确的是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "监测并分析用户和系统的网络活动",
+            "B": "匹配特征库识别已知的网络攻击行为",
+            "C": "联动入侵检测系统使其阻断网络攻击行为",
+            "D": "检测僵尸网络，木马控制等僵尸主机行为"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch05",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-11",
+      "no": 11,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "web应用防火墙无法有效保护（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "登录口令暴力破解",
+            "B": "恶意注册",
+            "C": "抢票机器人",
+            "D": "流氓软件"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-12",
+      "no": 12,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "著作权中，（）的保护期不受限制",
+      "blanks": [
+        {
+          "options": {
+            "A": "发表权",
+            "B": "发行权",
+            "C": "署名权",
+            "D": "展览权"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch06",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-13",
+      "no": 13,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "国际上为保护计算机软件知识产权不受侵犯所采用的主要方式是实施（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "合同法",
+            "B": "物权法",
+            "C": "版权法",
+            "D": "刑法"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch06",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-14",
+      "no": 14,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "以下关于计算机软件著作权的叙述中，不正确的是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "软件著作权人可以许可他人行使其软件著作权，并有权获得报酬",
+            "B": "软件著作权人可以全部或者部分转让其软件著作权，并有权获得报酬",
+            "C": "软件著作权属于自然人的，该自然人死亡后，在软件著作权的保护期内、继承人能继承软件著作权的所有权力",
+            "D": "为了学习和研究软件内含的设计思想和原理，通过安装、显示、传输或者存储软件等使用软件的，可以不经软件著作权人许可，不向其支付报酬"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch06",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-15",
+      "no": 15,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "以上关于数据流图中基本加工的叙出，不正确的是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "对每一个基本加工，必须有一个加工规格说明",
+            "B": "加工规格说明必须描述把输入数据流变换为输出数据流的加工规则",
+            "C": "加工规格说明需要给出实现加工的细节",
+            "D": "决策树、决策表可以用来表示加工规格说明."
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-16",
+      "no": 16,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "以下关于好的软件设计原则的叙述中，不正确的是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "模块化",
+            "B": "提高模块独立性",
+            "C": "集中化",
+            "D": "提高抽象层次"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-17",
+      "no": 17,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "下图是一个软件项目的活动图，其中顶点表示项目里程碑，连接顶点的边表示活动，则里程碑(17)在关键路径上,关键路径长度为(18)",
+      "blanks": [
+        {
+          "options": {
+            "A": "B",
+            "B": "E",
+            "C": "G",
+            "D": "I"
+          },
+          "answer": "B"
+        },
+        {
+          "options": {
+            "A": "15",
+            "B": "17",
+            "C": "19",
+            "D": "23"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": [
+        "无解析",
+        "含图"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-19",
+      "no": 19,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "由8位成员组成的开发团队中，一共有（）条沟通路径",
+      "blanks": [
+        {
+          "options": {
+            "A": "64",
+            "B": "56",
+            "C": "32",
+            "D": "28"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-20",
+      "no": 20,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "对布尔表达式“a or ((cb",
+      "blanks": [
+        {
+          "options": {
+            "A": "a为true",
+            "B": "b为true",
+            "C": "c为true",
+            "D": "d为true"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-21",
+      "no": 21,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "设有正规式s=(o | 10)*，则其所描述正规集中字符体的特点是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "长度必须是偶数",
+            "B": "长度必须是奇数",
+            "C": "0不能连续出现",
+            "D": "1不能连续出现"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-22",
+      "no": 22,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "设函数foo和hoo的定义如下图所示，在函数foo中调用函数hoo，hoo的第一个参数采用传引用方式(call by reference)，第二个参数传值方式(call by value)，那么函数foo中的print(a，b)将输出（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "8，5",
+            "B": "39，5",
+            "C": "8，40",
+            "D": "39，40"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": [
+        "无解析",
+        "含图"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-23",
+      "no": 23,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "某文件管理系统采用位示图(bitmap)来记录磁盘的使用情况，若计算机系统的字长为64位，磁盘容量为512GB，物理块的大小为4MB，那么位示图的大小为（）个字.",
+      "blanks": [
+        {
+          "options": {
+            "A": "1024",
+            "B": "2048",
+            "C": "4096",
+            "D": "9600"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-24",
+      "no": 24,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "磁盘调度分为移臂调度和旋转调度两类，在移臂调度的算法中，（）算法可能会随时改变移动臂的运行方向",
+      "blanks": [
+        {
+          "options": {
+            "A": "单向扫描和先来先服务",
+            "B": "电梯调度和先来先服务",
+            "C": "电梯调度和最短寻监时间优先",
+            "D": "先来先服务和最短寻道时间优先"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-25",
+      "no": 25,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "在支持多线程的操作系统中，假设进程P创建了t1、t2、t3线程，那么（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "该进程的代码段不能被t1、t2、t3共享",
+            "B": "该进程的全局变量只能被t共享",
+            "C": "该进程中t1、t2、t3的栈指针不能被共享",
+            "D": "该进程中t1的栈指针可以被t2、t3共享"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-26",
+      "no": 26,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "进程P1、P2、P3、P4、P5和P6的前趋图如下所示： 若用PV操作控制进程P1、P2、P3、P4、P5和P6并发执行的过程，需要设置8个信号量S1、S2、S3、S4、S5、s6、S7和S8，且信号量S1~S8的初值都等于零。下面P1~P6的进程执行过程中，①和②处应分别填写(26);③和④处应分别填写(27):⑤和⑥处应分别填写(28)",
+      "blanks": [
+        {
+          "options": {
+            "A": "P(S1)P(S2)和V(S3)V(S4)",
+            "B": "P(S1)P(S2)和V(S1)V(S2)",
+            "C": "V (S3)V(S4)和P(S1) P(S2)",
+            "D": "V(S3)V(S4)和P(S2)P(S3)"
+          },
+          "answer": "D"
+        },
+        {
+          "options": {
+            "A": "V (S5)和P(S4)P(S5)",
+            "B": "V(S3)和P(S4)V(S5)",
+            "C": "P(S5)和V(S4)V(S5)",
+            "D": "P(S3)和P(S4)P(S5)"
+          },
+          "answer": "A"
+        },
+        {
+          "options": {
+            "A": "V(S6)和V(S8)",
+            "B": "P(S6)和P(S7)",
+            "C": "P(S6)和V(S8)",
+            "D": "P(S6)和P(S8)"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-29",
+      "no": 29,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "以下关于增量模型优点的叙述中，不正确的是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "能够在较短的时间提交一个可用的产品系统",
+            "B": "可以尽早让用户熟悉系统",
+            "C": "优先级高的功能首先交付，这些功能将接受更多的测试",
+            "D": "系统的设计更加容易"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-30",
+      "no": 30,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "以下敏捷开发方法中，（）使用迭代的方法，把一段短的时间(如30天)的迭代称为一个冲刺，并按照需求优先级来实现产品",
+      "blanks": [
+        {
+          "options": {
+            "A": "极限编程(XP)",
+            "B": "水晶法(Crystal)",
+            "C": "并列争球法(Scrum)",
+            "D": "自适应软件开发(ASD)"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-31",
+      "no": 31,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "若模块A通过控制参数来传递信息给模块B，从而确定执行模块B中的哪部分语句。则这两个模块的耦合类型是（）耦合",
+      "blanks": [
+        {
+          "options": {
+            "A": "数据",
+            "B": "标记",
+            "C": "控制",
+            "D": "公共"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-32",
+      "no": 32,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "在设计中实现可移植性设计的规则不包括（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "将设备相关程序和设备无关程序分开设计",
+            "B": "可使用特定环境的专用功能",
+            "C": "采用平台无关的程序设计语言",
+            "D": "不使用依赖于某一平台的类库"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-33",
+      "no": 33,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "以下关于管道——过滤器软件体系结构风格优点的叙述中，不正确的是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "构件具有良好的高内聚、低耦合的特点",
+            "B": "支持软件复用",
+            "C": "支持并行执行",
+            "D": "适合交互处理应用"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-34",
+      "no": 34,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "以下流程图中，至少需要(34)个测试用例才能覆盖所有路径。采用McCabe方法计算程序复杂度为(35)",
+      "blanks": [
+        {
+          "options": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "6"
+          },
+          "answer": "B"
+        },
+        {
+          "options": {
+            "A": "2",
+            "B": "3",
+            "C": "4",
+            "D": "5"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-36",
+      "no": 36,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "在软件系统交付给用户使用后，为了使用户界面更友好，对系统的图形输出进行改进，该行为属于（）维护",
+      "blanks": [
+        {
+          "options": {
+            "A": "改正性",
+            "B": "适应性",
+            "C": "改善性",
+            "D": "预防性"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-37",
+      "no": 37,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "采用面向对象方法开发学生成绩管理系统，学生的姓名、性别、出生日期、期末考试成绩、查看成绩操作均被(37)在学生对象中。系统中定义不同类，不同类的对象之间通过(38)进行通信",
+      "blanks": [
+        {
+          "options": {
+            "A": "封装",
+            "B": "继承",
+            "C": "多态",
+            "D": "信息"
+          },
+          "answer": "A"
+        },
+        {
+          "options": {
+            "A": "继承",
+            "B": "多态",
+            "C": "消息",
+            "D": "重载"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-39",
+      "no": 39,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "对采用面向对象方法开发的系统进行测试时，通常从不同层次进行测试。测试类中定义的每个方法属于（）层",
+      "blanks": [
+        {
+          "options": {
+            "A": "算法",
+            "B": "类",
+            "C": "模板",
+            "D": "系统"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-40",
+      "no": 40,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "在面向对象系统设计中，如果重用了一个包中的某个类，那么就要重用该包中所的类，这属于（）原则",
+      "blanks": [
+        {
+          "options": {
+            "A": "共同封闭",
+            "B": "共同重用",
+            "C": "开放-封闭",
+            "D": "接口分离"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-43",
+      "no": 43,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "UML包图展现由模型本身分解而成的组织单元及其依赖关系，以下关于包图的叙述中，不正确的是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "可以拥有类、接口构件、节点",
+            "B": "一个元素可以被多个包拥",
+            "C": "一个包可以嵌套其他包",
+            "D": "一个包内元素不能重名"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-44",
+      "no": 44,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "在某招聘系统中，要求实现求职简历自动生成功能。简历的基本内容包括求职xx的姓名、性别、年龄及工作经历等。希望每份简历中的工作经历有所不同，并尽量减少xx序中的重复代码。针对此需求，设计如下所示类图。该设计采用了(44)模式，由xx实例指定创建对象的种类，声明一个复制自身的接口，并且通过复制这些Resume xx Work Experience的对象来创建新的对象。该模式属于(45)模式",
+      "blanks": [
+        {
+          "options": {
+            "A": "单例(Singleton)",
+            "B": "抽象工厂(Abstract Factory)",
+            "C": "生成器(Builder)",
+            "D": "原型(Prototype)"
+          },
+          "answer": "D"
+        },
+        {
+          "options": {
+            "A": "混合型",
+            "B": "行为型",
+            "C": "结构型",
+            "D": "创建型"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-46",
+      "no": 46,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "某旅游公司欲开发一套软件系统，要求能根据季节，节假日等推出不同的旅行定价包，如淡季打折、一口价等。实现该要求适合采用(46)模式，该模式的主要意图是(47)",
+      "blanks": [
+        {
+          "options": {
+            "A": "策略(Strategy)",
+            "B": "状态(State)",
+            "C": "观察者(Observer)",
+            "D": "命令(command)"
+          },
+          "answer": "A"
+        },
+        {
+          "options": {
+            "A": "将一个请求封装为对象，从而可以用不同的请求对客户进行参数化",
+            "B": "当一个对象的状态发生改变时，依赖于它的对象都得到通知并被自动更新",
+            "C": "允许一个对象在其内部状态改变时改变它的行为",
+            "D": "定义一系列的算法，把它们一个个封装起来，并且使它们可以相互替换"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-48",
+      "no": 48,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "Python中采用（）方法来获得一个对象的类型",
+      "blanks": [
+        {
+          "options": {
+            "A": "str ( )",
+            "B": "type ( )",
+            "C": "id ( )",
+            "D": "object （）"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-49",
+      "no": 49,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "在Python语言中，语句x=（）不能定义一个元组",
+      "blanks": [
+        {
+          "options": {
+            "A": "(1，2，1，2)",
+            "B": "1，2，1，2",
+            "C": "tuple ()",
+            "D": "(1)"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-50",
+      "no": 50,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "关于Python语言的叙述中，不正确的是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "for语句可以用于在序列(如列表、元组和字符串)上进行迭代访问",
+            "B": "循环结构如for和while后可以加else语句",
+            "C": "可以用if...else和switch...case语句表示选择结构",
+            "D": "支持嵌套循环"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-51",
+      "no": 51,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "在数据库应用系统的开发过程中，开发人员需要通过视图层、逻辑个层次上的抽象来对用户屏蔽系统的复杂性,简化用户与系统的交互过程错误的是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "视图层是最高层次的抽象",
+            "B": "逻辑层是比视图层更低一层的抽象",
+            "C": "物理层是最低层次的抽象",
+            "D": "物理层是比逻辑层更高一层的抽象"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-52",
+      "no": 52,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "给定关系模式R(U,F),其中U为属性集，F是U上的一组函数（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "若Y∈X∈U，则X->Y为所蕴涵",
+            "B": "若X->Y，Y->Z、则X—>Y为F所蕴涵",
+            "C": "若X->Y，Z∈Y，则X—>Z为F所蕴涵",
+            "D": "若X-->Y，X->Z，则X—>YZ为F所蕴涵"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-53",
+      "no": 53,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "给定关系模式R(U,F)，U={A,B,C,D}，函数依赖集F={AB—>C,CD—>B}。关系模式R_(53)_，主属性和非主属性个数分别为(54)",
+      "blanks": [
+        {
+          "options": {
+            "A": "只有1个候选关键字ACB",
+            "B": "只有1个候选关键字BCD",
+            "C": "有2个候选关键字ABD和ACD",
+            "D": "有2个候选关键字ACB和BCD"
+          },
+          "answer": "C"
+        },
+        {
+          "options": {
+            "A": "4和0",
+            "B": "3和1",
+            "C": "2和2",
+            "D": "1和3"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-55",
+      "no": 55,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "如果将Students表的插入权限赋予用户User1，并允许其将该权限授予他人，那么正确的SQL语句如下: GRANT (55)TABLE Students TO User1 (56)",
+      "blanks": [
+        {
+          "options": {
+            "A": "INSERT",
+            "B": "INSERT ON",
+            "C": "UPDATE",
+            "D": "UPDATE ON"
+          },
+          "answer": "B"
+        },
+        {
+          "options": {
+            "A": "FOR ALL",
+            "B": "PUBLIC",
+            "C": "WITH GRANT OPTION",
+            "D": "WITH CHECK OPTION"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-57",
+      "no": 57,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "利用栈对算术表达式10*(40-30/5)+20求值时，存放操作数的栈(初始为空)的容量至少为_（）_，才能满足暂存该表达式中的运算数或运算结果的要求",
+      "blanks": [
+        {
+          "options": {
+            "A": "2",
+            "B": "3",
+            "C": "4",
+            "D": "5"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-58",
+      "no": 58,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "设有5个字符，根据使用频率为其构造哈夫曼编码。以下编码方案中，（）是不可能的",
+      "blanks": [
+        {
+          "options": {
+            "A": "{111，110，101，100，0}",
+            "B": "{0000，0001，001，01，1}",
+            "C": "{11，10，01，001，000}",
+            "D": "{11，10，011，010，000}"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-59",
+      "no": 59,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "设有向图G具有n个顶点、e条弧，采用邻接表存储，则完成广度优先遍历的时间复杂度为（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "O(n+e)",
+            "B": "O(n^2)",
+            "C": "O(e^2)",
+            "D": "O(n*e)"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-60",
+      "no": 60,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "对某有序概序表进行折率查找《二分查找》时，进行比较的关键字序列不可能是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "42,61,90,85,77",
+            "B": "42,90,85,61,77",
+            "C": "90,85,61,77,42",
+            "D": "90,85,77,61,42"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-61",
+      "no": 61,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "设由三棵树构成的森林中，第一棵树、第二棵树和第三棵树的结点总数分别为n1、n2和n3。将该森林转换为一棵二叉树，那么该二叉树的右子树包含（）个结点",
+      "blanks": [
+        {
+          "options": {
+            "A": "n1",
+            "B": "n1+n2",
+            "C": "n3",
+            "D": "n2+n3"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-62",
+      "no": 62,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "对—组数据进行排序，要求排序算法的时间复杂度为O(nlgn)，且要求排序是稳定的，则可采用(62)算法。若要求排序算法的时间复杂度为O(nlgn)，且在原数据上进行，即空间复杂度为O(1)，则可采用(63)算法",
+      "blanks": [
+        {
+          "options": {
+            "A": "直接插入排序",
+            "B": "堆排序",
+            "C": "快速排序",
+            "D": "归并排序"
+          },
+          "answer": "D"
+        },
+        {
+          "options": {
+            "A": "直接插入排序",
+            "B": "堆排序",
+            "C": "快速排序",
+            "D": "归并排序"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-64",
+      "no": 64,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "采用Kruskal 算法求解下图的最小生成树，采用的算法设计策略是(64)。该小生成树的权值是(65)",
+      "blanks": [
+        {
+          "options": {
+            "A": "分治法",
+            "B": "动态规划",
+            "C": "贪心法",
+            "D": "追溯法"
+          },
+          "answer": "C"
+        },
+        {
+          "options": {
+            "A": "14",
+            "B": "16",
+            "C": "20",
+            "D": "32"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch09",
+      "flags": [
+        "无解析",
+        "含图"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-66",
+      "no": 66,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "www的控制协议是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "FTP",
+            "B": "HTTP",
+            "C": "SSL",
+            "D": "DNS"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-67",
+      "no": 67,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "在Linux操作系统中通常使用(67)作为Web服务器，其默认的Web站录为(68)",
+      "blanks": [
+        {
+          "options": {
+            "A": "IIS",
+            "B": "Apache",
+            "C": "NFS",
+            "D": "MYSOL"
+          },
+          "answer": "B"
+        },
+        {
+          "options": {
+            "A": "/etc/httpd",
+            "B": "/var/log/httpd",
+            "C": "/etc/home",
+            "D": "/home/httpd"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": true,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-69",
+      "no": 69,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "SNMP的传输层协议是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "UDP",
+            "B": "TCP",
+            "C": "IP",
+            "D": "ICM"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202305-70",
+      "no": 70,
+      "paper": "2023-05",
+      "paperTitle": "2023年上半年",
+      "stem": "某电脑无法打开任意网页，但是互联网即时聊天软件使用正常，造成该故障的原因可能是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "IP地址配置错误",
+            "B": "DNS配置错误",
+            "C": "网卡故障",
+            "D": "链路故障"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "信管网文字版（考生回忆版）",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "信管网",
+      "quality": "ok"
+    }
+  ]
+}

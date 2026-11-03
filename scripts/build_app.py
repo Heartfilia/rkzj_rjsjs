@@ -32,28 +32,32 @@ def read_json(path):
 def scan():
     sys.path.insert(0, ROOT)
     from banklib import load_banks
-    banks, questions, _usable = load_banks(BANKS, OVERLAY, os.path.join(ROOT, "data", "excluded.json"))
-    return banks, questions
+    banks, questions, materials, _usable = load_banks(
+        BANKS, OVERLAY, os.path.join(ROOT, "data", "excluded.json"))
+    return banks, questions, materials
 
 
 def main():
     if not os.path.isdir(BANKS):
         raise SystemExit(f"找不到题库目录：{BANKS}")
 
-    banks, questions = scan()
+    banks, questions, materials = scan()
     payload = {
         "schemaVersion": 2,
         "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "banks": banks,
         "questions": questions,
+        "materials": materials,
     }
 
+    from banklib import material_meta
     os.makedirs(os.path.dirname(MANIFEST), exist_ok=True)
     with open(MANIFEST, "w", encoding="utf-8") as f:
         json.dump({
             "generatedAt": payload["generatedAt"],
             "banks": [{k: b[k] for k in ("id", "level", "subject", "sections", "papers")}
                       for b in banks],
+            "materials": [material_meta(m) for m in materials],
         }, f, ensure_ascii=False, indent=2)
 
     tpl = open(TPL, encoding="utf-8").read()
@@ -85,6 +89,9 @@ def main():
         u = sum(p["practiceable"] for p in b["papers"])
         print(f"  · {b['level']} {b['subject']}：{len(b['papers'])} 套卷 / {n} 题（可刷 {u}）")
     print(f"  合计可刷 {usable} 题")
+    if materials:
+        mq = sum(m["count"] for m in materials)
+        print(f"  应用题资料：{len(materials)} 套 / {mq} 题（只浏览，不进练习池）")
     print(f"  选项校验：{usable} 道可练习题均含完整 A–D 选项")
 
 

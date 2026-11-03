@@ -37,7 +37,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path[:0] = [ROOT, os.path.dirname(os.path.abspath(__file__))]
 
 try:
-    from banklib import load_banks, audit_options
+    from banklib import load_banks, audit_options, material_meta
 except ModuleNotFoundError:
     sys.exit(
         "缺少 banklib.py。请确认它和 server/ 在同一层目录：\n"
@@ -202,9 +202,10 @@ def login_ok(ip):
 
 # ---------------------------------------------------------------- 题库
 _banks_cache = {"mtime": 0, "banks": [], "questions": [], "index": {},
+                "materials": [], "material_index": {},
                 "payload": b"", "payload_gzip": b"", "etag": "",
                 "lite": b"", "lite_gzip": b"", "lite_etag": "",
-                "banks_json": b"", "questions_json": b""}
+                "banks_json": b"", "questions_json": b"", "materials_json": b""}
 _banks_checked_at = 0.0
 
 # 前端只用到这些字段，其余（no/flags/source/quality…）留在服务端，不随网络发送
@@ -245,7 +246,7 @@ def get_banks(force=False):
 
     mtime = banks_version()
     if mtime > _banks_cache["mtime"] or not _banks_cache["payload"]:
-        banks, questions, _usable = load_banks(BANKS, OVERLAY, EXCLUDED)
+        banks, questions, materials, _usable = load_banks(BANKS, OVERLAY, EXCLUDED)
         bad = audit_options(questions)
         if bad:
             print(f"[banks] WARNING: {len(bad)} practiceable question(s) missing options: "
@@ -255,13 +256,16 @@ def get_banks(force=False):
         # （之前每个 /api/bootstrap 都序列化一遍，小机器上会被单个页面加载拖住）
         wire = [wire_question(q) for q in questions]
         lite = [lite_question(q) for q in questions]
-        payload = json.dumps({"banks": banks, "questions": wire},
+        mats_meta = [material_meta(m) for m in materials]
+        payload = json.dumps({"banks": banks, "questions": wire, "materials": materials},
                              ensure_ascii=False, separators=(",", ":")).encode()
-        lite_payload = json.dumps({"banks": banks, "questions": lite},
+        lite_payload = json.dumps({"banks": banks, "questions": lite, "materials": mats_meta},
                                   ensure_ascii=False, separators=(",", ":")).encode()
         _banks_cache.update({
             "mtime": mtime, "banks": banks, "questions": questions,
             "index": {q["id"]: q for q in questions},
+            "materials": materials,
+            "material_index": {m["id"]: m for m in materials},
             "payload": payload,
             "payload_gzip": gzip.compress(payload, 6),
             "etag": '"' + hashlib.sha1(payload).hexdigest()[:20] + '"',
@@ -270,8 +274,10 @@ def get_banks(force=False):
             "lite_etag": '"' + hashlib.sha1(lite_payload).hexdigest()[:20] + '"',
             "banks_json": json.dumps(banks, ensure_ascii=False, separators=(",", ":")).encode(),
             "questions_json": json.dumps(wire, ensure_ascii=False, separators=(",", ":")).encode(),
+            "materials_json": json.dumps(materials, ensure_ascii=False, separators=(",", ":")).encode(),
         })
         print(f"[banks] reloaded: {len(banks)} bank(s), {len(questions)} question(s), "
+              f"{len(materials)} material(s), "
               f"index {len(lite_payload)//1024} KB / full {len(payload)//1024} KB", flush=True)
     return _banks_cache
 
@@ -418,6 +424,32 @@ class Handler(BaseHTTPRequestHandler):
             return self._send(200, body, cache="private, max-age=0, must-revalidate",
                               etag=etag, encoding=encoding, vary="Accept-Encoding")
 
+        if path == "/api/material":
+            uid = self._need_login()
+            if uid is None:
+                return
+            mid = (parse_qs(urlparse(self.path).query).get("id") or [""])[0]
+            if not mid:
+                return self._json(400, {"error": "id required"})
+            m = get_banks()["material_index"].get(mid)
+            if not m:
+                return self._json(404, {"error": "no such material"})
+            body = json.dumps({"material": m},
+                              ensure_ascii=False, separators=(",", ":")).encode()
+            etag = '"' + hashlib.sha1(body).hexdigest()[:20] + '"'
+            if self.headers.get("If-None-Match") == etag:
+                self.send_response(304)
+                self.send_header("ETag", etag)
+                self.send_header("Cache-Control", "private, max-age=0, must-revalidate")
+                self.send_header("Vary", "Accept-Encoding")
+                self.end_headers()
+                return
+            encoding = None
+            if "gzip" in (self.headers.get("Accept-Encoding") or ""):
+                body, encoding = gzip.compress(body, 6), "gzip"
+            return self._send(200, body, cache="private, max-age=0, must-revalidate",
+                              etag=etag, encoding=encoding, vary="Accept-Encoding")
+
         if path == "/api/banks":
             uid = self._need_login()
             if uid is None:
@@ -461,6 +493,7 @@ class Handler(BaseHTTPRequestHandler):
             body = (b'{"user":' + dumps({"id": uid, "name": u["name"] if u else ""})
                     + b',"banks":' + cache["banks_json"]
                     + b',"questions":' + cache["questions_json"]
+                    + b',"materials":' + cache["materials_json"]
                     + b',"state":' + dumps(progress_of(uid)) + b'}')
             return self._send(200, body)
 

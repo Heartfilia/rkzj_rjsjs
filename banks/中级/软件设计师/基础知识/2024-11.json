@@ -1,0 +1,849 @@
+{
+  "paper": "2024-11",
+  "paperTitle": "2024年下半年（前30题·回忆版）",
+  "section": "基础知识",
+  "source": "希赛网免费回忆版",
+  "questions": [
+    {
+      "id": "sd-202411-01",
+      "no": 1,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "可以使用（）命令测试网络的连通性",
+      "blanks": [
+        {
+          "options": {
+            "A": "telnet",
+            "B": "netstat",
+            "C": "ping",
+            "D": "nslookup"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-02",
+      "no": 2,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "下列协议属于TCP/P模型中的应用层协议的是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "DNS",
+            "B": "HDLC",
+            "C": "ICMP",
+            "D": "IP"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-03",
+      "no": 3,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "访问Web服务器默认使用的端口号是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "53",
+            "B": "110",
+            "C": "80",
+            "D": "23"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-04",
+      "no": 4,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "某个病毒表现为通过电子邮件向通讯簿的联系人发送邮件，并通过邮件自带的Word文档附件感染主机。该病毒属于（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "木马病毒",
+            "B": "CIH病毒",
+            "C": "蠕虫病毒",
+            "D": "宏病毒"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch05",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-05",
+      "no": 5,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "甲公司发布了一款名为“智基助手”的智能手机应用，其竞争对手乙公司紧随其后开发并发布了一故名为“智能帮手”的应用，其界面设计和功能与“智慧助手”基本一致。以下叙述中，正确的是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "乙公司侵犯了甲公司的商标权",
+            "B": "乙公司侵犯了甲公司的著作权",
+            "C": "乙公司没有侵犯甲公司的任何知识产权",
+            "D": "乙公司侵犯了甲公司的专利权"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-06",
+      "no": 6,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "在TCP/IP体系结构中，（）协议实现IP地址到MAC地址的转化",
+      "blanks": [
+        {
+          "options": {
+            "A": "ARP",
+            "B": "ICMP",
+            "C": "TCP",
+            "D": "RARP"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-07",
+      "no": 7,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "在操作系统中，进程调度的主要目的是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "合理分配CPU时间，提高CPU利用率",
+            "B": "提高计算机的运行速度",
+            "C": "减少进程的等待时间",
+            "D": "增加系统的吞吐量"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-08",
+      "no": 8,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "希望用最快的速度挑选出1000个无序元素中前10个最大的元素，则最好选择（）排序算法",
+      "blanks": [
+        {
+          "options": {
+            "A": "冒泡",
+            "B": "基数",
+            "C": "堆",
+            "D": "快速"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-09",
+      "no": 9,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "数据库的恢复操作，主要依靠（）属性",
+      "blanks": [
+        {
+          "options": {
+            "A": "约束",
+            "B": "冗余",
+            "C": "加密",
+            "D": "存取控制"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-10",
+      "no": 10,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "设码长为8，已知X是整数且[X]补=11111111，则x的真值为（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "1",
+            "B": "-1",
+            "C": "127",
+            "D": "255 软考真题"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-11",
+      "no": 11,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "为实现海明码纠错，对于16位信息位，最少应附加的校验码为（）位",
+      "blanks": [
+        {
+          "options": {
+            "A": "5",
+            "B": "4",
+            "C": "6",
+            "D": "3"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-12",
+      "no": 12,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "网络通信中四种基本的攻击形式中，属于被动攻击的是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "篡改",
+            "B": "截获",
+            "C": "中断",
+            "D": "伪造"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-13",
+      "no": 13,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "若某文件系统的目录结构如下图所示，假设用户要访问文件fault,swf，且当前工作目录为Swtools，则该文件的相对路径和绝对路径分别为（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "\\Swtools\\flash\\和flash\\",
+            "B": "flash\\和\\Swtools\\flash\\",
+            "C": "Swtools\\flash和\\flash\\",
+            "D": "\\flash和\\Swtools\\flash\\"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": [
+        "无解析",
+        "含图"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-14",
+      "no": 14,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "详细设计结束后，重点审查的内容不包括（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "数据流图",
+            "B": "算法",
+            "C": "数据结构",
+            "D": "软件界面"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-15",
+      "no": 15,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "以下软件工程行为中，（）不能提高软件的可维护性",
+      "blanks": [
+        {
+          "options": {
+            "A": "重视程序的结构设计，使程序具有较好的层次结构",
+            "B": "尽可能在软件开发过程中保证各阶段文档的正确性",
+            "C": "尽可能利用硬件的特点",
+            "D": "在进行概要设计时，应加强模块间的联系"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-16",
+      "no": 16,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "在数据流图中，（）不属于待开发系统的内容",
+      "blanks": [
+        {
+          "options": {
+            "A": "外部主体",
+            "B": "数据加工",
+            "C": "数据存储",
+            "D": "数据流"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-17",
+      "no": 17,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "字典是Python语言中的一个复合数据类型，现定义字典dict1如下，则不正确的语句为（）。 dict1={'name':'David','age':10,'class':'first'}",
+      "blanks": [
+        {
+          "options": {
+            "A": "print(dict1['name'])",
+            "B": "de1dict1",
+            "C": "de1dict1[1]",
+            "D": "dict1['age']=15"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-18",
+      "no": 18,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "以下关于单链表存储结构特征的叙述中，错误的是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "可随机访问表中的任一元素结点",
+            "B": "在表中任意位置插入和删除都不用移动其他元素结点",
+            "C": "表中结点所占用存储空间的地址不必是连续的",
+            "D": "所需空间与结点个数成正比"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-19",
+      "no": 19,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "与RISC计算机相比，不属于CISC计算机特征的是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "指令长度固定",
+            "B": "寻址方式多",
+            "C": "执行一条指令用的时钟周期多",
+            "D": "指令类型多"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-20",
+      "no": 20,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "两个函数依赖集F和G等价是指（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "F→G",
+            "B": "F+=G+",
+            "C": "G→F",
+            "D": "F=G 软考真题"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-21",
+      "no": 21,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "访问控制的策略主要分为三类，正确的是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "基于时间的访问控制、自主访问控制和强制访问控制",
+            "B": "自主访问控制、强制访问控制和基于角色的访问控制",
+            "C": "基于角色的访问控制、基于时间的访问控制和自主访问控制",
+            "D": "强制访问控制、基于角色的访问控制和基于时间的访问控制"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch05",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-22",
+      "no": 22,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "“开发了一个没有人真正需要的软件系统”属于（）风险",
+      "blanks": [
+        {
+          "options": {
+            "A": "商业",
+            "B": "管理",
+            "C": "技术",
+            "D": "项目"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-23",
+      "no": 23,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "在C/C++程序中，函数fun无返回值、无参数，对该函效的正确声明是（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "fun(void)；",
+            "B": "voidfun(...).",
+            "C": "voidfun(void,...)",
+            "D": "voidfun(void)；"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-24",
+      "no": 24,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "关系型数据库的参考完整性约束可以通过（）来实现",
+      "blanks": [
+        {
+          "options": {
+            "A": "主码",
+            "B": "候选码",
+            "C": "超码",
+            "D": "外码"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-25",
+      "no": 25,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "设某线性表的元素存储在有序顺序表A[1..20]中，表中元素互异，即A[1]、A[2]、…、A[20]互不相同，用折半查找（即二分查找，向下取整）在A[]中查找key，若key等于A[13]，则查找过程中参与比较的元素依次为A[10]、（）",
+      "blanks": [
+        {
+          "options": {
+            "A": "A[15]、A[12]、A[13]",
+            "B": "A[16]、A[15]、A[13]",
+            "C": "A[15]、A[14]、A[13]",
+            "D": "A[16]、A[14]、A[13]"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-26",
+      "no": 26,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "（）不属于信息安全的基本要素",
+      "blanks": [
+        {
+          "options": {
+            "A": "可重用性",
+            "B": "保密性",
+            "C": "完整性",
+            "D": "可控性"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-27",
+      "no": 27,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "（）适合于面向对象的开发方法，是一种以用户需求为动力，以对象作为驱动的模型",
+      "blanks": [
+        {
+          "options": {
+            "A": "统一过程模型",
+            "B": "瀑布模型",
+            "C": "喷泉模型",
+            "D": "螺旋模型"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-28",
+      "no": 28,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "（）操作可以对SQL访问控制进行授权",
+      "blanks": [
+        {
+          "options": {
+            "A": "DELETE",
+            "B": "GRANT",
+            "C": "REVOKE",
+            "D": "DROP"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-29",
+      "no": 29,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "要在O(nlgn)时间内，对数据进行稳定排序，则应选择（）排序算法",
+      "blanks": [
+        {
+          "options": {
+            "A": "快速",
+            "B": "归并",
+            "C": "堆",
+            "D": "直接插入"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-202411-30",
+      "no": 30,
+      "paper": "2024-11",
+      "paperTitle": "2024年下半年（前30题·回忆版）",
+      "stem": "对数据库查询结果进行分组，可以使用（）子句实现",
+      "blanks": [
+        {
+          "options": {
+            "A": "GROUPBY",
+            "B": "HAVING",
+            "C": "WHERE",
+            "D": "ORDERBY 软考真题"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "",
+      "source": "希赛网免费回忆版",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": [
+        "无解析"
+      ],
+      "answerSource": "希赛网",
+      "quality": "ok"
+    }
+  ]
+}

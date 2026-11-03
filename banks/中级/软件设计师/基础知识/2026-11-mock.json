@@ -1,0 +1,1958 @@
+{
+  "paper": "2026-11-mock",
+  "paperTitle": "2026 模拟冲刺卷（原创）",
+  "section": "基础知识",
+  "source": "原创模拟题（非真题），依据 2022-2024 年真题考点分布编写",
+  "questions": [
+    {
+      "id": "sd-mock2026-01",
+      "no": 1,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "某计算机字长为 8 位，采用补码表示定点整数，则它能表示的最小整数是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "-127",
+            "B": "-128",
+            "C": "-129",
+            "D": "-255"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "n 位补码表示范围为 -2^(n-1) ~ 2^(n-1)-1。8 位补码的范围是 -128~127，因此最小整数为 -128。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-02",
+      "no": 2,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "设信息位为 32 位，采用海明码进行检错并纠正 1 位错误，至少需要附加的校验位是（）位。",
+      "blanks": [
+        {
+          "options": {
+            "A": "5",
+            "B": "6",
+            "C": "7",
+            "D": "8"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "海明码校验位 r 需满足 2^r >= m+r+1。m=32 时，r=5 有 32 < 38，不满足；r=6 有 64 >= 39，满足，故至少 6 位。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-03",
+      "no": 3,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "某指令流水线分为取指、分析、执行 3 段，各段耗时均为 2ns。执行完 100 条指令所需的时间至少为（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "202ns",
+            "B": "204ns",
+            "C": "208ns",
+            "D": "300ns"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "流水线周期为 2ns，执行 n 条指令的时间为 (k+n-1)×Δt=(3+100-1)×2=204ns。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-04",
+      "no": 4,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "某系统采用 Cache-主存两级存储，Cache 访问时间为 5ns，主存访问时间为 50ns，Cache 命中率为 95%。采用同时访问方式时，平均访问时间约为（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "5.0ns",
+            "B": "7.25ns",
+            "C": "9.75ns",
+            "D": "50ns"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "平均访问时间 = 命中率×Cache 时间 + 未命中率×主存时间 = 0.95×5 + 0.05×50 = 7.25ns。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-05",
+      "no": 5,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "以下关于 RISC（精简指令集计算机）的叙述中，正确的是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "只有取数/存数指令可以访问存储器",
+            "B": "指令长度可变，寻址方式丰富",
+            "C": "通用寄存器数量通常较少",
+            "D": "通常采用微程序控制器实现"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "RISC 的典型特征是指令长度固定、寻址方式少、通用寄存器多、以硬布线控制为主，并且只有取数/存数指令访问存储器。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-06",
+      "no": 6,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "某系统由部件 A 和部件 B 串联组成，部件 A 由两个相同的子部件并联构成，单个子部件的可靠度为 0.9；部件 B 的可靠度为 0.9。该系统的可靠度约为（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "0.810",
+            "B": "0.891",
+            "C": "0.900",
+            "D": "0.990"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "并联部分可靠度 = 1-(1-0.9)^2 = 0.99；再与 B 串联，系统可靠度 = 0.99×0.9 = 0.891。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch01",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-07",
+      "no": 7,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "在生产者-消费者问题中，缓冲区容量为 n，信号量 empty 表示空闲缓冲区数量，full 表示已有产品数量，mutex 用于互斥访问缓冲区。生产者向缓冲区放入产品前，应执行的操作是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "P(empty) 和 P(mutex)",
+            "B": "P(full) 和 P(mutex)",
+            "C": "V(empty) 和 P(mutex)",
+            "D": "V(full) 和 V(mutex)"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "生产者先申请空闲缓冲区（P(empty)），再申请缓冲区互斥锁（P(mutex)）；若顺序颠倒可能造成死锁。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-08",
+      "no": 8,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "某进程访问页面序列为 1,2,3,4,1,2,5,1,2,3,4,5，系统分配 3 个页框，采用 LRU 置换算法，缺页次数为（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "7",
+            "B": "8",
+            "C": "9",
+            "D": "10"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "按 LRU 依次模拟，缺页发生在访问 1、2、3、4、1、2、5、3、4、5 时，共 10 次；访问第二个 1 和第二个 2 时命中。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-09",
+      "no": 9,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "某文件管理系统采用位示图记录磁盘块使用情况。若计算机字长为 32 位，磁盘容量为 1TB，物理块大小为 4MB，则位示图占用的字数为（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "4096",
+            "B": "8192",
+            "C": "16384",
+            "D": "32768"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "1TB/4MB = 2^40/2^22 = 2^18 个物理块；每个字 32 位，可表示 32 块，因此需要 2^18/32 = 8192 个字。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-10",
+      "no": 10,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "在 UNIX/Linux 文件系统中，索引节点（inode）通常不包含（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "文件类型",
+            "B": "文件大小",
+            "C": "数据块地址",
+            "D": "文件名"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "inode 保存文件类型、大小、权限、数据块地址等元数据；文件名保存在目录项中，由目录项与 inode 关联。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-11",
+      "no": 11,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "某系统中有 3 个并发进程，每个进程最多需要 2 台打印机。为保证系统不会发生死锁，该系统至少应配置打印机（）台。",
+      "blanks": [
+        {
+          "options": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "6"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "避免死锁的经典公式为 n×(m-1)+1，其中 n 为进程数、m 为每个进程最大需求量。代入得 3×(2-1)+1=4 台。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch02",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-12",
+      "no": 12,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "设学生关系 S(学号, 姓名, 年龄, 专业)，要查询“年龄大于 20 岁的学生姓名”，正确的关系代数表达式是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "π姓名(σ年龄>20(S))",
+            "B": "σ姓名(π年龄>20(S))",
+            "C": "π年龄>20(σ姓名(S))",
+            "D": "σ年龄>20(π姓名(S))"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "关系代数中先做选择（σ）筛出年龄大于 20 的元组，再做投影（π）取出姓名属性。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-13",
+      "no": 13,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "设关系模式 R(学号, 姓名, 课程号, 成绩)，主键为(学号, 课程号)，且存在函数依赖 学号→姓名。该关系模式最高满足（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "1NF",
+            "B": "2NF",
+            "C": "3NF",
+            "D": "BCNF"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "姓名是非主属性，却只依赖于主键的一部分（学号），存在部分函数依赖，因此不满足 2NF，只满足 1NF。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-14",
+      "no": 14,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "在 SQL 中，要查询平均成绩大于 80 分的课程号，正确的语句是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "SELECT 课程号 FROM 成绩 GROUP BY 课程号 HAVING AVG(成绩)>80",
+            "B": "SELECT 课程号 FROM 成绩 WHERE AVG(成绩)>80 GROUP BY 课程号",
+            "C": "SELECT 课程号 FROM 成绩 GROUP BY 课程号 WHERE AVG(成绩)>80",
+            "D": "SELECT 课程号 FROM 成绩 HAVING AVG(成绩)>80 GROUP BY 课程号"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "对分组后的聚合结果进行筛选要用 HAVING，且 HAVING 位于 GROUP BY 之后；WHERE 不能直接使用聚合函数。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-15",
+      "no": 15,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "事务 T1 修改了某数据但尚未提交，事务 T2 读取了该数据，随后 T1 回滚。T2 读到的数据称为（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "丢失修改",
+            "B": "幻读",
+            "C": "不可重复读",
+            "D": "脏数据"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "读取了其他事务未提交且随后被回滚的数据，称为脏读，读到的数据称为脏数据。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-16",
+      "no": 16,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "设关系模式 R(A,B,C)，函数依赖集 F={A→B, B→C}，则 R 最高满足（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "1NF",
+            "B": "2NF",
+            "C": "3NF",
+            "D": "BCNF"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "候选码为 A；B→C 构成传递函数依赖，因此不满足 3NF。由于主键为单属性，不存在部分函数依赖，故满足 2NF。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch03",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-17",
+      "no": 17,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "某主机 IP 地址为 192.168.10.130，子网掩码为 255.255.255.192，该主机所在子网的可用主机地址数是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "30",
+            "B": "62",
+            "C": "64",
+            "D": "126"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "掩码 255.255.255.192 对应 /26，主机位 6 位，共有 2^6=64 个地址，扣除网络地址和广播地址后可用 62 个。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-18",
+      "no": 18,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "以下应用层协议中，通常使用 UDP 作为传输层协议的是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "DNS",
+            "B": "HTTP",
+            "C": "FTP",
+            "D": "SMTP"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "DNS 查询通常使用 UDP 53 端口；HTTP、FTP、SMTP 通常使用 TCP。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-19",
+      "no": 19,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "在 TCP/IP 体系结构中，ICMP 协议属于（）层。",
+      "blanks": [
+        {
+          "options": {
+            "A": "应用层",
+            "B": "传输层",
+            "C": "网际层",
+            "D": "网络接口层"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "ICMP 与 IP 协议配合工作，用于传递差错和控制报文，属于 TCP/IP 的网际层（网络层）。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-20",
+      "no": 20,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "下列网络设备中，能够隔离广播域的是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "集线器",
+            "B": "二层交换机",
+            "C": "路由器",
+            "D": "中继器"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "路由器工作在网络层，不转发广播帧，因此可以隔离广播域；二层交换机只能隔离冲突域。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-21",
+      "no": 21,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "SMTP 协议默认使用的 TCP 端口号是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "21",
+            "B": "25",
+            "C": "53",
+            "D": "110"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "SMTP 默认使用 TCP 25 端口；21 是 FTP 控制端口，53 是 DNS 端口，110 是 POP3 端口。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch04",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-22",
+      "no": 22,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "在数字签名中，发送方通常使用（）对消息摘要进行签名，接收方使用（）验证签名。",
+      "blanks": [
+        {
+          "options": {
+            "A": "发送方公钥；发送方私钥",
+            "B": "接收方私钥；接收方公钥",
+            "C": "接收方公钥；接收方私钥",
+            "D": "发送方私钥；发送方公钥"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "发送方用私钥签名，接收方用发送方公钥验签，从而保证消息的来源真实性和完整性。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch05",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-23",
+      "no": 23,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "以下攻击形式中，属于被动攻击的是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "重放攻击",
+            "B": "消息篡改",
+            "C": "流量分析",
+            "D": "拒绝服务"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "被动攻击不改变信息内容，主要包括窃听和流量分析；重放、篡改和拒绝服务都会主动影响系统或数据。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch05",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-24",
+      "no": 24,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "根据用户在组织中的角色和岗位为其分配权限的访问控制模型是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "DAC",
+            "B": "MAC",
+            "C": "RBAC",
+            "D": "ABAC"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "RBAC（基于角色的访问控制）将权限分配给角色，再把角色分配给用户，适合按岗位和职责管理权限。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch05",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-25",
+      "no": 25,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "某软件工程师在单位承担本职工作时开发了一款软件，合同未约定著作权归属。根据《计算机软件保护条例》，该软件的著作权（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "归单位所有",
+            "B": "归工程师个人所有",
+            "C": "由工程师与单位共同所有",
+            "D": "进入公有领域"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "《计算机软件保护条例》规定，自然人在单位任职期间针对本职工作明确指定的开发目标所开发的软件，或从事本职工作活动所预见的结果，其著作权由单位享有，另有约定除外。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch06",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-26",
+      "no": 26,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "我国发明专利权的保护期限为（）年，自申请日起计算。",
+      "blanks": [
+        {
+          "options": {
+            "A": "10",
+            "B": "15",
+            "C": "20",
+            "D": "50"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "发明专利权的期限为 20 年，实用新型专利权的期限为 10 年，外观设计专利权的期限为 15 年，均自申请日起计算。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch06",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-27",
+      "no": 27,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "注册商标的有效期为（）年，期满可以续展。",
+      "blanks": [
+        {
+          "options": {
+            "A": "5",
+            "B": "10",
+            "C": "15",
+            "D": "20"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "注册商标的有效期为 10 年，自核准注册之日起计算；期满需要继续使用的，可以依法办理续展。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch06",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-28",
+      "no": 28,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "算术表达式 a+b*(c-d) 的后缀式（逆波兰式）是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "a b + c d - *",
+            "B": "a b + c * d -",
+            "C": "a b c d * - +",
+            "D": "a b c d - * +"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "先处理括号内 c-d 得 c d -；再算 b*(c-d) 得 b c d - *；最后与 a 相加得 a b c d - * +。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-29",
+      "no": 29,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "已知函数 f(x,y) 的定义为：x=x+1; y=y+x; 若调用 f(a,a) 时两个参数均采用传引用方式，且调用前 a=1，则调用后 a 的值为（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "传引用时 x、y 与 a 是同一个变量的别名。执行 x=x+1 后 a=2；再执行 y=y+x 即 a=2+2=4。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-30",
+      "no": 30,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "以下关于编译过程各阶段的叙述中，错误的是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "词法分析识别源程序中的单词符号",
+            "B": "语法分析检查源程序是否符合文法规则",
+            "C": "语义分析只能发现语法错误",
+            "D": "代码优化可以在中间代码或目标代码上进行"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "语义分析用于检查类型不匹配、未声明变量等语义错误；语法错误由语法分析阶段发现。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-31",
+      "no": 31,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "在面向对象程序中，重写（override）方法的调用在运行时根据对象的实际类型确定，这种机制称为（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "动态绑定",
+            "B": "静态绑定",
+            "C": "编译优化",
+            "D": "参数传递"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "运行时根据对象实际类型确定所调用方法的现象称为动态绑定，是多态的重要实现机制。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-32",
+      "no": 32,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "在 Python 中，表达式 len(set([1,2,2,3,3,3])) 的值是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "2",
+            "B": "3",
+            "C": "6",
+            "D": "报错"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "set 会去除重复元素，[1,2,2,3,3,3] 转换后得到 {1,2,3}，长度为 3。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-33",
+      "no": 33,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "以下 Python 数据类型中，属于不可变类型的是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "list",
+            "B": "dict",
+            "C": "set",
+            "D": "tuple"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "tuple（元组）一旦创建就不能修改元素，属于不可变类型；list、dict、set 都是可变类型。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-34",
+      "no": 34,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "在 C 语言中，执行语句 int a[5]={1,2,3}; 后，a[3] 的值是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "0",
+            "B": "3",
+            "C": "一个随机值",
+            "D": "编译错误"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "C 语言对数组进行部分初始化时，未显式赋值的元素会自动初始化为 0，因此 a[3] 和 a[4] 均为 0。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-35",
+      "no": 35,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "在 C 语言中，若有 int a=10; int *p=&a; *p=20; 则变量 a 的值是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "10",
+            "B": "编译错误",
+            "C": "a 的地址",
+            "D": "20"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "p 指向 a，*p=20 表示通过指针修改 a 所在存储单元的内容，因此 a 的值变为 20。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch07",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-36",
+      "no": 36,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "已知某二叉树的先序遍历序列为 ABDECF，中序遍历序列为 DBEAFC，则其后序遍历序列为（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "DEBFCA",
+            "B": "DBEFCA",
+            "C": "DEBCFA",
+            "D": "EDBFCA"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "由先序确定根 A，中序将左右子树分为 DBE 和 FC；递归可得左子树后序为 DEB，右子树后序为 FC，最终为 DEBFCA。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-37",
+      "no": 37,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "某有向图的顶点集为{1,2,3,4}，边集为{<1,2>,<1,3>,<2,4>,<3,4>}。以下序列中，可能是该图拓扑排序结果的是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "2,1,3,4",
+            "B": "1,3,2,4",
+            "C": "4,1,2,3",
+            "D": "2,4,1,3"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "拓扑排序要求每条边的起点排在终点之前，即 1 在 2、3 之前，2、3 在 4 之前。只有 1,3,2,4 满足。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-38",
+      "no": 38,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "在时间复杂度为 O(nlogn)、空间复杂度为 O(1)，且排序不稳定的排序算法是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "归并排序",
+            "B": "快速排序",
+            "C": "堆排序",
+            "D": "基数排序"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "堆排序最坏时间复杂度为 O(nlogn)，只需常数级辅助空间，且不稳定；归并排序需要 O(n) 辅助空间，快速排序平均 O(nlogn) 但最坏 O(n^2)。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-39",
+      "no": 39,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "对长度为 1000 的有序表进行折半查找，最多需要比较（）次。",
+      "blanks": [
+        {
+          "options": {
+            "A": "9",
+            "B": "10",
+            "C": "11",
+            "D": "1000"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "折半查找的判定树高度为 ⌈log2(n+1)⌉，⌈log2(1001)⌉=10，因此最多比较 10 次。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-40",
+      "no": 40,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "若循环队列的存储空间容量为 M，队头指针 front 指向队头元素，队尾指针 rear 指向队尾元素的下一个位置，则当前队列中的元素个数为（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "(rear-front+M)%M",
+            "B": "(front-rear+M)%M",
+            "C": "rear-front",
+            "D": "(rear-front+1)%M"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "循环队列中，元素个数为 (rear-front+M)%M；该公式同时适用于 rear 在 front 前或后的情况。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-41",
+      "no": 41,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "已知 5 个字符的频率分别为 2、3、5、7、11，构造哈夫曼树后，其带权路径长度（WPL）为（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "55",
+            "B": "60",
+            "C": "65",
+            "D": "70"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "依次合并 2+3=5、5+5=10、7+10=17、11+17=28，WPL 等于所有合并权值之和：5+10+17+28=60。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch08",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-42",
+      "no": 42,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "0-1 背包问题通常采用动态规划求解，其适合动态规划的两个主要性质是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "最优子结构和重叠子问题",
+            "B": "贪心选择性质和最优子结构",
+            "C": "无后效性和贪心选择性质",
+            "D": "可分解性和随机性"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "动态规划适用于具有最优子结构和重叠子问题的问题；0-1 背包问题满足这两个性质，但不满足贪心选择性质。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch09",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-43",
+      "no": 43,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "某递归算法的时间复杂度满足 T(n)=2T(n/2)+O(n)，则 T(n) 为（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "O(n)",
+            "B": "O(logn)",
+            "C": "O(n^2)",
+            "D": "O(nlogn)"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "由主定理，a=2、b=2、f(n)=O(n)，属于 T(n)=O(nlogn) 的情形；归并排序就是这种复杂度。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch09",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-44",
+      "no": 44,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "Dijkstra 算法用于求解单源最短路径，其采用的设计策略是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "分治",
+            "B": "动态规划",
+            "C": "贪心",
+            "D": "回溯"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "Dijkstra 算法每次从未确定的顶点中选择距离源点最近的顶点加入集合，属于贪心策略。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch09",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-45",
+      "no": 45,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "在 UML 用例图中，若用例 B 是用例 A 的可选扩展，则 A 与 B 之间的关系是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "泛化",
+            "B": "包含",
+            "C": "扩展",
+            "D": "依赖"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "扩展关系（extend）表示在特定条件下为基用例增加可选行为；包含关系（include）表示必须复用的行为。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-46",
+      "no": 46,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "在 UML 类图中，若整体与部分具有相同的生命周期，整体销毁时部分也随之销毁，则这种关系是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "关联",
+            "B": "聚合",
+            "C": "组合",
+            "D": "依赖"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "组合关系表示强整体-部分关系，部分不能脱离整体独立存在，生命周期一致；聚合关系中的部分可以独立存在。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-47",
+      "no": 47,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "单例模式的意图是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "保证一个类只有一个实例，并提供全局访问点",
+            "B": "将对象的创建延迟到使用时",
+            "C": "定义一系列算法并使它们可以互相替换",
+            "D": "为其他对象提供一种代理以控制访问"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "单例模式保证类只有一个实例，并提供一个全局访问点；延迟创建是懒汉式实现的一种手段，不是该模式的根本意图。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-48",
+      "no": 48,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "当系统中存在多种可互换的算法，并需要在运行时根据情况选择其中一种时，适合采用（）模式。",
+      "blanks": [
+        {
+          "options": {
+            "A": "观察者",
+            "B": "工厂方法",
+            "C": "装饰器",
+            "D": "策略"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "策略模式将不同算法封装成独立的类，并使它们可以互相替换，适合在运行时切换算法。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-49",
+      "no": 49,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "观察者模式的主要作用是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "在对象状态发生变化时自动通知依赖它的对象",
+            "B": "将一个类的接口转换成客户希望的另一个接口",
+            "C": "保证类的实例唯一",
+            "D": "为复杂子系统提供统一入口"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "观察者模式建立对象间的一对多依赖，当被观察对象状态改变时，所有观察者都会收到通知并自动更新。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-50",
+      "no": 50,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "UML 部署图主要用于描述（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "软件构件在物理节点上的部署关系",
+            "B": "系统的功能需求",
+            "C": "类之间的静态关系",
+            "D": "对象之间的消息交互顺序"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "部署图描述系统运行时的物理节点、构件及其部署关系；类图描述静态结构，用例图描述功能需求。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-51",
+      "no": 51,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "“对扩展开放，对修改关闭”体现的是面向对象设计中的（）原则。",
+      "blanks": [
+        {
+          "options": {
+            "A": "单一职责原则",
+            "B": "依赖倒置原则",
+            "C": "里氏替换原则",
+            "D": "开闭原则"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "开闭原则要求软件实体对扩展开放、对修改关闭，通常通过抽象和多态来实现。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch10",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-52",
+      "no": 52,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "适用于大型复杂软件项目、强调风险分析的软件开发模型是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "瀑布模型",
+            "B": "原型模型",
+            "C": "螺旋模型",
+            "D": "增量模型"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "螺旋模型将瀑布模型与原型模型结合，每一轮迭代都进行风险分析，适合大型复杂项目。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-53",
+      "no": 53,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "以下实践不属于极限编程（XP）核心实践的是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "结对编程",
+            "B": "测试驱动开发",
+            "C": "持续集成",
+            "D": "详细的阶段性文档"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "XP 强调轻量级文档、结对编程、测试驱动开发、持续集成和短迭代，不以详细阶段性文档为核心。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-54",
+      "no": 54,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "若一个模块内各组成部分共同完成同一个功能，缺一不可，则该模块的内聚类型是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "偶然内聚",
+            "B": "逻辑内聚",
+            "C": "时间内聚",
+            "D": "功能内聚"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "功能内聚指模块内所有元素协同完成一个单一、明确的功能，是内聚程度最高的一种。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-55",
+      "no": 55,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "以下测试方法中，属于黑盒测试的是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "语句覆盖",
+            "B": "路径覆盖",
+            "C": "条件覆盖",
+            "D": "等价类划分"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "等价类划分只依据输入与输出的关系设计测试用例，不关心程序内部结构，属于黑盒测试；其余三项属于白盒测试。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-56",
+      "no": 56,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "若某程序的 McCabe 环路复杂度为 5，则至少需要（）个测试用例才能覆盖其所有独立路径。",
+      "blanks": [
+        {
+          "options": {
+            "A": "4",
+            "B": "5",
+            "C": "6",
+            "D": "10"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "McCabe 环路复杂度等于程序中独立路径的数量，因此至少需要 5 个测试用例覆盖所有独立路径。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-57",
+      "no": 57,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "软件交付后，为适应操作系统或硬件环境的变化而修改软件，这种维护属于（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "适应性维护",
+            "B": "正确性维护",
+            "C": "完善性维护",
+            "D": "预防性维护"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "适应性维护是为了使软件适应外部环境（如操作系统、硬件、数据格式）的变化而进行的修改。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-58",
+      "no": 58,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "在 CMMI 中，过程已经文档化、标准化，并形成组织级标准过程，该等级是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "初始级",
+            "B": "已管理级",
+            "C": "已定义级",
+            "D": "量化管理级"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "CMMI 3 级为已定义级，过程已文档化、标准化，并形成组织的标准过程；2 级为已管理级，4 级为量化管理级。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-59",
+      "no": 59,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "风险暴露量通常表示为（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "风险发生的概率",
+            "B": "风险发生后的损失",
+            "C": "风险概率与风险影响的乘积",
+            "D": "风险识别所需的时间"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "风险暴露量（风险值）= 风险发生的概率 × 风险发生后的影响，用于衡量风险的严重程度。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch11",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-60",
+      "no": 60,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "甲、乙两人独立完成某任务的概率分别为 0.6 和 0.5，则至少有一人完成该任务的概率是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "0.3",
+            "B": "0.5",
+            "C": "0.8",
+            "D": "1.1"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "两人都未完成的概率为 (1-0.6)×(1-0.5)=0.4×0.5=0.2，因此至少一人完成的概率为 1-0.2=0.8。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-61",
+      "no": 61,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "5 个人排成一排，其中甲不站在两端的排法共有（）种。",
+      "blanks": [
+        {
+          "options": {
+            "A": "48",
+            "B": "72",
+            "C": "96",
+            "D": "120"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "甲可以站在中间的 3 个位置；甲选定位置后，其余 4 人任意排列，有 4!=24 种，因此共有 3×24=72 种。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-62",
+      "no": 62,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "已知命题“如果明天不下雨，那么我就去跑步”为假，则以下必然为真的是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "明天下雨且我去跑步",
+            "B": "明天不下雨且我去跑步",
+            "C": "明天下雨且我没去跑步",
+            "D": "明天不下雨且我没去跑步"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "充分条件假言命题“P→Q”只有在 P 真、Q 假时为假。因此 P（明天不下雨）为真，Q（我去跑步）为假。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-63",
+      "no": 63,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "分层体系结构风格的主要特点是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "每层只能调用上层提供的服务",
+            "B": "每层只依赖其下层，层内变化不影响其他层",
+            "C": "所有构件通过共享数据区通信",
+            "D": "构件之间通过管道传递数据流"
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "分层风格中每一层为上层提供服务并依赖下层，层内实现变化通常不影响其他层；选项 D 描述的是管道-过滤器风格。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-64",
+      "no": 64,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "在 MVC 架构中，负责接收用户输入、协调模型和视图的是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "模型",
+            "B": "视图",
+            "C": "控制器",
+            "D": "数据库"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "MVC 中模型负责数据和业务逻辑，视图负责显示，控制器负责接收用户输入并协调模型与视图。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-65",
+      "no": 65,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "消息队列在分布式系统中的主要作用不包括（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "应用解耦",
+            "B": "异步处理",
+            "C": "流量削峰",
+            "D": "提高单机 CPU 主频"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "消息队列常用于应用解耦、异步处理和流量削峰；它不能提高单机 CPU 的主频。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-66",
+      "no": 66,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "与传统虚拟机相比，容器技术（如 Docker）的主要特点是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "容器共享宿主机内核，启动更快、资源开销更小",
+            "B": "每个容器都包含完整的操作系统内核",
+            "C": "容器只能运行在 Windows 系统上",
+            "D": "容器必须依赖数据库才能运行"
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "容器共享宿主机操作系统内核，不需要为每个实例安装完整操作系统，因此更轻量、启动更快。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-67",
+      "no": 67,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "在云计算服务模型中，用户直接使用提供商部署在云端的应用程序，而不管理底层平台和基础设施，这种模型是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "IaaS",
+            "B": "PaaS",
+            "C": "SaaS",
+            "D": "DaaS"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "SaaS（软件即服务）向用户直接提供应用软件；IaaS 提供基础设施，PaaS 提供应用开发和运行平台。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-68",
+      "no": 68,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "一幅分辨率为 1024×768、24 位真彩色的图像，未压缩时占用的存储空间约为（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "0.75MB",
+            "B": "1.5MB",
+            "C": "2.25MB",
+            "D": "9MB"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "每个像素占 24 位即 3 字节，总数据量为 1024×768×3=2359296 字节，约等于 2.25MB。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-69",
+      "no": 69,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "以下文件格式中，通常采用无损压缩的是（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "JPEG",
+            "B": "MP3",
+            "C": "PNG",
+            "D": "MPEG"
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "PNG 采用无损压缩，适合保存图像原始细节；JPEG、MP3、MPEG 通常采用有损压缩。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-70",
+      "no": 70,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "多媒体计算机中，声音的采样频率越高、量化位数越多，则（）。",
+      "blanks": [
+        {
+          "options": {
+            "A": "音质越差，数据量越小",
+            "B": "音质越好，数据量不变",
+            "C": "音质不变，数据量越大",
+            "D": "音质越好，数据量越大"
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "采样频率和量化位数越高，声音还原越精细，音质越好，同时产生的数据量也越大。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch13",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-71",
+      "no": 71,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "A microservice is organized around a business capability, runs in its own process, and can be deployed independently. Which of the following is a defining characteristic of microservices?",
+      "blanks": [
+        {
+          "options": {
+            "A": "They can be deployed independently.",
+            "B": "They must share a single database.",
+            "C": "They cannot communicate over HTTP.",
+            "D": "They must be implemented in one programming language."
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "题干指出微服务可以独立部署（can be deployed independently），这是其定义性特征之一。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch12",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-72",
+      "no": 72,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "Because each microservice usually owns its own database, maintaining data consistency across services becomes difficult. What problem does this situation mainly cause?",
+      "blanks": [
+        {
+          "options": {
+            "A": "Loss of network connectivity.",
+            "B": "Difficulty in achieving data consistency.",
+            "C": "Inability to scale services.",
+            "D": "Lack of programming languages."
+          },
+          "answer": "B"
+        }
+      ],
+      "analysis": "题干明确说明每个服务拥有自己的数据库会使跨服务的数据一致性难以维护，因此主要问题是数据一致性。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch12",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-73",
+      "no": 73,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "An API gateway provides a single entry point for clients and handles routing, authentication, and rate limiting. What is the main role of an API gateway?",
+      "blanks": [
+        {
+          "options": {
+            "A": "Storing all business data.",
+            "B": "Compiling source code.",
+            "C": "Replacing all microservices.",
+            "D": "Providing a single entry point and handling cross-cutting concerns."
+          },
+          "answer": "D"
+        }
+      ],
+      "analysis": "API 网关为客户端提供统一入口，并集中处理路由、认证、限流等横切关注点。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch12",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-74",
+      "no": 74,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "A bounded context defines the boundary within which a domain model is consistent. Services are often aligned with bounded contexts to reduce coupling. What does “bounded context” refer to?",
+      "blanks": [
+        {
+          "options": {
+            "A": "A boundary within which a domain model is consistent.",
+            "B": "A limit on the number of services.",
+            "C": "A distributed transaction protocol.",
+            "D": "A network security policy."
+          },
+          "answer": "A"
+        }
+      ],
+      "analysis": "题干直接给出定义：bounded context 是领域模型保持一致性的边界。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch12",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    },
+    {
+      "id": "sd-mock2026-75",
+      "no": 75,
+      "paper": "2026-11-mock",
+      "paperTitle": "2026 模拟冲刺卷（原创）",
+      "stem": "The decision to adopt microservices should depend on team size, system complexity, and operational capability rather than on fashion. What does the author suggest?",
+      "blanks": [
+        {
+          "options": {
+            "A": "All organizations should adopt microservices.",
+            "B": "Microservices are always simpler than monoliths.",
+            "C": "Adoption should be based on concrete organizational and technical factors.",
+            "D": "Microservices should be used only in small systems."
+          },
+          "answer": "C"
+        }
+      ],
+      "analysis": "作者认为是否采用微服务应取决于团队规模、系统复杂度和运维能力等具体因素，而不是盲目跟风。",
+      "source": "原创模拟题",
+      "multiBlank": false,
+      "practiceable": true,
+      "chapter": "ch12",
+      "flags": [],
+      "answerSource": "原创解析",
+      "quality": "ok"
+    }
+  ]
+}

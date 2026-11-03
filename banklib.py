@@ -73,6 +73,44 @@ def read_json(path, default=None):
         return json.load(f)
 
 
+def is_material_doc(doc):
+    """应用题/案例题资料卷：只浏览题目和参考答案，不进练习池。"""
+    return isinstance(doc, dict) and (
+        doc.get("kind") == "material" or doc.get("practice") is False)
+
+
+def build_material(doc, fname, bank_id, level, subject, section):
+    """把一份资料卷归一化成前端浏览用的结构。"""
+    paper_id = str(doc.get("paper") or fname[:-5])
+    items = []
+    for i, q in enumerate(doc.get("questions") or [], 1):
+        if not isinstance(q, dict):
+            continue
+        no = q.get("no") or i
+        items.append({
+            "id": f"{paper_id}-{no}",
+            "no": no,
+            "title": str(q.get("title") or f"试题{no}").strip(),
+            "stem": str(q.get("stem") or "").strip(),
+            "answer": str(q.get("answer") or "").strip(),
+            "analysis": str(q.get("analysis") or "").strip(),
+        })
+    return {
+        "id": f"{bank_id}/{paper_id}", "bank": bank_id, "level": level, "subject": subject,
+        "section": section, "title": doc.get("paperTitle") or paper_id,
+        "source": str(doc.get("source") or "").strip(),
+        "note": str(doc.get("note") or "").strip(),
+        "count": len(items), "questions": items,
+    }
+
+
+def material_meta(m):
+    """索引里只带资料元信息，正文进入资料页时再取。"""
+    return {k: m[k] for k in
+            ("id", "bank", "level", "subject", "section", "title", "source", "note", "count")
+            if k in m}
+
+
 def normalize_question(q, overlay=None, excluded=None):
     """把一道题统一成前端要的形状，返回是否可用。"""
     overlay = overlay or {}
@@ -116,10 +154,14 @@ def normalize_question(q, overlay=None, excluded=None):
 
 
 def scan_banks(banks_dir):
-    """扫 banks/<级别>/<资格>/<科目>/*.json，返回原始 banks 与 questions（未归一化）"""
-    banks, questions = [], []
+    """扫 banks/<级别>/<资格>/<科目>/<章节>/*.json。
+
+    返回 (banks, questions, materials)：questions 是练习卷题目（未归一化），
+    materials 是 kind=material / practice=false 的资料卷，不进入练习池。
+    """
+    banks, questions, materials = [], [], []
     if not os.path.isdir(banks_dir):
-        return banks, questions
+        return banks, questions, materials
 
     for level in sorted(os.listdir(banks_dir)):
         level_dir = os.path.join(banks_dir, level)
@@ -144,6 +186,10 @@ def scan_banks(banks_dir):
                     if not fname.endswith(".json"):
                         continue
                     doc = read_json(os.path.join(sec_dir, fname), {}) or {}
+                    if is_material_doc(doc):
+                        materials.append(
+                            build_material(doc, fname, bank_id, level, subject, section))
+                        continue
                     qs = doc.get("questions", [])
                     for q in qs:
                         q["bank"] = bank_id
@@ -164,12 +210,12 @@ def scan_banks(banks_dir):
                 "name": meta.get("subject") or subject, "exam": meta.get("exam", ""),
                 "chapters": meta.get("chapters", []), "sections": sections, "papers": papers,
             })
-    return banks, questions
+    return banks, questions, materials
 
 
 def load_banks(banks_dir, overlay_path=None, excluded_path=None):
-    """完整加载：扫描 -> 归一化 -> 返回 (banks, questions)、可刷题数"""
-    banks, questions = scan_banks(banks_dir)
+    """完整加载：扫描 -> 归一化 -> 返回 (banks, questions, materials, 可刷题数)"""
+    banks, questions, materials = scan_banks(banks_dir)
     overlay = read_json(overlay_path, {}) if overlay_path else {}
     excluded_doc = read_json(excluded_path, {}) if excluded_path else {}
     excluded = set((excluded_doc or {}).get("ids", []))
@@ -189,4 +235,4 @@ def load_banks(banks_dir, overlay_path=None, excluded_path=None):
         for p in b["papers"]:
             p["practiceable"] = by_paper.get((b["id"], p["id"]), 0)
 
-    return banks, questions, usable
+    return banks, questions, materials, usable

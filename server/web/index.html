@@ -120,6 +120,33 @@
   .analysis .lab{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.3px;margin-bottom:4px}
   .analysis.empty{color:var(--muted);font-style:italic;font-size:13px}
 
+  /* ---------- 应用题资料 ---------- */
+  .mat-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+  .mat-head{display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap}
+  .mat-head > div:first-child{flex:1;min-width:180px}
+  .mat-title{font-size:16px;font-weight:650;line-height:1.5}
+  .mat-meta{font-size:12px;color:var(--muted);margin-top:4px}
+  .mat-actions{display:flex;gap:6px;flex-wrap:wrap}
+  .mat-actions button{font-size:12.5px;padding:7px 10px}
+  .mat-note{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);
+    font-size:12.5px;color:var(--muted);line-height:1.7;white-space:pre-wrap}
+  .mat-q-head{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+  .mat-no{font-size:15px;font-weight:650}
+  .mat-stem{white-space:pre-wrap;font-size:14.5px;line-height:1.8;color:#2b3138}
+  .mat-ans{margin-top:12px;border:1px solid var(--line);border-radius:10px;
+    background:#fbfcff;overflow:hidden}
+  .mat-ans summary{list-style:none;cursor:pointer;padding:10px 13px;font-size:13px;
+    font-weight:600;color:var(--accent);display:flex;align-items:center;
+    justify-content:space-between;gap:8px}
+  .mat-ans summary::-webkit-details-marker{display:none}
+  .mat-ans summary::after{content:'＋';font-weight:700;color:var(--muted)}
+  .mat-ans[open] summary::after{content:'－'}
+  .mat-ans[open] summary{border-bottom:1px dashed var(--line)}
+  .mat-ans .ans-body{padding:12px 13px;white-space:pre-wrap;font-size:14px;
+    line-height:1.8;color:#333}
+  .mat-ans.analysis{background:#fff}
+  .mat-ans.analysis summary{color:#555}
+
   .footbar{
     position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.94);
     backdrop-filter:blur(12px);border-top:1px solid var(--line);
@@ -211,6 +238,9 @@
     .row{flex-wrap:wrap;row-gap:4px}
     .row .l{min-width:0}
     .row .r{white-space:nowrap}
+    .mat-actions{width:100%}
+    .mat-actions button{flex:1}
+    .mat-stem{font-size:14px}
   }
 </style>
 </head>
@@ -229,6 +259,7 @@
       <button class="ghost" id="nav-home">首页</button>
       <button class="ghost" id="nav-stats">统计</button>
       <button class="ghost" id="nav-wrong">错题</button>
+      <button class="ghost hidden" id="nav-app">应用题</button>
       <button class="ghost hidden" id="nav-logout">退出</button>
     </nav>
   </div>
@@ -289,11 +320,11 @@
 
     <h2 class="sec">题库说明</h2>
     <div class="card tight" style="font-size:13px;color:var(--muted);line-height:1.8">
-      共 <b id="bank-total">-</b> 道题，来自 <b id="bank-papers">-</b>（公开真题卷）。
-      其中 <b id="bank-analysis">-</b> 道带原卷解析，其余只有答案。<br>
-      所有可练习题都已校验过，每题都有完整的 A–D 选项；原卷缺题干或选项的题不会进入练习。<br>
-      另有 <b id="bank-hidden">-</b> 道题因原卷缺题干/选项或答案存疑未进入练习。<br>
-      数据是从 PDF 里抽的，个别题干可能有断行或错字。遇到可疑的题，点题目右上角
+      共 <b id="bank-total">-</b> 道题，来自 <b id="bank-papers">-</b>（真题/模拟卷）。
+      其中 <b id="bank-analysis">-</b> 道带解析，其余只有答案。<br>
+      所有可练习题都已校验过，每题都有完整的 A–D 选项；缺题干或选项的题不会进入练习。<br>
+      另有 <b id="bank-hidden">-</b> 道题因缺题干/选项或答案存疑未进入练习。<br>
+      真题数据从 PDF/网页整理，模拟卷为原创题；个别题干可能有断行或错字。遇到可疑的题，点题目右上角
       「⚑ 有问题」标记一下，会记在本地（目前标记 <b id="flag-count">0</b> 道）。<br>
       练习范围是**配置项**：改完存在本地，下次打开还是这个范围，直到你再改。
       答题记录只存在这台电脑的浏览器里，换设备/清缓存就没了。
@@ -325,6 +356,9 @@
 
   <!-- 错题 -->
   <section id="view-wrong" class="hidden"></section>
+
+  <!-- 应用题资料 -->
+  <section id="view-app" class="hidden"></section>
 </div>
 
 <div class="footbar hidden" id="footbar">
@@ -351,6 +385,11 @@ let BY_ID = {};
 let YEARS = [];    // 题库里出现过的年份
 let SEL = new Set();   // 选中的年份
 let QD = {};       // 已加载的题目详情：线上按需拉取，离线从内联数据取
+let MATERIALS = [];    // 应用题资料（只浏览，不进练习池）
+let MATS = [];         // 当前题库的资料
+let MAT_CUR = '';      // 当前打开的资料 id
+let MAT_DOCS = {};     // 已加载的资料正文
+let MATSEQ = 0;        // 资料页渲染序号，防止快速切换时旧请求覆盖
 
 const chapterName = id => CH[id] || id;
 const OPT_KEYS = ['A','B','C','D'];
@@ -396,6 +435,8 @@ function applyBank(id){
   SEL = new Set(saved.length ? saved : YEARS);
 
   applyRange();
+  MATS = MATERIALS.filter(m => m.bank === CUR);
+  MAT_CUR = (MATS[0] && MATS[0].id) || '';
   renderHeader();
 }
 
@@ -455,6 +496,8 @@ function renderHeader(){
   } else {
     sel.classList.add('hidden');
   }
+  const navApp = document.getElementById('nav-app');
+  if (navApp) navApp.classList.toggle('hidden', !MATS.length);
 }
 
 /* ---------------- 本地存储 ---------------- */
@@ -523,7 +566,7 @@ function streak(){
 
 /* ---------------- 视图切换 ---------------- */
 const $ = s => document.querySelector(s);
-const views = ['home','quiz','stats','wrong'];
+const views = ['home','quiz','stats','wrong','app'];
 function show(v){
   views.forEach(x => $('#view-'+x).classList.toggle('hidden', x !== v));
   $('#footbar').classList.toggle('hidden', v !== 'quiz');
@@ -531,6 +574,7 @@ function show(v){
   if (v === 'home') renderHome();
   if (v === 'stats') renderStats();
   if (v === 'wrong') renderWrong();
+  if (v === 'app') renderApp();
 }
 
 /* ---------------- 考试倒计时 ---------------- */
@@ -894,6 +938,96 @@ async function renderWrong(){
   $('#btn-redo').onclick = () => { SESS = {ids:rows.map(q=>q.id), i:0, mode:'wrong', answers:{}, picks:{}}; show('quiz'); renderQuestion(); };
 }
 
+/* ---------------- 应用题资料 ---------------- */
+async function loadMaterial(id){
+  if (MAT_DOCS[id]) return MAT_DOCS[id];
+  if (ONLINE){
+    const data = await api('/material?id=' + encodeURIComponent(id));
+    if (data && data.material) MAT_DOCS[id] = data.material;
+  } else {
+    const m = (DATA.materials || []).find(x => x.id === id);
+    if (m) MAT_DOCS[id] = m;
+  }
+  return MAT_DOCS[id];
+}
+
+function matAnswerHTML(q){
+  return `<details class="mat-ans">
+    <summary>查看参考答案</summary>
+    <div class="ans-body">${q.answer ? esc(q.answer) : '暂无参考答案'}</div>
+  </details>` + (q.analysis ? `<details class="mat-ans analysis">
+    <summary>查看解析</summary>
+    <div class="ans-body">${esc(q.analysis)}</div>
+  </details>` : '');
+}
+
+async function renderApp(){
+  const el = $('#view-app');
+  if (!MATS.length){
+    el.innerHTML = `<div class="empty-state"><div class="big">📄</div>还没有应用题资料</div>`;
+    return;
+  }
+
+  const id = MATS.some(m => m.id === MAT_CUR) ? MAT_CUR : MATS[0].id;
+  MAT_CUR = id;
+  const seq = ++MATSEQ;
+  if (!MAT_DOCS[id]){
+    el.innerHTML = `<div class="empty-state">正在加载应用题资料…</div>`;
+    try {
+      await loadMaterial(id);
+    } catch (e) {
+      if (seq !== MATSEQ) return;
+      if (e.message === 'unauthorized') return;
+      el.innerHTML = `<div class="empty-state">资料加载失败，请检查网络<br>
+        <button class="primary" id="mat-retry" style="margin-top:12px">重试</button></div>`;
+      const retry = document.getElementById('mat-retry');
+      if (retry) retry.onclick = () => renderApp();
+      return;
+    }
+  }
+  if (seq !== MATSEQ) return;
+
+  const doc = MAT_DOCS[id];
+  if (!doc){
+    el.innerHTML = `<div class="empty-state">没有找到这份资料</div>`;
+    return;
+  }
+
+  const tabs = MATS.length > 1 ? `<div class="mat-tabs">${MATS.map(m =>
+    `<button class="chip${m.id === id ? ' on' : ''}" data-mat="${esc(m.id)}">${esc(m.title)}</button>`
+  ).join('')}</div>` : '';
+
+  el.innerHTML = tabs + `
+    <div class="card">
+      <div class="mat-head">
+        <div>
+          <div class="mat-title">${esc(doc.title)}</div>
+          <div class="mat-meta">${esc(doc.source || '')}${doc.count ? ` · 共 ${doc.count} 题` : ''} · 参考答案默认折叠</div>
+        </div>
+        <div class="mat-actions">
+          <button id="mat-expand">全部展开</button>
+          <button id="mat-collapse">全部收起</button>
+        </div>
+      </div>
+      ${doc.note ? `<div class="mat-note">${esc(doc.note)}</div>` : ''}
+    </div>
+    ${(doc.questions || []).map(q => `<div class="card mat-q">
+      <div class="mat-q-head"><span class="mat-no">${esc(q.title || ('第 ' + q.no + ' 题'))}</span></div>
+      <div class="mat-stem">${esc(q.stem)}</div>
+      ${matAnswerHTML(q)}
+    </div>`).join('')}`;
+
+  el.querySelectorAll('[data-mat]').forEach(b => b.onclick = () => {
+    MAT_CUR = b.dataset.mat;
+    renderApp();
+  });
+  el.querySelectorAll('details').forEach(d => d.open = false);
+  const expand = document.getElementById('mat-expand');
+  const collapse = document.getElementById('mat-collapse');
+  if (expand) expand.onclick = () => el.querySelectorAll('details').forEach(d => d.open = true);
+  if (collapse) collapse.onclick = () => el.querySelectorAll('details').forEach(d => d.open = false);
+}
+
 /* ---------------- 工具 ---------------- */
 function esc(s){ return String(s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 
@@ -906,6 +1040,7 @@ document.addEventListener('click', e => {
 $('#nav-home').onclick = () => show('home');
 $('#nav-stats').onclick = () => show('stats');
 $('#nav-wrong').onclick = () => show('wrong');
+$('#nav-app').onclick = () => show('app');
 $('#btn-next').onclick = () => {
   if (!SESS) return;
   const q = QD[SESS.ids[SESS.i]];
@@ -937,7 +1072,9 @@ document.addEventListener('keydown', e => {
 function initData(){
   BANKS = DATA.banks || [];
   ALL = DATA.questions || [];
+  MATERIALS = DATA.materials || [];
   QD = {};
+  MAT_DOCS = {};
   CUR = (BANKS[0] && BANKS[0].id) || '';
   applyBank(CUR);
   renderHome();
